@@ -12,4 +12,4 @@ position = Vector2(140, 181)
 position = Vector2(143, 399)
 
 [node name="platform2" parent="." unique_id=198293701 instance=ExtResource("2_bswci")]
-position = Vector2(333, 455)
+position = Vector2(399, 459)
