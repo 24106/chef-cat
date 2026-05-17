@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://gcicvknkqeqm"]
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/prefabs/player.tscn" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://nlo1v2x0ec0g" path="res://scenes/prefabs/platform.tscn" id="2_bswci"]
 
 [node name="level1" type="Node2D" unique_id=402238727]
 
 [node name="player" parent="." unique_id=1720179057 instance=ExtResource("1_014kd")]
-position = Vector2(187, 188)
+position = Vector2(140, 181)
+
+[node name="platform" parent="." unique_id=975258551 instance=ExtResource("2_bswci")]
+position = Vector2(143, 399)
+
+[node name="platform2" parent="." unique_id=198293701 instance=ExtResource("2_bswci")]
+position = Vector2(333, 455)
