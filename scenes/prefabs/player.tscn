@@ -19,5 +19,6 @@ texture = ExtResource("1_06qtw")
 shape = SubResource("CapsuleShape2D_014kd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=772868981]
+zoom = Vector2(0.75, 0.75)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
