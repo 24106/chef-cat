@@ -1,15 +1,35 @@
 [gd_scene format=3 uid="uid://gcicvknkqeqm"]
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/prefabs/player.tscn" id="1_014kd"]
-[ext_resource type="PackedScene" uid="uid://nlo1v2x0ec0g" path="res://scenes/prefabs/platform.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://nlo1v2x0ec0g" path="res://scenes/prefabs/medium_platform.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://dchluttqf5jyy" path="res://scenes/prefabs/small_platform.tscn" id="3_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://cwxrjy7nbhjhr" path="res://scenes/prefabs/large_platform.tscn" id="4_4nkto"]
 
 [node name="level1" type="Node2D" unique_id=402238727]
 
 [node name="player" parent="." unique_id=1720179057 instance=ExtResource("1_014kd")]
 position = Vector2(140, 181)
 
-[node name="platform" parent="." unique_id=975258551 instance=ExtResource("2_bswci")]
-position = Vector2(143, 399)
+[node name="medium_platform" parent="." unique_id=975258551 instance=ExtResource("2_bswci")]
+position = Vector2(360, 468)
 
-[node name="platform2" parent="." unique_id=198293701 instance=ExtResource("2_bswci")]
-position = Vector2(399, 459)
+[node name="medium_platform2" parent="." unique_id=506389000 instance=ExtResource("2_bswci")]
+position = Vector2(746, 551)
+
+[node name="medium_platform3" parent="." unique_id=421959576 instance=ExtResource("2_bswci")]
+position = Vector2(659, 328)
+
+[node name="small_platform" parent="." unique_id=999097173 instance=ExtResource("3_5xbjy")]
+position = Vector2(466, 596)
+
+[node name="small_platform2" parent="." unique_id=1808120358 instance=ExtResource("3_5xbjy")]
+position = Vector2(617, 649)
+
+[node name="small_platform3" parent="." unique_id=1504177506 instance=ExtResource("3_5xbjy")]
+position = Vector2(872, 424)
+
+[node name="large_platform" parent="." unique_id=396493248 instance=ExtResource("4_4nkto")]
+position = Vector2(131, 383)
+
+[node name="large_platform2" parent="." unique_id=1058339108 instance=ExtResource("4_4nkto")]
+position = Vector2(960, 716)

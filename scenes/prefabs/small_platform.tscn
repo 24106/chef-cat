@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dchluttqf5jyy"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_js2xh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efl2r"]
+size = Vector2(40, 5)
+
+[node name="small_platform" type="StaticBody2D" unique_id=975258551]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=213918325]
+position = Vector2(-9.536743e-07, 0.5000001)
+scale = Vector2(40.000004, 5.0000005)
+texture = SubResource("CanvasTexture_js2xh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1090854629]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_efl2r")
