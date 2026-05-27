@@ -20,6 +20,9 @@ shape = SubResource("RectangleShape2D_n0leu")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=772868981]
 offset = Vector2(2, 5)
 zoom = Vector2(0.45, 0.45)
+limit_left = -77
+limit_right = 8750
+limit_bottom = 3650
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
