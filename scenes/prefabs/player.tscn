@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://quyh4cbsa3vt" path="res://scripts/player.gd" id="1_tou0u"]
 [ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="2_tou0u"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0leu"]
-size = Vector2(104, 104)
-
 [node name="player" type="CharacterBody2D" unique_id=1720179057]
 script = ExtResource("1_tou0u")
 
@@ -13,9 +10,6 @@ script = ExtResource("1_tou0u")
 position = Vector2(-3.8146973e-06, 5.722046e-06)
 scale = Vector2(0.8125, 0.8125)
 texture = ExtResource("2_tou0u")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1008358444]
-shape = SubResource("RectangleShape2D_n0leu")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=772868981]
 offset = Vector2(2, 5)
@@ -27,3 +21,6 @@ limit_bottom = 3650
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=647427910]
+polygon = PackedVector2Array(42, -52, 48, -49, 52, -43, 52, 42, 49, 48, 43, 52, -43, 52, -48, 49, -52, 43, -52, -44, -48, -49, -43, -52)
