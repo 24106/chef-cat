@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-const speed = 600
+var speed = 600
+var sprint_speed = 800
 const jump_power = -1850
 
 const acceleration = 40
