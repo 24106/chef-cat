@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/prefabs/player.tscn" id="1_014kd"]
 [ext_resource type="Texture2D" uid="uid://cauwk4rhfu2tv" path="res://assets/basic tilemap.png" id="2_bswci"]
-[ext_resource type="PackedScene" uid="uid://xmhg2ynua3j" path="res://scenes/prefabs/slippery_floor.tscn" id="3_rus8k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("2_bswci")
@@ -99,9 +98,6 @@ sources/5 = SubResource("TileSetAtlasSource_rus8k")
 
 [node name="player" parent="." unique_id=1720179057 instance=ExtResource("1_014kd")]
 position = Vector2(412, -167)
-
-[node name="slippery_floor" parent="." unique_id=1588692238 instance=ExtResource("3_rus8k")]
-position = Vector2(443, 70)
 
 [node name="terrain" type="TileMapLayer" parent="." unique_id=1999464203]
 position = Vector2(0, -1000)

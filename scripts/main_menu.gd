@@ -8,7 +8,7 @@ func _on_quit_game_button_pressed() -> void:
 	get_tree().quit()
 
 func _on_select_level_button_pressed() -> void:
-	pass # Replace with function body.
+	global_position = Vector2(200, 60)
 
 
 # level select section buttons
