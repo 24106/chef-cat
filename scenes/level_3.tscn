@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cvk6xartpje07"]
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/prefabs/player.tscn" id="1_h23n6"]
+[ext_resource type="Script" uid="uid://bmjt6hy5mg1lt" path="res://scripts/level_3.gd" id="1_uwxec"]
 [ext_resource type="Texture2D" uid="uid://cauwk4rhfu2tv" path="res://assets/basic tilemap.png" id="2_uwxec"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
@@ -95,6 +96,7 @@ physics_layer_0/collision_layer = 1
 sources/5 = SubResource("TileSetAtlasSource_rus8k")
 
 [node name="level3" type="Node2D" unique_id=402238727]
+script = ExtResource("1_uwxec")
 
 [node name="player" parent="." unique_id=1720179057 instance=ExtResource("1_h23n6")]
 position = Vector2(128, 2737)
@@ -108,3 +110,13 @@ tile_set = SubResource("TileSet_014kd")
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1874009113]
 position = Vector2(8436, -468)
 scale = Vector2(0.15, 0.15)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972422341]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1375839913]
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 145.0
+offset_bottom = 60.0
+text = "press esc to
+pause gameplay"
