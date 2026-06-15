@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bsoq344miamrp" path="res://scenes/ingredients/icecream.tscn" id="3_p6vls"]
 [ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/slipperyfloor.tscn" id="4_1pn4d"]
 [ext_resource type="PackedScene" uid="uid://dnw2ahjo76wht" path="res://scenes/movingobstacle.tscn" id="4_ah8om"]
-[ext_resource type="PackedScene" uid="uid://be8klt5jxnt3s" path="res://scenes/kitchendoor.tscn" id="4_hhfj6"]
 [ext_resource type="PackedScene" uid="uid://djwi0x33fgf2q" path="res://scenes/ingredients/chocolatesauce.tscn" id="4_wae8j"]
 [ext_resource type="PackedScene" uid="uid://b4jf5btpmwfq5" path="res://scenes/ingredients/strawberries.tscn" id="5_ha73p"]
+[ext_resource type="PackedScene" uid="uid://cvwkyowxcbbv4" path="res://scenes/l3_kitchendoor.tscn" id="6_ha73p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("2_uwxec")
@@ -118,8 +118,8 @@ position = Vector2(8225, -255)
 [node name="strawberries" parent="ingredients" unique_id=1537495012 instance=ExtResource("5_ha73p")]
 position = Vector2(8433, -268)
 
-[node name="kitchendoor" parent="." unique_id=1353888535 instance=ExtResource("4_hhfj6")]
-position = Vector2(8718, -295)
+[node name="l3_kitchendoor" parent="." unique_id=1353888535 instance=ExtResource("6_ha73p")]
+position = Vector2(8721, -294)
 
 [node name="terrain" type="TileMapLayer" parent="." unique_id=1999464203]
 position = Vector2(0, -1001)
@@ -199,3 +199,11 @@ offset_right = 145.0
 offset_bottom = 60.0
 text = "press esc to
 pause gameplay"
+
+[node name="arrow" type="Label" parent="CanvasLayer" unique_id=1793808961]
+visible = false
+offset_left = 1054.0
+offset_top = 26.0
+offset_right = 1130.0
+offset_bottom = 49.0
+text = "kitchen ->"

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://be8klt5jxnt3s"]
 
-[ext_resource type="Script" uid="uid://ckufsvuaiegke" path="res://scripts/kitchendoor.gd" id="1_2qm2g"]
+[ext_resource type="Script" uid="uid://ckufsvuaiegke" path="res://scripts/l1_kitchendoor.gd" id="1_2qm2g"]
 [ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="1_ud5e8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ud5e8"]
 size = Vector2(72, 274)
 
-[node name="kitchendoor" type="Area2D" unique_id=1353888535]
+[node name="l1_kitchendoor" type="Area2D" unique_id=1353888535]
 script = ExtResource("1_2qm2g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1630642859]
@@ -27,3 +27,4 @@ offset_bottom = -149.0
 text = "right click to enter"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
