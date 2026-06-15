@@ -24,3 +24,14 @@ drag_vertical_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=647427910]
 polygon = PackedVector2Array(42, -52, 48, -49, 52, -43, 52, 42, 49, 48, 43, 52, -43, 52, -48, 49, -52, 43, -52, -44, -48, -49, -43, -52)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=535854254]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=2096110815]
+offset_left = 866.0
+offset_top = 589.0
+offset_right = 1116.0
+offset_bottom = 616.0
+max_value = 10.0
+step = 1.0
+value = 10.0
