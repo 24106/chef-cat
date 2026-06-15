@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="chef_cat"
-run/main_scene="uid://gcicvknkqeqm"
+run/main_scene="uid://dfgrgk2eqaj6c"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

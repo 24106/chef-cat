@@ -8,67 +8,77 @@ script = ExtResource("1_l6cm7")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=935277815]
 position = Vector2(575, 325)
 
-[node name="main section" type="Node2D" parent="." unique_id=951975974]
+[node name="mainsection" type="Node2D" parent="." unique_id=951975974]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="main section" unique_id=1381863886]
+[node name="welcome text" type="Label" parent="mainsection" unique_id=1553438035]
 offset_left = 200.0
 offset_top = 60.0
 offset_right = 955.0
-offset_bottom = 583.0
-
-[node name="welcome text" type="Label" parent="main section/VBoxContainer" unique_id=1553438035]
-layout_mode = 2
+offset_bottom = 83.0
 text = "welcome to chef cat!!"
 
-[node name="start game button" type="Button" parent="main section/VBoxContainer" unique_id=227683818]
-layout_mode = 2
+[node name="start game button" type="Button" parent="mainsection" unique_id=227683818]
+offset_left = 200.0
+offset_top = 115.0
+offset_right = 955.0
+offset_bottom = 146.0
 text = "start game"
 
-[node name="select level button" type="Button" parent="main section/VBoxContainer" unique_id=27762673]
-layout_mode = 2
+[node name="select level button" type="Button" parent="mainsection" unique_id=27762673]
+offset_left = 200.0
+offset_top = 175.0
+offset_right = 955.0
+offset_bottom = 206.0
 text = "select level"
 
-[node name="quit game button" type="Button" parent="main section/VBoxContainer" unique_id=1791672770]
-layout_mode = 2
+[node name="quit game button" type="Button" parent="mainsection" unique_id=1791672770]
+offset_left = 200.0
+offset_top = 235.0
+offset_right = 955.0
+offset_bottom = 266.0
 text = "quit game"
 
-[node name="Camera2D2" type="Camera2D" parent="." unique_id=1163926405]
-position = Vector2(1728, 325)
+[node name="levelselectsection" type="Node2D" parent="." unique_id=1199045995]
 
-[node name="level select section" type="Node2D" parent="." unique_id=1199045995]
-position = Vector2(1152, 0)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="level select section" unique_id=1369547374]
+[node name="level select text" type="Label" parent="levelselectsection" unique_id=1692781625]
 offset_left = 200.0
 offset_top = 60.0
 offset_right = 955.0
-offset_bottom = 583.0
-metadata/_edit_group_ = true
-
-[node name="level select text" type="Label" parent="level select section/VBoxContainer" unique_id=1692781625]
-layout_mode = 2
+offset_bottom = 83.0
 text = "select a level you want to play :)"
 
-[node name="level 1 button" type="Button" parent="level select section/VBoxContainer" unique_id=1468165472]
-layout_mode = 2
+[node name="level 1 button" type="Button" parent="levelselectsection" unique_id=1468165472]
+offset_left = 200.0
+offset_top = 115.0
+offset_right = 955.0
+offset_bottom = 146.0
 text = "level 1 (easy)"
 
-[node name="level 2 button" type="Button" parent="level select section/VBoxContainer" unique_id=380306634]
-layout_mode = 2
+[node name="level 2 button" type="Button" parent="levelselectsection" unique_id=380306634]
+offset_left = 200.0
+offset_top = 175.0
+offset_right = 955.0
+offset_bottom = 206.0
 text = "level 2 (intermediate)"
 
-[node name="level 3 button" type="Button" parent="level select section/VBoxContainer" unique_id=1088815961]
-layout_mode = 2
+[node name="level 3 button" type="Button" parent="levelselectsection" unique_id=1088815961]
+offset_left = 200.0
+offset_top = 235.0
+offset_right = 955.0
+offset_bottom = 266.0
 text = "level 3 (advanced)"
 
-[node name="back button" type="Button" parent="level select section/VBoxContainer" unique_id=1194503895]
-layout_mode = 2
+[node name="back button" type="Button" parent="levelselectsection" unique_id=1194503895]
+offset_left = 200.0
+offset_top = 299.0
+offset_right = 955.0
+offset_bottom = 330.0
 text = "back to main menu"
 
-[connection signal="pressed" from="main section/VBoxContainer/start game button" to="." method="_on_start_game_button_pressed"]
-[connection signal="pressed" from="main section/VBoxContainer/select level button" to="." method="_on_select_level_button_pressed"]
-[connection signal="pressed" from="main section/VBoxContainer/quit game button" to="." method="_on_quit_game_button_pressed"]
-[connection signal="pressed" from="level select section/VBoxContainer/level 1 button" to="." method="_on_level_1_button_pressed"]
-[connection signal="pressed" from="level select section/VBoxContainer/level 2 button" to="." method="_on_level_2_button_pressed"]
-[connection signal="pressed" from="level select section/VBoxContainer/level 3 button" to="." method="_on_level_3_button_pressed"]
-[connection signal="pressed" from="level select section/VBoxContainer/back button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="mainsection/start game button" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="mainsection/select level button" to="." method="_on_select_level_button_pressed"]
+[connection signal="pressed" from="mainsection/quit game button" to="." method="_on_quit_game_button_pressed"]
+[connection signal="pressed" from="levelselectsection/level 1 button" to="." method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="levelselectsection/level 2 button" to="." method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="levelselectsection/level 3 button" to="." method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="levelselectsection/back button" to="." method="_on_back_button_pressed"]

@@ -52,6 +52,9 @@ func _physics_process(delta: float) -> void:
 		add_friction()
 	player_movement()
 	jump()
+	
+	if global_position.y > 3675:
+		get_tree().reload_current_scene()
 
 func input() -> Vector2:
 	var input_direction = Vector2.ZERO

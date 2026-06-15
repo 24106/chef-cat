@@ -13,7 +13,7 @@ texture = ExtResource("2_tou0u")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=772868981]
 offset = Vector2(2, 5)
-zoom = Vector2(0.45, 0.45)
+zoom = Vector2(0.5, 0.5)
 limit_left = -77
 limit_top = -470
 limit_right = 8750
