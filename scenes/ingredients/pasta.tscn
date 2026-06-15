@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ekffug3swemm"]
+
+[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_mxd63"]
+[ext_resource type="Texture2D" uid="uid://revoo1rekm4d" path="res://assets/pasta.png" id="2_mxd63"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8bec"]
+size = Vector2(42, 70)
+
+[node name="pasta" type="Area2D" unique_id=1530174558]
+script = ExtResource("1_mxd63")
+ingredient_name = "pasta"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
+position = Vector2(0, 5.9604645e-08)
+scale = Vector2(0.17999998, 0.17999998)
+texture = ExtResource("2_mxd63")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_y8bec")
+
+[node name="Label" type="Label" parent="." unique_id=463640050]
+visible = false
+offset_left = -57.0
+offset_top = -61.0
+offset_right = 58.0
+offset_bottom = -38.0
+text = "click to pick up"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b4jf5btpmwfq5"]
+
+[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_wmf5h"]
+[ext_resource type="Texture2D" uid="uid://b0a6i6bofe7cd" path="res://assets/strawberries.png" id="2_wmf5h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fcf3i"]
+radius = 58.00862
+
+[node name="strawberries" type="Area2D" unique_id=1530174558]
+script = ExtResource("1_wmf5h")
+ingredient_name = "strawberries"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
+position = Vector2(0, -1)
+scale = Vector2(0.17999999, 0.17999999)
+texture = ExtResource("2_wmf5h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
+position = Vector2(5, 0)
+shape = SubResource("CircleShape2D_fcf3i")
+
+[node name="Label" type="Label" parent="." unique_id=463640050]
+visible = false
+offset_left = -47.0
+offset_top = -75.0
+offset_right = 68.0
+offset_bottom = -52.0
+text = "click to pick up"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

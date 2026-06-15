@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bsoq344miamrp"]
+
+[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_bd6am"]
+[ext_resource type="Texture2D" uid="uid://dfmvo8eegc78l" path="res://assets/ice cream.png" id="2_bd6am"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kw16"]
+size = Vector2(103, 103)
+
+[node name="icecream" type="Area2D" unique_id=1530174558]
+script = ExtResource("1_bd6am")
+ingredient_name = "icecream"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
+position = Vector2(-0.4999981, -0.4999981)
+scale = Vector2(0.13125, 0.13125)
+texture = ExtResource("2_bd6am")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_4kw16")
+
+[node name="Label" type="Label" parent="." unique_id=463640050]
+visible = false
+offset_left = -55.0
+offset_top = -80.0
+offset_right = 60.0
+offset_bottom = -57.0
+text = "click to pick up"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

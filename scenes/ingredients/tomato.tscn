@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c2bon1ck2j3s3"]
+
+[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_rcex7"]
+[ext_resource type="Texture2D" uid="uid://bw8rfuhaq8fll" path="res://assets/tomato.png" id="2_ssx0k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ssx0k"]
+radius = 32.0
+
+[node name="tomato" type="Area2D" unique_id=1530174558]
+script = ExtResource("1_rcex7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
+position = Vector2(2.3841858e-07, 2.3841858e-07)
+scale = Vector2(0.033509713, 0.033509713)
+texture = ExtResource("2_ssx0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
+position = Vector2(-1, 2)
+shape = SubResource("CircleShape2D_ssx0k")
+
+[node name="Label" type="Label" parent="." unique_id=463640050]
+visible = false
+offset_left = -57.0
+offset_top = -55.0
+offset_right = 58.0
+offset_bottom = -32.0
+text = "click to pick up"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

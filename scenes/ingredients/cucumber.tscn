@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bvgwdhjyvsyoh"]
+
+[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_sfjeg"]
+[ext_resource type="Texture2D" uid="uid://d2ggtuva8btml" path="res://assets/cucumber.png" id="2_sfjeg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ssx0k"]
+radius = 35.0
+
+[node name="cucumber" type="Area2D" unique_id=1530174558]
+script = ExtResource("1_sfjeg")
+ingredient_name = "cucumber"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
+position = Vector2(0, 1.1920929e-07)
+scale = Vector2(0.08045976, 0.08045976)
+texture = ExtResource("2_sfjeg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_ssx0k")
+
+[node name="Label" type="Label" parent="." unique_id=463640050]
+visible = false
+offset_left = -57.0
+offset_top = -51.0
+offset_right = 58.0
+offset_bottom = -28.0
+text = "click to pick up"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

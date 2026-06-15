@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dqqsxgn2q13uj"]
+
+[ext_resource type="Script" uid="uid://cbndydluvdaer" path="res://scripts/level_3_lose_screen.gd" id="1_nld84"]
+
+[node name="level_3_lose_screen" type="Node2D" unique_id=1446881211]
+script = ExtResource("1_nld84")
+
+[node name="Label" type="Label" parent="." unique_id=1154345780]
+offset_left = 408.0
+offset_top = 119.0
+offset_right = 697.0
+offset_bottom = 142.0
+text = "awh shucks, you failed level 3 :("
+
+[node name="main menu button" type="Button" parent="." unique_id=332492236]
+offset_left = 540.0
+offset_top = 228.0
+offset_right = 637.0
+offset_bottom = 259.0
+text = "main menu"
+
+[node name="restart button" type="Button" parent="." unique_id=434414655]
+offset_left = 534.0
+offset_top = 169.0
+offset_right = 635.0
+offset_bottom = 200.0
+text = "restart level"
+
+[connection signal="pressed" from="main menu button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="restart button" to="." method="_on_restart_button_pressed"]

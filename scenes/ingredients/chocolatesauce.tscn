@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://djwi0x33fgf2q"]
+
+[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_nvsx6"]
+[ext_resource type="Texture2D" uid="uid://b8vhtlyuxnagx" path="res://assets/chocolate sauce.png" id="2_nvsx6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kw16"]
+size = Vector2(44, 96)
+
+[node name="chocolatesauce" type="Area2D" unique_id=1530174558]
+script = ExtResource("1_nvsx6")
+ingredient_name = "chocolatesauce"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
+position = Vector2(9.536743e-07, 9.536743e-07)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_nvsx6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_4kw16")
+
+[node name="Label" type="Label" parent="." unique_id=463640050]
+visible = false
+offset_left = -55.0
+offset_top = -72.0
+offset_right = 60.0
+offset_bottom = -49.0
+text = "click to pick up"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
