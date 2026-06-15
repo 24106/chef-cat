@@ -4,14 +4,24 @@
 [ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="2_oibyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oibyq"]
-size = Vector2(4, 51.5)
+size = Vector2(6, 51.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cno7v"]
+size = Vector2(6, 52)
 
 [node name="movingobstacle" type="CharacterBody2D" unique_id=1808693964]
 script = ExtResource("1_k8yae")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1665795698]
-scale = Vector2(0.03125, 0.40234378)
+scale = Vector2(0.05, 0.402)
 texture = ExtResource("2_oibyq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=918954312]
 shape = SubResource("RectangleShape2D_oibyq")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=115963941]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=663019803]
+shape = SubResource("RectangleShape2D_cno7v")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
