@@ -99,7 +99,7 @@ sources/5 = SubResource("TileSetAtlasSource_rus8k")
 script = ExtResource("1_uwxec")
 
 [node name="player" parent="." unique_id=1720179057 instance=ExtResource("1_h23n6")]
-position = Vector2(128, 2737)
+position = Vector2(128, 2709)
 
 [node name="terrain" type="TileMapLayer" parent="." unique_id=1999464203]
 position = Vector2(0, -1001)
