@@ -16,18 +16,35 @@ var recharge_timer = 0
 
 const jump_power = -1850
 
-const acceleration = 50
-const friction = 50
+var acceleration = 50
+var friction = 50
+
+var normal_acceleration = 50
+var normal_friction = 50
+
+var slippery_acceleration = 12
+var slippery_friction = 3
 
 const gravity = 100
 
 const max_jumps = 2
 var current_jumps = 1
 
+var slippery = false
+var ice_input_delay = 0
+
 func _physics_process(delta: float) -> void:
+	if slippery:
+		ice_input_delay += delta
+	else:
+		ice_input_delay = 0
+	
 	sprint(delta)
 	
 	var input_direction: Vector2 = input()
+	
+	if slippery and ice_input_delay < 0.12:
+		input_direction = Vector2.ZERO
 	
 	if input_direction != Vector2.ZERO:
 		accelerate(input_direction)
@@ -57,11 +74,11 @@ func jump():
 		if current_jumps < max_jumps:
 			velocity.y = jump_power
 			current_jumps += 1
-	else:
-		velocity.y += gravity
-	
+
+	velocity.y += gravity
+
 	if is_on_floor():
-		current_jumps = 1
+		current_jumps = 0
 
 
 func sprint(delta):
@@ -77,3 +94,14 @@ func sprint(delta):
 			recharge_timer = 0
 	sprint_energy = clamp(sprint_energy, 0, max_sprint_energy)
 	sprint_bar.value = sprint_energy
+
+func enter_slippery():
+	slippery = true
+	acceleration = slippery_acceleration
+	friction = slippery_friction
+
+
+func exit_slippery():
+	slippery = false
+	acceleration = normal_acceleration
+	friction = normal_friction
