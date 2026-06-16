@@ -13,8 +13,6 @@ var timer_started = false
 
 @onready var prompt = $Label
 
-var running = false
-var can_run = false
 
 func _ready():
 	prompt.visible = false
@@ -22,13 +20,11 @@ func _ready():
 
 
 func _process(delta):
-	if not running or not can_run:
-		return
-
-	timer += delta
-
-	if timer >= spoil_time:
-		spoil()
+	if timer_started and not spoiled:
+		timer += delta
+		
+		if timer >= spoil_time:
+			spoil()
 
 
 func spoil():
@@ -36,7 +32,7 @@ func spoil():
 	print(ingredient_name, " spoiled!")
 
 func start_timer():
-	running = true
+	timer_started = true
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
