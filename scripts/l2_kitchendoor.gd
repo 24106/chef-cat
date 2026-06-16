@@ -37,6 +37,6 @@ func enter_kitchen():
 	if player:
 
 		if player.collected_ingredients.size() >= 3:
-			get_tree().change_scene_to_file("res://scenes/level_2_win_screen.tscn")
+			get_tree().change_scene_to_file("res://scenes/l2_cookingscene.tscn")
 		else:
 			get_tree().change_scene_to_file("res://scenes/level_2_lose_screen.tscn")

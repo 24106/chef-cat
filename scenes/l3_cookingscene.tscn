@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bnxv8s8pmfj5d"]
+
+[ext_resource type="Script" uid="uid://bxo8rg53oc7y2" path="res://scripts/l3_cookingscene.gd" id="1_ay573"]
+[ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="2_blwxb"]
+[ext_resource type="Texture2D" uid="uid://b0a6i6bofe7cd" path="res://assets/strawberries.png" id="3_5fltf"]
+[ext_resource type="Texture2D" uid="uid://b8vhtlyuxnagx" path="res://assets/chocolate sauce.png" id="4_jciks"]
+[ext_resource type="Texture2D" uid="uid://dfmvo8eegc78l" path="res://assets/ice cream.png" id="5_siobb"]
+[ext_resource type="Texture2D" uid="uid://cvvxf0ktf1bo5" path="res://assets/sundae.webp" id="6_p28qw"]
+
+[node name="l3_cookingscene" type="Node2D" unique_id=269050124]
+script = ExtResource("1_ay573")
+
+[node name="Label2" type="Label" parent="." unique_id=1624794257]
+offset_left = 389.0
+offset_top = 59.0
+offset_right = 711.0
+offset_bottom = 82.0
+text = "your aim is to create an ice cream sundae"
+
+[node name="bench" type="Sprite2D" parent="." unique_id=2023528118]
+position = Vector2(577, 560.74994)
+scale = Vector2(9.0078125, 1.7460935)
+texture = ExtResource("2_blwxb")
+
+[node name="ingredientUI" type="Node2D" parent="." unique_id=130928132]
+
+[node name="Panel" type="Panel" parent="ingredientUI" unique_id=321221559]
+offset_left = 60.0
+offset_top = 43.0
+offset_right = 200.0
+offset_bottom = 378.0
+
+[node name="Label" type="Label" parent="ingredientUI" unique_id=1100620890]
+offset_left = 84.0
+offset_top = 48.0
+offset_right = 176.0
+offset_bottom = 71.0
+text = "ingredients:"
+
+[node name="strawberries" type="Sprite2D" parent="ingredientUI" unique_id=840001016]
+position = Vector2(126.00006, 313)
+scale = Vector2(0.08465574, 0.08465574)
+texture = ExtResource("3_5fltf")
+
+[node name="strawberriestext" type="Label" parent="ingredientUI" unique_id=1913926051]
+offset_left = 81.0
+offset_top = 341.0
+offset_right = 213.0
+offset_bottom = 364.0
+text = "strawberries"
+
+[node name="chocolatesaucetext" type="Label" parent="ingredientUI" unique_id=54316243]
+offset_left = 70.0
+offset_top = 240.0
+offset_right = 227.0
+offset_bottom = 263.0
+text = "chocolate sauce"
+
+[node name="chocolatesauce" type="Sprite2D" parent="ingredientUI" unique_id=921961365]
+position = Vector2(126.00001, 216)
+scale = Vector2(0.11627769, 0.11627769)
+texture = ExtResource("4_jciks")
+
+[node name="icecreamtext" type="Label" parent="ingredientUI" unique_id=18681556]
+offset_left = 87.0
+offset_top = 139.0
+offset_right = 195.0
+offset_bottom = 162.0
+text = "ice cream"
+
+[node name="icecream" type="Sprite2D" parent="ingredientUI" unique_id=1262333892]
+position = Vector2(123.00001, 117)
+scale = Vector2(0.05323795, 0.05323795)
+texture = ExtResource("5_siobb")
+
+[node name="question" type="Node2D" parent="." unique_id=2128598451]
+
+[node name="Label" type="Label" parent="question" unique_id=540687514]
+offset_left = 413.0
+offset_top = 143.0
+offset_right = 668.0
+offset_bottom = 166.0
+text = "how do you scoop the ice cream?"
+
+[node name="Button" type="Button" parent="question" unique_id=1125542128]
+offset_left = 440.0
+offset_top = 198.0
+offset_right = 650.0
+offset_bottom = 229.0
+text = "use the ice cream scooper"
+
+[node name="Button2" type="Button" parent="question" unique_id=1194815124]
+offset_left = 444.0
+offset_top = 253.0
+offset_right = 654.0
+offset_bottom = 284.0
+text = "use your fingers"
+
+[node name="Button3" type="Button" parent="question" unique_id=1201589407]
+offset_left = 440.0
+offset_top = 309.0
+offset_right = 650.0
+offset_bottom = 340.0
+text = "use the ice cream scooper 
+after dipping it in water"
+
+[node name="correctanswer" type="Node2D" parent="." unique_id=1091977472]
+
+[node name="Label" type="Label" parent="correctanswer" unique_id=1606733415]
+offset_left = 362.0
+offset_top = 279.0
+offset_right = 799.0
+offset_bottom = 302.0
+text = "congratulations, here is your finished ice cream sundae!!"
+
+[node name="icecreamsundae" type="Sprite2D" parent="correctanswer" unique_id=1989616993]
+position = Vector2(548, 482)
+scale = Vector2(0.15242222, 0.15242222)
+texture = ExtResource("6_p28qw")
+
+[node name="levelcompletionbutton" type="Button" parent="." unique_id=27956787]
+offset_left = 458.0
+offset_top = 601.0
+offset_right = 649.0
+offset_bottom = 632.0
+text = "level completion screen"
+
+[connection signal="pressed" from="question/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="question/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="question/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="levelcompletionbutton" to="." method="_on_levelcompletionbutton_pressed"]
