@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://b7r2rbxvgeqou" path="res://scenes/ingredients/tomatosauce.tscn" id="4_ne2mo"]
 [ext_resource type="PackedScene" uid="uid://bw0oft3mjbe7o" path="res://scenes/ingredients/mushrooms.tscn" id="5_6cvei"]
 [ext_resource type="PackedScene" uid="uid://bspmtkpd57uo3" path="res://scenes/l2_kitchendoor.tscn" id="6_6cvei"]
+[ext_resource type="Texture2D" uid="uid://revoo1rekm4d" path="res://assets/pasta.png" id="10_172wr"]
+[ext_resource type="Texture2D" uid="uid://c2nccuh42krbt" path="res://assets/tomato sauce.png" id="11_g2hoc"]
+[ext_resource type="Texture2D" uid="uid://gdv5unlqygdt" path="res://assets/mushrooms.png" id="12_fldb1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("3_b4j7a")
@@ -200,9 +203,9 @@ position = Vector2(8564, 2225)
 [node name="slipperyfloor15" parent="slipperyfloors" unique_id=849751233 instance=ExtResource("4_eqxsl")]
 position = Vector2(7030, 227)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=261323981]
+[node name="UI layer" type="CanvasLayer" parent="." unique_id=189081464]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=687296992]
+[node name="Label" type="Label" parent="UI layer" unique_id=1270103435]
 offset_left = 19.0
 offset_top = 11.0
 offset_right = 145.0
@@ -210,10 +213,53 @@ offset_bottom = 60.0
 text = "press esc to
 pause gameplay"
 
-[node name="arrow" type="Label" parent="CanvasLayer" unique_id=1130764896]
+[node name="arrow" type="Label" parent="UI layer" unique_id=1230693452]
 visible = false
 offset_left = 1054.0
 offset_top = 26.0
 offset_right = 1130.0
 offset_bottom = 49.0
 text = "kitchen ->"
+
+[node name="Label2" type="Label" parent="UI layer" unique_id=1339718764]
+offset_left = 468.0
+offset_top = 9.0
+offset_right = 635.0
+offset_bottom = 32.0
+text = "ingredients to collect:"
+
+[node name="pasta" type="Sprite2D" parent="UI layer" unique_id=1518328438]
+position = Vector2(453, 58)
+scale = Vector2(0.11295185, 0.11295185)
+texture = ExtResource("10_172wr")
+
+[node name="pastatext" type="Label" parent="UI layer" unique_id=2060560613]
+offset_left = 413.0
+offset_top = 77.0
+offset_right = 504.0
+offset_bottom = 100.0
+text = "pasta - no"
+
+[node name="tomatosauce" type="Sprite2D" parent="UI layer" unique_id=501031627]
+position = Vector2(535, 90.99999)
+scale = Vector2(0.022555502, 0.022555502)
+texture = ExtResource("11_g2hoc")
+
+[node name="tomatosaucetext" type="Label" parent="UI layer" unique_id=1917020200]
+offset_left = 470.0
+offset_top = 39.0
+offset_right = 609.0
+offset_bottom = 62.0
+text = "tomato sauce - no"
+
+[node name="mushrooms" type="Sprite2D" parent="UI layer" unique_id=1286343747]
+position = Vector2(645, 60.000004)
+scale = Vector2(0.10681142, 0.10681142)
+texture = ExtResource("12_fldb1")
+
+[node name="mushroomstext" type="Label" parent="UI layer" unique_id=2056967469]
+offset_left = 588.0
+offset_top = 76.0
+offset_right = 700.0
+offset_bottom = 99.0
+text = "mushrooms - no"

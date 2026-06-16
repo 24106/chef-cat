@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://djwi0x33fgf2q" path="res://scenes/ingredients/chocolatesauce.tscn" id="4_wae8j"]
 [ext_resource type="PackedScene" uid="uid://b4jf5btpmwfq5" path="res://scenes/ingredients/strawberries.tscn" id="5_ha73p"]
 [ext_resource type="PackedScene" uid="uid://cvwkyowxcbbv4" path="res://scenes/l3_kitchendoor.tscn" id="6_ha73p"]
+[ext_resource type="Texture2D" uid="uid://dfmvo8eegc78l" path="res://assets/ice cream.png" id="10_ax3dk"]
+[ext_resource type="Texture2D" uid="uid://b8vhtlyuxnagx" path="res://assets/chocolate sauce.png" id="11_q2dsb"]
+[ext_resource type="Texture2D" uid="uid://b0a6i6bofe7cd" path="res://assets/strawberries.png" id="12_p3r0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("2_uwxec")
@@ -197,9 +200,9 @@ position = Vector2(959, 3529)
 [node name="slipperyfloor3" parent="slipperyfloors" unique_id=664627799 instance=ExtResource("4_1pn4d")]
 position = Vector2(883, 3529)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972422341]
+[node name="UI layer" type="CanvasLayer" parent="." unique_id=1094227771]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1375839913]
+[node name="Label" type="Label" parent="UI layer" unique_id=2094513593]
 offset_left = 19.0
 offset_top = 11.0
 offset_right = 145.0
@@ -207,10 +210,53 @@ offset_bottom = 60.0
 text = "press esc to
 pause gameplay"
 
-[node name="arrow" type="Label" parent="CanvasLayer" unique_id=1793808961]
+[node name="arrow" type="Label" parent="UI layer" unique_id=1970895278]
 visible = false
 offset_left = 1054.0
 offset_top = 26.0
 offset_right = 1130.0
 offset_bottom = 49.0
 text = "kitchen ->"
+
+[node name="Label2" type="Label" parent="UI layer" unique_id=1094359506]
+offset_left = 468.0
+offset_top = 9.0
+offset_right = 635.0
+offset_bottom = 32.0
+text = "ingredients to collect:"
+
+[node name="icecream" type="Sprite2D" parent="UI layer" unique_id=478354903]
+position = Vector2(442, 56)
+scale = Vector2(0.05323795, 0.05323795)
+texture = ExtResource("10_ax3dk")
+
+[node name="icecreamtext" type="Label" parent="UI layer" unique_id=2118853740]
+offset_left = 394.0
+offset_top = 80.0
+offset_right = 502.0
+offset_bottom = 103.0
+text = "ice cream - no"
+
+[node name="chocolatesauce" type="Sprite2D" parent="UI layer" unique_id=868457225]
+position = Vector2(546, 84)
+scale = Vector2(0.11627769, 0.11627769)
+texture = ExtResource("11_q2dsb")
+
+[node name="chocolatesaucetext" type="Label" parent="UI layer" unique_id=1040221645]
+offset_left = 471.0
+offset_top = 36.0
+offset_right = 628.0
+offset_bottom = 59.0
+text = "chocolate sauce - no"
+
+[node name="strawberries" type="Sprite2D" parent="UI layer" unique_id=376222453]
+position = Vector2(666.00006, 53.000004)
+scale = Vector2(0.08465574, 0.08465574)
+texture = ExtResource("12_p3r0x")
+
+[node name="strawberriestext" type="Label" parent="UI layer" unique_id=52975632]
+offset_left = 602.0
+offset_top = 75.0
+offset_right = 734.0
+offset_bottom = 98.0
+text = "strawberries - no"

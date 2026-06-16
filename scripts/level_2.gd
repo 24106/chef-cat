@@ -2,7 +2,7 @@ extends Node2D
 
 var required_ingredients = ["lettuce", "tomato", "cucumber"]
 
-@onready var arrow = $CanvasLayer/arrow
+@onready var arrow = $"UI layer"/arrow
 @onready var player = $player
 
 
