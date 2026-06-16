@@ -34,6 +34,7 @@ var slippery = false
 var ice_input_delay = 0
 
 var collected_ingredients = []
+var ingredient_failed = false
 
 func _physics_process(delta: float) -> void:
 	if slippery:

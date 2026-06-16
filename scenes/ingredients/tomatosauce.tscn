@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7r2rbxvgeqou"]
 
-[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_ipyih"]
+[ext_resource type="Script" uid="uid://dbh537pxjwjg7" path="res://scripts/timed_ingredients.gd" id="1_ipyih"]
 [ext_resource type="Texture2D" uid="uid://c2nccuh42krbt" path="res://assets/tomato sauce.png" id="2_ipyih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kw16"]
@@ -8,7 +8,7 @@ size = Vector2(44, 91)
 
 [node name="tomatosauce" type="Area2D" unique_id=1530174558]
 script = ExtResource("1_ipyih")
-ingredient_name = "tomatosauce"
+spoil_time = 20.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
 position = Vector2(1.1920929e-07, 1.1920929e-07)

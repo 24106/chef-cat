@@ -1,6 +1,7 @@
 extends Node2D
 
 var required_ingredients = ["pasta", "tomatosauce", "mushrooms"]
+var ingredients_started = false
 
 @onready var arrow = $"UI layer"/arrow
 @onready var player = $player
@@ -13,6 +14,8 @@ var required_ingredients = ["pasta", "tomatosauce", "mushrooms"]
 @onready var tomatosauce_label = $"UI layer"/ingredientUI/tomatosaucetext
 @onready var mushrooms_label = $"UI layer"/ingredientUI/mushroomstext
 
+@onready var tomatosauce_timer = $"UI layer"/tomatosauce_timer
+@onready var tomatosauce = $ingredients/tomatosauce
 
 func _ready():
 	arrow.visible = false
@@ -26,6 +29,18 @@ func _physics_process(delta):
 	check_ingredients()
 	update_ingredient_UI()
 
+	if tomatosauce:
+		var time_left = tomatosauce.spoil_time - tomatosauce.timer
+		
+		tomatosauce_timer.visible = true
+		
+		if time_left > 0:
+			tomatosauce_timer.text = "Spoils in: " + str(round(time_left))
+		else:
+			tomatosauce_timer.text = "Tomato sauce spoiled"
+	else:
+		tomatosauce_timer.visible = false
+
 
 func pause():
 	if Input.is_action_just_pressed("pause"):
@@ -33,6 +48,10 @@ func pause():
 
 
 func check_ingredients():
+	if player.ingredient_failed:
+		arrow.visible = false
+		return
+
 	if player.collected_ingredients.size() >= required_ingredients.size():
 		arrow.visible = true
 	else:
@@ -63,3 +82,13 @@ func _on_button_pressed() -> void:
 	tutorialbutton.visible = false
 	tutorialpanel.visible = false
 	tutorialtext.visible = false
+	
+	start_ingredients()
+
+func start_ingredients():
+	if ingredients_started:
+		return
+	
+	ingredients_started = true
+	
+	tomatosauce.start_timer()

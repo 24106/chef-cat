@@ -108,12 +108,13 @@ sources/5 = SubResource("TileSetAtlasSource_rus8k")
 script = ExtResource("1_uwxec")
 
 [node name="player" parent="." unique_id=1720179057 instance=ExtResource("1_h23n6")]
-position = Vector2(8145, 675)
+position = Vector2(8459, 483)
 
 [node name="ingredients" type="Node2D" parent="." unique_id=235251802]
 
 [node name="icecream" parent="ingredients" unique_id=1530174558 instance=ExtResource("3_p6vls")]
 position = Vector2(8137, 662)
+spoil_time = 16.0
 
 [node name="chocolatesauce" parent="ingredients" unique_id=510157130 instance=ExtResource("4_wae8j")]
 position = Vector2(8477, 419)
@@ -202,6 +203,12 @@ position = Vector2(883, 3529)
 
 [node name="UI layer" type="CanvasLayer" parent="." unique_id=1094227771]
 
+[node name="icecream_timer" type="Label" parent="UI layer" unique_id=207326132]
+offset_left = 371.0
+offset_top = 109.0
+offset_right = 411.0
+offset_bottom = 132.0
+
 [node name="Label" type="Label" parent="UI layer" unique_id=2094513593]
 offset_left = 19.0
 offset_top = 11.0
@@ -233,18 +240,18 @@ scale = Vector2(0.08465574, 0.08465574)
 texture = ExtResource("12_p3r0x")
 
 [node name="strawberriestext" type="Label" parent="UI layer/ingredientUI" unique_id=52975632]
-offset_left = 602.0
-offset_top = 75.0
-offset_right = 734.0
-offset_bottom = 98.0
-text = "strawberries - no"
+offset_left = 623.0
+offset_top = 77.0
+offset_right = 755.0
+offset_bottom = 100.0
+text = "Strawberries"
 
 [node name="chocolatesaucetext" type="Label" parent="UI layer/ingredientUI" unique_id=1040221645]
-offset_left = 471.0
-offset_top = 36.0
-offset_right = 628.0
-offset_bottom = 59.0
-text = "chocolate sauce - no"
+offset_left = 490.0
+offset_top = 35.0
+offset_right = 647.0
+offset_bottom = 58.0
+text = "Chocolate sauce"
 
 [node name="chocolatesauce" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=868457225]
 position = Vector2(546, 84)
@@ -252,11 +259,11 @@ scale = Vector2(0.11627769, 0.11627769)
 texture = ExtResource("11_q2dsb")
 
 [node name="icecreamtext" type="Label" parent="UI layer/ingredientUI" unique_id=2118853740]
-offset_left = 394.0
-offset_top = 80.0
-offset_right = 502.0
-offset_bottom = 103.0
-text = "ice cream - no"
+offset_left = 406.0
+offset_top = 79.0
+offset_right = 514.0
+offset_bottom = 102.0
+text = "Ice cream"
 
 [node name="icecream" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=478354903]
 position = Vector2(442, 56)

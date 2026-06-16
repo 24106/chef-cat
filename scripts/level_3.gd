@@ -2,6 +2,8 @@ extends Node2D
 
 var required_ingredients = ["icecream", "chocolatesauce", "strawberries"]
 
+var ingredients_started = false
+
 @onready var arrow = $"UI layer"/arrow
 @onready var player = $player
 
@@ -13,18 +15,37 @@ var required_ingredients = ["icecream", "chocolatesauce", "strawberries"]
 @onready var chocolatesauce_label = $"UI layer"/ingredientUI/chocolatesaucetext
 @onready var strawberries_label = $"UI layer"/ingredientUI/strawberriestext
 
+@onready var icecream_timer = $"UI layer"/icecream_timer
+@onready var icecream = $ingredients/icecream
+
 
 func _ready():
 	arrow.visible = false
+	
 	tutorialbutton.visible = true
 	tutorialpanel.visible = true
 	tutorialtext.visible = true
+	
+	icecream_timer.visible = false
 
 
 func _physics_process(delta):
 	pause()
 	check_ingredients()
 	update_ingredient_UI()
+
+	if ingredients_started and icecream:
+		var time_left = icecream.spoil_time - icecream.timer
+		
+		icecream_timer.visible = true
+		
+		if time_left > 0:
+			icecream_timer.text = "Ice cream spoils in: " + str(round(time_left))
+		else:
+			icecream_timer.text = "Ice cream spoiled!"
+	
+	else:
+		icecream_timer.visible = false
 
 
 func pause():
@@ -33,6 +54,11 @@ func pause():
 
 
 func check_ingredients():
+
+	if player.ingredient_failed:
+		arrow.visible = false
+		return
+
 	if player.collected_ingredients.size() >= required_ingredients.size():
 		arrow.visible = true
 	else:
@@ -63,3 +89,17 @@ func _on_button_pressed() -> void:
 	tutorialbutton.visible = false
 	tutorialpanel.visible = false
 	tutorialtext.visible = false
+	
+	start_ingredients()
+
+
+func start_ingredients():
+
+	if ingredients_started:
+		return
+
+	ingredients_started = true
+
+
+	if icecream:
+		icecream.start_timer()

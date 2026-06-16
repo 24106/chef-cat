@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bsoq344miamrp"]
 
-[ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_bd6am"]
+[ext_resource type="Script" uid="uid://dbh537pxjwjg7" path="res://scripts/timed_ingredients.gd" id="1_bd6am"]
 [ext_resource type="Texture2D" uid="uid://dfmvo8eegc78l" path="res://assets/ice cream.png" id="2_bd6am"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kw16"]
