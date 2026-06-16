@@ -108,19 +108,19 @@ sources/5 = SubResource("TileSetAtlasSource_rus8k")
 script = ExtResource("1_uwxec")
 
 [node name="player" parent="." unique_id=1720179057 instance=ExtResource("1_h23n6")]
-position = Vector2(8459, 483)
+position = Vector2(149, 2665)
 
 [node name="ingredients" type="Node2D" parent="." unique_id=235251802]
 
 [node name="icecream" parent="ingredients" unique_id=1530174558 instance=ExtResource("3_p6vls")]
-position = Vector2(8137, 662)
+position = Vector2(2611, 3045)
 spoil_time = 16.0
 
 [node name="chocolatesauce" parent="ingredients" unique_id=510157130 instance=ExtResource("4_wae8j")]
-position = Vector2(8477, 419)
+position = Vector2(4637, 3113)
 
 [node name="strawberries" parent="ingredients" unique_id=1537495012 instance=ExtResource("5_ha73p")]
-position = Vector2(8045, 138)
+position = Vector2(8138, 2056)
 
 [node name="l3_kitchendoor" parent="." unique_id=1353888535 instance=ExtResource("6_ha73p")]
 position = Vector2(8721, -294)
@@ -215,7 +215,7 @@ offset_top = 11.0
 offset_right = 145.0
 offset_bottom = 60.0
 text = "press esc to
-pause gameplay"
+go to the main menu"
 
 [node name="arrow" type="Label" parent="UI layer" unique_id=1970895278]
 visible = false

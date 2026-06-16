@@ -29,7 +29,6 @@ func _process(delta):
 
 func spoil():
 	spoiled = true
-	print(ingredient_name, " spoiled!")
 
 func start_timer():
 	timer_started = true
