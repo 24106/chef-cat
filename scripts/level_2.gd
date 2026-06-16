@@ -18,7 +18,7 @@ func _physics_process(delta):
 
 func pause():
 	if Input.is_action_just_pressed("pause"):
-		print("PAUSE :(")
+		get_tree().change_scene_to_file("res://scenes/pausemenu.tscn")
 
 
 func check_ingredients():
