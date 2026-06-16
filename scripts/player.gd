@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @onready var sprint_bar = $CanvasLayer/ProgressBar
-@onready var ingredient_ui = $UIlayer/ingredientUI
 
 var speed = 600
 var sprint_speed = 925
@@ -122,9 +121,3 @@ func add_ingredient(name):
 		collected_ingredients.append(name)
 		print("Collected:", name)
 		print("Inventory:", collected_ingredients)
-		update_ingredient_UI(name)
-
-func update_ingredient_UI(name):
-	match name:
-		"tomato":
-			ingredient_ui.get_node("tomatotext").text = "tomato - yes"

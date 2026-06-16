@@ -228,38 +228,40 @@ offset_right = 635.0
 offset_bottom = 32.0
 text = "ingredients to collect:"
 
-[node name="pasta" type="Sprite2D" parent="UI layer" unique_id=1518328438]
-position = Vector2(453, 58)
-scale = Vector2(0.11295185, 0.11295185)
-texture = ExtResource("10_172wr")
+[node name="ingredientUI" type="Node2D" parent="UI layer" unique_id=1911415561]
 
-[node name="pastatext" type="Label" parent="UI layer" unique_id=2060560613]
+[node name="pastatext" type="Label" parent="UI layer/ingredientUI" unique_id=2060560613]
 offset_left = 413.0
 offset_top = 77.0
 offset_right = 504.0
 offset_bottom = 100.0
 text = "pasta - no"
 
-[node name="tomatosauce" type="Sprite2D" parent="UI layer" unique_id=501031627]
-position = Vector2(535, 90.99999)
-scale = Vector2(0.022555502, 0.022555502)
-texture = ExtResource("11_g2hoc")
-
-[node name="tomatosaucetext" type="Label" parent="UI layer" unique_id=1917020200]
+[node name="tomatosaucetext" type="Label" parent="UI layer/ingredientUI" unique_id=1917020200]
 offset_left = 470.0
 offset_top = 39.0
 offset_right = 609.0
 offset_bottom = 62.0
 text = "tomato sauce - no"
 
-[node name="mushrooms" type="Sprite2D" parent="UI layer" unique_id=1286343747]
+[node name="mushroomstext" type="Label" parent="UI layer/ingredientUI" unique_id=2056967469]
+offset_left = 588.0
+offset_top = 76.0
+offset_right = 715.0
+offset_bottom = 99.0
+text = "mushrooms - no"
+
+[node name="pasta" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1518328438]
+position = Vector2(453, 58)
+scale = Vector2(0.11295185, 0.11295185)
+texture = ExtResource("10_172wr")
+
+[node name="tomatosauce" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=501031627]
+position = Vector2(535, 90.99999)
+scale = Vector2(0.022555502, 0.022555502)
+texture = ExtResource("11_g2hoc")
+
+[node name="mushrooms" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1286343747]
 position = Vector2(645, 60.000004)
 scale = Vector2(0.10681142, 0.10681142)
 texture = ExtResource("12_fldb1")
-
-[node name="mushroomstext" type="Label" parent="UI layer" unique_id=2056967469]
-offset_left = 588.0
-offset_top = 76.0
-offset_right = 700.0
-offset_bottom = 99.0
-text = "mushrooms - no"

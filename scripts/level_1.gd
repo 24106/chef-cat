@@ -5,6 +5,10 @@ var required_ingredients = ["lettuce", "tomato", "cucumber"]
 @onready var arrow = $UIlayer/arrow
 @onready var player = $player
 
+@onready var tomato_label = $UIlayer/ingredientUI/tomatotext
+@onready var lettuce_label = $UIlayer/ingredientUI/lettucetext
+@onready var cucumber_label = $UIlayer/ingredientUI/cucumbertext
+
 
 func _ready():
 	arrow.visible = false
@@ -12,8 +16,8 @@ func _ready():
 
 func _physics_process(delta):
 	pause()
-
 	check_ingredients()
+	update_ingredient_UI()
 
 
 func pause():
@@ -26,3 +30,23 @@ func check_ingredients():
 		arrow.visible = true
 	else:
 		arrow.visible = false
+
+
+func update_ingredient_UI():
+
+	if "tomato" in player.collected_ingredients:
+		tomato_label.text = "Tomato ✓"
+	else:
+		tomato_label.text = "Tomato"
+
+
+	if "lettuce" in player.collected_ingredients:
+		lettuce_label.text = "Lettuce ✓"
+	else:
+		lettuce_label.text = "Lettuce"
+
+
+	if "cucumber" in player.collected_ingredients:
+		cucumber_label.text = "Cucumber ✓"
+	else:
+		cucumber_label.text = "Cucumber"

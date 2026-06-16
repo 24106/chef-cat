@@ -1,9 +1,13 @@
 extends Node2D
 
-var required_ingredients = ["lettuce", "tomato", "cucumber"]
+var required_ingredients = ["icecream", "chocolatesauce", "strawberries"]
 
-@onready var arrow = $CanvasLayer/arrow
+@onready var arrow = $"UI layer"/arrow
 @onready var player = $player
+
+@onready var icecream_label = $"UI layer"/ingredientUI/icecreamtext
+@onready var chocolatesauce_label = $"UI layer"/ingredientUI/chocolatesaucetext
+@onready var strawberries_label = $"UI layer"/ingredientUI/strawberriestext
 
 
 func _ready():
@@ -12,8 +16,8 @@ func _ready():
 
 func _physics_process(delta):
 	pause()
-
 	check_ingredients()
+	update_ingredient_UI()
 
 
 func pause():
@@ -26,3 +30,23 @@ func check_ingredients():
 		arrow.visible = true
 	else:
 		arrow.visible = false
+
+
+func update_ingredient_UI():
+
+	if "icecream" in player.collected_ingredients:
+		icecream_label.text = "Ice cream ✓"
+	else:
+		icecream_label.text = "Ice cream"
+
+
+	if "chocolatesauce" in player.collected_ingredients:
+		chocolatesauce_label.text = "Chocolate sauce ✓"
+	else:
+		chocolatesauce_label.text = "Chocolate sauce"
+
+
+	if "strawberries" in player.collected_ingredients:
+		strawberries_label.text = "Strawberries ✓"
+	else:
+		strawberries_label.text = "Strawberries"

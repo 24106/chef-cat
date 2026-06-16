@@ -216,21 +216,6 @@ offset_right = 635.0
 offset_bottom = 32.0
 text = "ingredients to collect:"
 
-[node name="tomato" type="Sprite2D" parent="UIlayer" unique_id=1114774823]
-position = Vector2(455, 57)
-scale = Vector2(0.025903864, 0.025903864)
-texture = ExtResource("10_2y5yt")
-
-[node name="cucumber" type="Sprite2D" parent="UIlayer" unique_id=265576494]
-position = Vector2(539, 84)
-scale = Vector2(0.05605537, 0.05605537)
-texture = ExtResource("11_go7sj")
-
-[node name="lettuce" type="Sprite2D" parent="UIlayer" unique_id=480483326]
-position = Vector2(632, 54.000004)
-scale = Vector2(0.0444334, 0.0444334)
-texture = ExtResource("12_7gny6")
-
 [node name="ingredientUI" type="Node2D" parent="UIlayer" unique_id=2097303309]
 
 [node name="lettucetext" type="Label" parent="UIlayer/ingredientUI" unique_id=838118443]
@@ -238,18 +223,33 @@ offset_left = 588.0
 offset_top = 76.0
 offset_right = 700.0
 offset_bottom = 99.0
-text = "lettuce - no"
+text = "Lettuce"
 
 [node name="cucumbertext" type="Label" parent="UIlayer/ingredientUI" unique_id=202375115]
-offset_left = 486.0
-offset_top = 38.0
-offset_right = 598.0
-offset_bottom = 61.0
-text = "cucumber - no"
+offset_left = 502.0
+offset_top = 37.0
+offset_right = 614.0
+offset_bottom = 60.0
+text = "Cucumber"
 
 [node name="tomatotext" type="Label" parent="UIlayer/ingredientUI" unique_id=745242039]
-offset_left = 413.0
+offset_left = 436.0
 offset_top = 77.0
-offset_right = 504.0
+offset_right = 527.0
 offset_bottom = 100.0
-text = "tomato - no"
+text = "Tomato"
+
+[node name="tomato" type="Sprite2D" parent="UIlayer/ingredientUI" unique_id=1114774823]
+position = Vector2(466, 54.999996)
+scale = Vector2(0.025903864, 0.025903864)
+texture = ExtResource("10_2y5yt")
+
+[node name="cucumber" type="Sprite2D" parent="UIlayer/ingredientUI" unique_id=265576494]
+position = Vector2(539, 84)
+scale = Vector2(0.05605537, 0.05605537)
+texture = ExtResource("11_go7sj")
+
+[node name="lettuce" type="Sprite2D" parent="UIlayer/ingredientUI" unique_id=480483326]
+position = Vector2(618, 54)
+scale = Vector2(0.0444334, 0.0444334)
+texture = ExtResource("12_7gny6")
