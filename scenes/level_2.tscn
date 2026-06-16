@@ -117,6 +117,7 @@ position = Vector2(1625, 526)
 
 [node name="tomatosauce" parent="ingredients" unique_id=670717627 instance=ExtResource("4_ne2mo")]
 position = Vector2(6030, 2564)
+spoil_time = 30.0
 
 [node name="mushrooms" parent="ingredients" unique_id=229269615 instance=ExtResource("5_6cvei")]
 position = Vector2(6507, 812)
