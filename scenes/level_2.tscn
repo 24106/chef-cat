@@ -265,3 +265,43 @@ texture = ExtResource("11_g2hoc")
 position = Vector2(645, 60.000004)
 scale = Vector2(0.10681142, 0.10681142)
 texture = ExtResource("12_fldb1")
+
+[node name="tutorialpanel" type="Panel" parent="UI layer" unique_id=1980103915]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="UI layer/tutorialpanel" unique_id=1720515471]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 54.0
+offset_right = 965.0
+offset_bottom = 545.0
+text = "welcome to level 2 of chef cat
+
+your second dish to make is a main of pasta
+
+* you need to remember to keep the lid off when cooking the pasta during the dish making scene *
+
+you need to collect all these ingredients:
+ - pasta
+ - tomato sauce
+ - mushrooms
+
+controls:
+left/right movement - a/d keys or arrow keys
+jump - space, w key or up arrow
+sprint - shift
+pick up ingredients - left mouse button (LMB)
+enter the kitchen - right mouse button (RMB)
+
+make it through the obstacles, collect the ingredients, reach the kitchen and then make the dish!"
+
+[node name="Button" type="Button" parent="UI layer/tutorialpanel" unique_id=614710800]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 572.0
+offset_right = 643.0
+offset_bottom = 603.0
+text = "click here to start level 2"
+
+[connection signal="pressed" from="UI layer/tutorialpanel/Button" to="." method="_on_button_pressed"]

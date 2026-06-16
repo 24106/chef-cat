@@ -32,6 +32,5 @@ func try_collect(player):
 	collected = true
 	
 	player.add_ingredient(ingredient_name)
-	print("COLLECTED:", ingredient_name)
 
 	queue_free()

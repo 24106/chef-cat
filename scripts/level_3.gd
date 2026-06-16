@@ -5,6 +5,10 @@ var required_ingredients = ["icecream", "chocolatesauce", "strawberries"]
 @onready var arrow = $"UI layer"/arrow
 @onready var player = $player
 
+@onready var tutorialpanel = $"UI layer"/tutorialpanel
+@onready var tutorialtext = $"UI layer"/tutorialpanel/Label
+@onready var tutorialbutton = $"UI layer"/tutorialpanel/Button
+
 @onready var icecream_label = $"UI layer"/ingredientUI/icecreamtext
 @onready var chocolatesauce_label = $"UI layer"/ingredientUI/chocolatesaucetext
 @onready var strawberries_label = $"UI layer"/ingredientUI/strawberriestext
@@ -12,6 +16,9 @@ var required_ingredients = ["icecream", "chocolatesauce", "strawberries"]
 
 func _ready():
 	arrow.visible = false
+	tutorialbutton.visible = true
+	tutorialpanel.visible = true
+	tutorialtext.visible = true
 
 
 func _physics_process(delta):
@@ -50,3 +57,9 @@ func update_ingredient_UI():
 		strawberries_label.text = "Strawberries ✓"
 	else:
 		strawberries_label.text = "Strawberries"
+
+
+func _on_button_pressed() -> void:
+	tutorialbutton.visible = false
+	tutorialpanel.visible = false
+	tutorialtext.visible = false

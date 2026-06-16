@@ -119,5 +119,3 @@ func exit_slippery():
 func add_ingredient(name):
 	if name not in collected_ingredients:
 		collected_ingredients.append(name)
-		print("Collected:", name)
-		print("Inventory:", collected_ingredients)

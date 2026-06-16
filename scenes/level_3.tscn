@@ -262,3 +262,43 @@ text = "ice cream - no"
 position = Vector2(442, 56)
 scale = Vector2(0.05323795, 0.05323795)
 texture = ExtResource("10_ax3dk")
+
+[node name="tutorialpanel" type="Panel" parent="UI layer" unique_id=1203254563]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="UI layer/tutorialpanel" unique_id=1338180533]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 54.0
+offset_right = 965.0
+offset_bottom = 545.0
+text = "welcome to level 3 (the last level) of chef cat
+
+your third and final dish to make is an ice cream sundae dessert
+
+* you need to remember to dip the ice cream scooper in water during the dish making scene *
+
+you need to collect all these ingredients:
+ - ice cream
+ - chocolate sauce
+ - strawberries
+
+controls:
+left/right movement - a/d keys or arrow keys
+jump - space, w key or up arrow
+sprint - shift
+pick up ingredients - left mouse button (LMB)
+enter the kitchen - right mouse button (RMB)
+
+make it through the obstacles, collect the ingredients, reach the kitchen and then make the dish!"
+
+[node name="Button" type="Button" parent="UI layer/tutorialpanel" unique_id=788555099]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 572.0
+offset_right = 643.0
+offset_bottom = 603.0
+text = "click here to start level 3"
+
+[connection signal="pressed" from="UI layer/tutorialpanel/Button" to="." method="_on_button_pressed"]

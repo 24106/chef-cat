@@ -253,3 +253,43 @@ texture = ExtResource("11_go7sj")
 position = Vector2(618, 54)
 scale = Vector2(0.0444334, 0.0444334)
 texture = ExtResource("12_7gny6")
+
+[node name="tutorialpanel" type="Panel" parent="UIlayer" unique_id=808669699]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="UIlayer/tutorialpanel" unique_id=1129794993]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 54.0
+offset_right = 965.0
+offset_bottom = 545.0
+text = "welcome to level 1 of chef cat
+
+your first dish to make is a starter salad
+
+* you need to remember to add the lettuce to the salad first when making the dish at the end *
+
+you need to collect all these ingredients:
+ - lettuce
+ - tomato
+ - cucumber
+
+controls:
+left/right movement - a/d keys or arrow keys
+jump - space, w key or up arrow
+sprint - shift
+pick up ingredients - left mouse button (LMB)
+enter the kitchen - right mouse button (RMB)
+
+make it through the obstacles, collect the ingredients, reach the kitchen and then make the dish!"
+
+[node name="Button" type="Button" parent="UIlayer/tutorialpanel" unique_id=1825351150]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 572.0
+offset_right = 643.0
+offset_bottom = 603.0
+text = "click here to start level 1"
+
+[connection signal="pressed" from="UIlayer/tutorialpanel/Button" to="." method="_on_button_pressed"]

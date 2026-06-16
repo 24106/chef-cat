@@ -5,6 +5,10 @@ var required_ingredients = ["lettuce", "tomato", "cucumber"]
 @onready var arrow = $UIlayer/arrow
 @onready var player = $player
 
+@onready var tutorialpanel = $UIlayer/tutorialpanel
+@onready var tutorialtext = $UIlayer/tutorialpanel/Label
+@onready var tutorialbutton = $UIlayer/tutorialpanel/Button
+
 @onready var tomato_label = $UIlayer/ingredientUI/tomatotext
 @onready var lettuce_label = $UIlayer/ingredientUI/lettucetext
 @onready var cucumber_label = $UIlayer/ingredientUI/cucumbertext
@@ -12,6 +16,9 @@ var required_ingredients = ["lettuce", "tomato", "cucumber"]
 
 func _ready():
 	arrow.visible = false
+	tutorialbutton.visible = true
+	tutorialpanel.visible = true
+	tutorialtext.visible = true
 
 
 func _physics_process(delta):
@@ -50,3 +57,9 @@ func update_ingredient_UI():
 		cucumber_label.text = "Cucumber ✓"
 	else:
 		cucumber_label.text = "Cucumber"
+
+
+func _on_button_pressed() -> void:
+	tutorialbutton.visible = false
+	tutorialpanel.visible = false
+	tutorialtext.visible = false

@@ -35,12 +35,8 @@ func _input(event):
 
 func enter_kitchen():
 	if player:
-		print("Player reached kitchen")
-		print("Ingredients:", player.collected_ingredients)
 
 		if player.collected_ingredients.size() >= 3:
-			print("WIN")
 			get_tree().change_scene_to_file("res://scenes/level_2_win_screen.tscn")
 		else:
-			print("FAIL")
 			get_tree().change_scene_to_file("res://scenes/level_2_lose_screen.tscn")
