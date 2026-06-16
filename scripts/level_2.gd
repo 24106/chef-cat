@@ -19,9 +19,18 @@ var ingredients_started = false
 
 func _ready():
 	arrow.visible = false
+
 	tutorialbutton.visible = true
 	tutorialpanel.visible = true
 	tutorialtext.visible = true
+
+	load_saved_progress()
+
+	if PauseManager.tutorial_completed:
+		tutorialpanel.visible = false
+		tutorialbutton.visible = false
+		tutorialtext.visible = false
+		start_ingredients()
 
 
 func _physics_process(delta):
@@ -44,6 +53,16 @@ func _physics_process(delta):
 
 func pause():
 	if Input.is_action_just_pressed("pause"):
+
+		PauseManager.current_level = "res://scenes/level_2.tscn"
+
+		PauseManager.player_position = player.global_position
+		PauseManager.collected_ingredients = player.collected_ingredients.duplicate()
+		PauseManager.ingredient_failed = player.ingredient_failed
+
+		if tomatosauce:
+			PauseManager.tomatosauce_time = tomatosauce.timer
+
 		get_tree().change_scene_to_file("res://scenes/pausemenu.tscn")
 
 
@@ -82,13 +101,25 @@ func _on_button_pressed() -> void:
 	tutorialbutton.visible = false
 	tutorialpanel.visible = false
 	tutorialtext.visible = false
-	
+
 	start_ingredients()
 
 func start_ingredients():
 	if ingredients_started:
 		return
-	
+
 	ingredients_started = true
-	
+
+	PauseManager.tutorial_completed = true
+
+	tomatosauce.can_run = true
 	tomatosauce.start_timer()
+
+func load_saved_progress():
+	player.collected_ingredients = PauseManager.collected_ingredients.duplicate()
+	player.ingredient_failed = PauseManager.ingredient_failed
+
+	if tomatosauce:
+		tomatosauce.timer = PauseManager.tomatosauce_time
+	
+	
