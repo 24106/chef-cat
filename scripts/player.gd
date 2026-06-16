@@ -36,6 +36,10 @@ var ice_input_delay = 0
 var collected_ingredients = []
 var ingredient_failed = false
 
+func _process(delta):
+	if Input.is_action_just_pressed("pause"):
+		get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")
+
 func _physics_process(delta: float) -> void:
 	if slippery:
 		ice_input_delay += delta

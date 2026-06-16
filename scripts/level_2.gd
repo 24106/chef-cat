@@ -17,53 +17,52 @@ var ingredients_started = false
 @onready var tomatosauce_timer = $"UI layer"/tomatosauce_timer
 @onready var tomatosauce = $ingredients/tomatosauce
 
+
 func _ready():
 	arrow.visible = false
+	show_tutorial()
 
-	tutorialbutton.visible = true
+
+func show_tutorial():
 	tutorialpanel.visible = true
+	tutorialbutton.visible = true
 	tutorialtext.visible = true
-
-	load_saved_progress()
-
-	if PauseManager.tutorial_completed:
-		tutorialpanel.visible = false
-		tutorialbutton.visible = false
-		tutorialtext.visible = false
-		start_ingredients()
 
 
 func _physics_process(delta):
-	pause()
 	check_ingredients()
 	update_ingredient_UI()
+	update_timer()
 
-	if tomatosauce:
-		var time_left = tomatosauce.spoil_time - tomatosauce.timer
-		
-		tomatosauce_timer.visible = true
-		
-		if time_left > 0:
-			tomatosauce_timer.text = "Spoils in: " + str(round(time_left))
-		else:
-			tomatosauce_timer.text = "Tomato sauce spoiled"
-	else:
+
+func update_timer():
+	if tomatosauce == null:
 		tomatosauce_timer.visible = false
+		return
+
+	tomatosauce_timer.visible = true
+
+	var time_left = tomatosauce.spoil_time - tomatosauce.timer
+
+	if time_left > 0:
+		tomatosauce_timer.text = "Spoils in: " + str(round(time_left))
+	else:
+		tomatosauce_timer.text = "Tomato sauce spoiled"
+
+func _on_button_pressed() -> void:
+	tutorialpanel.visible = false
+	tutorialbutton.visible = false
+	tutorialtext.visible = false
+	start_ingredients()
 
 
-func pause():
-	if Input.is_action_just_pressed("pause"):
+func start_ingredients():
+	if ingredients_started:
+		return
 
-		PauseManager.current_level = "res://scenes/level_2.tscn"
-
-		PauseManager.player_position = player.global_position
-		PauseManager.collected_ingredients = player.collected_ingredients.duplicate()
-		PauseManager.ingredient_failed = player.ingredient_failed
-
-		if tomatosauce:
-			PauseManager.tomatosauce_time = tomatosauce.timer
-
-		get_tree().change_scene_to_file("res://scenes/pausemenu.tscn")
+	ingredients_started = true
+	if tomatosauce:
+		tomatosauce.start_timer()
 
 
 func check_ingredients():
@@ -71,55 +70,10 @@ func check_ingredients():
 		arrow.visible = false
 		return
 
-	if player.collected_ingredients.size() >= required_ingredients.size():
-		arrow.visible = true
-	else:
-		arrow.visible = false
+	arrow.visible = player.collected_ingredients.size() >= required_ingredients.size()
 
 
 func update_ingredient_UI():
-
-	if "pasta" in player.collected_ingredients:
-		pasta_label.text = "Pasta ✓"
-	else:
-		pasta_label.text = "Pasta"
-
-
-	if "tomatosauce" in player.collected_ingredients:
-		tomatosauce_label.text = "Tomato sauce ✓"
-	else:
-		tomatosauce_label.text = "Tomato sauce"
-
-
-	if "mushrooms" in player.collected_ingredients:
-		mushrooms_label.text = "Mushrooms ✓"
-	else:
-		mushrooms_label.text = "Mushrooms"
-
-
-func _on_button_pressed() -> void:
-	tutorialbutton.visible = false
-	tutorialpanel.visible = false
-	tutorialtext.visible = false
-
-	start_ingredients()
-
-func start_ingredients():
-	if ingredients_started:
-		return
-
-	ingredients_started = true
-
-	PauseManager.tutorial_completed = true
-
-	tomatosauce.can_run = true
-	tomatosauce.start_timer()
-
-func load_saved_progress():
-	player.collected_ingredients = PauseManager.collected_ingredients.duplicate()
-	player.ingredient_failed = PauseManager.ingredient_failed
-
-	if tomatosauce:
-		tomatosauce.timer = PauseManager.tomatosauce_time
-	
-	
+	pasta_label.text = "Pasta ✓" if "pasta" in player.collected_ingredients else "Pasta"
+	tomatosauce_label.text = "Tomato sauce ✓" if "tomatosauce" in player.collected_ingredients else "Tomato sauce"
+	mushrooms_label.text = "Mushrooms ✓" if "mushrooms" in player.collected_ingredients else "Mushrooms"
