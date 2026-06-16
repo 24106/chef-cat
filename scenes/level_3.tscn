@@ -215,7 +215,7 @@ offset_top = 11.0
 offset_right = 145.0
 offset_bottom = 60.0
 text = "press esc to
-return to the main menu"
+pause gameplay"
 
 [node name="arrow" type="Label" parent="UI layer" unique_id=1970895278]
 visible = false

@@ -1,6 +1,7 @@
 extends Node2D
 
 var required_ingredients = ["icecream", "chocolatesauce", "strawberries"]
+
 var ingredients_started = false
 
 @onready var arrow = $"UI layer"/arrow
@@ -20,62 +21,85 @@ var ingredients_started = false
 
 func _ready():
 	arrow.visible = false
-	show_tutorial()
-
-
-func show_tutorial():
-	tutorialpanel.visible = true
+	
 	tutorialbutton.visible = true
+	tutorialpanel.visible = true
 	tutorialtext.visible = true
+	
+	icecream_timer.visible = false
 
 
 func _physics_process(delta):
+	pause()
 	check_ingredients()
 	update_ingredient_UI()
-	update_timer()
 
-
-
-
-func update_timer():
-	if icecream == null:
-		icecream_timer.visible = false
-		return
-
-	icecream_timer.visible = true
-
-	var time_left = icecream.spoil_time - icecream.timer
-
-	if time_left > 0:
-		icecream_timer.text = "Ice cream spoils in: " + str(round(time_left))
+	if ingredients_started and icecream:
+		var time_left = icecream.spoil_time - icecream.timer
+		
+		icecream_timer.visible = true
+		
+		if time_left > 0:
+			icecream_timer.text = "Ice cream spoils in: " + str(round(time_left))
+		else:
+			icecream_timer.text = "Ice cream spoiled!"
+	
 	else:
-		icecream_timer.text = "Ice cream spoiled"
-
-func _on_button_pressed() -> void:
-	tutorialpanel.visible = false
-	tutorialbutton.visible = false
-	tutorialtext.visible = false
-	start_ingredients()
+		icecream_timer.visible = false
 
 
-func start_ingredients():
-	if ingredients_started:
-		return
-
-	ingredients_started = true
-	if icecream:
-		icecream.start_timer()
+func pause():
+	if Input.is_action_just_pressed("pause"):
+		get_tree().change_scene_to_file("res://scenes/pausemenu.tscn")
 
 
 func check_ingredients():
+
 	if player.ingredient_failed:
 		arrow.visible = false
 		return
 
-	arrow.visible = player.collected_ingredients.size() >= required_ingredients.size()
+	if player.collected_ingredients.size() >= required_ingredients.size():
+		arrow.visible = true
+	else:
+		arrow.visible = false
 
 
 func update_ingredient_UI():
-	icecream_label.text = "Ice cream ✓" if "icecream" in player.collected_ingredients else "Ice cream"
-	chocolatesauce_label.text = "Chocolate sauce ✓" if "chocolatesauce" in player.collected_ingredients else "Chocolate sauce"
-	strawberries_label.text = "Strawberries ✓" if "strawberries" in player.collected_ingredients else "Strawberries"
+
+	if "icecream" in player.collected_ingredients:
+		icecream_label.text = "Ice cream ✓"
+	else:
+		icecream_label.text = "Ice cream"
+
+
+	if "chocolatesauce" in player.collected_ingredients:
+		chocolatesauce_label.text = "Chocolate sauce ✓"
+	else:
+		chocolatesauce_label.text = "Chocolate sauce"
+
+
+	if "strawberries" in player.collected_ingredients:
+		strawberries_label.text = "Strawberries ✓"
+	else:
+		strawberries_label.text = "Strawberries"
+
+
+func _on_button_pressed() -> void:
+	tutorialbutton.visible = false
+	tutorialpanel.visible = false
+	tutorialtext.visible = false
+	
+	start_ingredients()
+
+
+func start_ingredients():
+
+	if ingredients_started:
+		return
+
+	ingredients_started = true
+
+
+	if icecream:
+		icecream.start_timer()
