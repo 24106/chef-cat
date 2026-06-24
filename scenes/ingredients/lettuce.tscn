@@ -1,22 +1,24 @@
 [gd_scene format=3 uid="uid://j2fad4sqkyxh"]
 
 [ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_qawv3"]
-[ext_resource type="Texture2D" uid="uid://cm340awfohp55" path="res://assets/lettuce.webp" id="2_qawv3"]
+[ext_resource type="Texture2D" uid="uid://i3qy5hq3oekd" path="res://assets/ingredients/lettuce art.png" id="2_qawv3"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ssx0k"]
-radius = 39.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1igxh"]
+radius = 27.0
+height = 80.0
 
 [node name="lettuce" type="Area2D" unique_id=1530174558]
 script = ExtResource("1_qawv3")
 ingredient_name = "lettuce"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
-scale = Vector2(0.08045976, 0.08045976)
+position = Vector2(11.500005, 20.500004)
+scale = Vector2(2.3799996, 2.3799996)
 texture = ExtResource("2_qawv3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
-position = Vector2(-2, 4)
-shape = SubResource("CircleShape2D_ssx0k")
+position = Vector2(-1, 4)
+shape = SubResource("CapsuleShape2D_1igxh")
 
 [node name="Label" type="Label" parent="." unique_id=463640050]
 visible = false

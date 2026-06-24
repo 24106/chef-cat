@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://revoo1rekm4d"
-path="res://.godot/imported/pasta.png-89ccbf0b120e62333e8a98526a6ddfb9.ctex"
+uid="uid://bw8rfuhaq8fll"
+path="res://.godot/imported/tomato.png-bc239f284bc88d0c5ee04c91ec538d1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pasta.png"
-dest_files=["res://.godot/imported/pasta.png-89ccbf0b120e62333e8a98526a6ddfb9.ctex"]
+source_file="res://assets/ingredients/tomato.png"
+dest_files=["res://.godot/imported/tomato.png-bc239f284bc88d0c5ee04c91ec538d1d.ctex"]
 
 [params]
 

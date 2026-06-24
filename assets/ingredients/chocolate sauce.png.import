@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw8rfuhaq8fll"
-path="res://.godot/imported/tomato.png-0703326d65793356cd32fc5ba3f82ec8.ctex"
+uid="uid://b8vhtlyuxnagx"
+path="res://.godot/imported/chocolate sauce.png-83ca132064625b9f4fe121bf27c95354.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tomato.png"
-dest_files=["res://.godot/imported/tomato.png-0703326d65793356cd32fc5ba3f82ec8.ctex"]
+source_file="res://assets/ingredients/chocolate sauce.png"
+dest_files=["res://.godot/imported/chocolate sauce.png-83ca132064625b9f4fe121bf27c95354.ctex"]
 
 [params]
 

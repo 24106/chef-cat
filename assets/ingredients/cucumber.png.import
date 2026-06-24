@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvvxf0ktf1bo5"
-path="res://.godot/imported/sundae.webp-663041e9912af87e903a38c066e0d9a5.ctex"
+uid="uid://d2ggtuva8btml"
+path="res://.godot/imported/cucumber.png-c7afa6adbf7198e80ba46d8ef8684872.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sundae.webp"
-dest_files=["res://.godot/imported/sundae.webp-663041e9912af87e903a38c066e0d9a5.ctex"]
+source_file="res://assets/ingredients/cucumber.png"
+dest_files=["res://.godot/imported/cucumber.png-c7afa6adbf7198e80ba46d8ef8684872.ctex"]
 
 [params]
 

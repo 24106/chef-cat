@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8vhtlyuxnagx"
-path="res://.godot/imported/chocolate sauce.png-10c60269ce159ec7e2e1a58c86035487.ctex"
+uid="uid://cvvxf0ktf1bo5"
+path="res://.godot/imported/sundae.webp-a0a8864200359d59322d8c70276a13ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chocolate sauce.png"
-dest_files=["res://.godot/imported/chocolate sauce.png-10c60269ce159ec7e2e1a58c86035487.ctex"]
+source_file="res://assets/ingredients/sundae.webp"
+dest_files=["res://.godot/imported/sundae.webp-a0a8864200359d59322d8c70276a13ff.ctex"]
 
 [params]
 

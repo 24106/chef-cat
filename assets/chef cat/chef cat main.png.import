@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfmvo8eegc78l"
-path="res://.godot/imported/ice cream.png-7b38579efc124570a35faf66e27ab4e8.ctex"
+uid="uid://bf0nc1e2g6d8q"
+path="res://.godot/imported/chef cat main.png-4da746dfa847d15762d948dac1a468b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ice cream.png"
-dest_files=["res://.godot/imported/ice cream.png-7b38579efc124570a35faf66e27ab4e8.ctex"]
+source_file="res://assets/chef cat/chef cat main.png"
+dest_files=["res://.godot/imported/chef cat main.png-4da746dfa847d15762d948dac1a468b2.ctex"]
 
 [params]
 

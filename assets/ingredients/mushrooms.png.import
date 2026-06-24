@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cauwk4rhfu2tv"
-path="res://.godot/imported/basic tilemap.png-d9c20c944521659e54c9d0116d3737cc.ctex"
+uid="uid://gdv5unlqygdt"
+path="res://.godot/imported/mushrooms.png-51ed8d750ef4592d7eb0751299acf418.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/basic tilemap.png"
-dest_files=["res://.godot/imported/basic tilemap.png-d9c20c944521659e54c9d0116d3737cc.ctex"]
+source_file="res://assets/ingredients/mushrooms.png"
+dest_files=["res://.godot/imported/mushrooms.png-51ed8d750ef4592d7eb0751299acf418.ctex"]
 
 [params]
 

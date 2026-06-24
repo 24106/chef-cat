@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/player.tscn" id="1_014kd"]
 [ext_resource type="Script" uid="uid://blkgjuiyo78sy" path="res://scripts/level_1.gd" id="1_rus8k"]
-[ext_resource type="Texture2D" uid="uid://cauwk4rhfu2tv" path="res://assets/basic tilemap.png" id="2_bswci"]
+[ext_resource type="Texture2D" uid="uid://cauwk4rhfu2tv" path="res://assets/terrain/basic tilemap.png" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/slipperyfloor.tscn" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bvgwdhjyvsyoh" path="res://scenes/ingredients/cucumber.tscn" id="4_15mv3"]
 [ext_resource type="PackedScene" uid="uid://dnw2ahjo76wht" path="res://scenes/movingobstacle.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://j2fad4sqkyxh" path="res://scenes/ingredients/lettuce.tscn" id="5_e3sih"]
 [ext_resource type="PackedScene" uid="uid://c2bon1ck2j3s3" path="res://scenes/ingredients/tomato.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://be8klt5jxnt3s" path="res://scenes/l1_kitchendoor.tscn" id="7_pa8r4"]
-[ext_resource type="Texture2D" uid="uid://bw8rfuhaq8fll" path="res://assets/tomato.png" id="10_2y5yt"]
-[ext_resource type="Texture2D" uid="uid://d2ggtuva8btml" path="res://assets/cucumber.png" id="11_go7sj"]
-[ext_resource type="Texture2D" uid="uid://cm340awfohp55" path="res://assets/lettuce.webp" id="12_7gny6"]
+[ext_resource type="Texture2D" uid="uid://bw8rfuhaq8fll" path="res://assets/ingredients/tomato.png" id="10_2y5yt"]
+[ext_resource type="Texture2D" uid="uid://d2ggtuva8btml" path="res://assets/ingredients/cucumber.png" id="11_go7sj"]
+[ext_resource type="Texture2D" uid="uid://i3qy5hq3oekd" path="res://assets/ingredients/lettuce art.png" id="12_go7sj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("2_bswci")
@@ -250,9 +250,9 @@ scale = Vector2(0.05605537, 0.05605537)
 texture = ExtResource("11_go7sj")
 
 [node name="lettuce" type="Sprite2D" parent="UIlayer/ingredientUI" unique_id=480483326]
-position = Vector2(618, 54)
-scale = Vector2(0.0444334, 0.0444334)
-texture = ExtResource("12_7gny6")
+position = Vector2(626.44464, 65.44458)
+scale = Vector2(1.2622166, 1.2622166)
+texture = ExtResource("12_go7sj")
 
 [node name="tutorialpanel" type="Panel" parent="UIlayer" unique_id=808669699]
 offset_right = 1152.0

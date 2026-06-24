@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0a6i6bofe7cd"
-path="res://.godot/imported/strawberries.png-b6585fc5ac75b582a68516cc63e994f3.ctex"
+uid="uid://c2nccuh42krbt"
+path="res://.godot/imported/tomato sauce.png-3c18ff5a6b62be1e02bf0d6fe5c82b13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/strawberries.png"
-dest_files=["res://.godot/imported/strawberries.png-b6585fc5ac75b582a68516cc63e994f3.ctex"]
+source_file="res://assets/ingredients/tomato sauce.png"
+dest_files=["res://.godot/imported/tomato sauce.png-3c18ff5a6b62be1e02bf0d6fe5c82b13.ctex"]
 
 [params]
 
