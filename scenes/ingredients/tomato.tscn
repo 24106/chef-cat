@@ -1,24 +1,24 @@
-[gd_scene format=3 uid="uid://c2bon1ck2j3s3"]
+[gd_scene load_steps=4 format=3 uid="uid://c2bon1ck2j3s3"]
 
 [ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_rcex7"]
-[ext_resource type="Texture2D" uid="uid://bw8rfuhaq8fll" path="res://assets/tomato.png" id="2_ssx0k"]
+[ext_resource type="Texture2D" uid="uid://cyeg5aronxsnu" path="res://assets/ingredients/tomato art.png" id="2_m0jnx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ssx0k"]
-radius = 32.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00c75"]
+size = Vector2(82, 51)
 
-[node name="tomato" type="Area2D" unique_id=1530174558]
+[node name="tomato" type="Area2D"]
 script = ExtResource("1_rcex7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
-position = Vector2(2.3841858e-07, 2.3841858e-07)
-scale = Vector2(0.033509713, 0.033509713)
-texture = ExtResource("2_ssx0k")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.500002, 19.500002)
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("2_m0jnx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
-position = Vector2(-1, 2)
-shape = SubResource("CircleShape2D_ssx0k")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 2.5)
+shape = SubResource("RectangleShape2D_00c75")
 
-[node name="Label" type="Label" parent="." unique_id=463640050]
+[node name="Label" type="Label" parent="."]
 visible = false
 offset_left = -57.0
 offset_top = -55.0
