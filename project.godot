@@ -70,4 +70,4 @@ mouse_right={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.1768, 0.25024006, 0.34, 0.7058824)
+environment/defaults/default_clear_color=Color(0.7647059, 0.79607844, 0.42745098, 1)
