@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://map"]
+
+[ext_resource type="PackedScene" uid="uid://cBs0bmbHBSc" id="0_id" path="Windows_0.tscn"]
+[ext_resource type="PackedScene" uid="uid://cLuhh49BhS_" id="1_id" path="Banner_1.tscn"]
+[ext_resource type="PackedScene" uid="uid://cmVTecZ0VQN" id="2_id" path="Platform_small_2.tscn"]
+[ext_resource type="PackedScene" uid="uid://cw8zCBy11S_" id="3_id" path="Platforms_large_3.tscn"]
+[ext_resource type="PackedScene" uid="uid://c7TP89wvVQH" id="4_id" path="Walls_4.tscn"]
+[ext_resource type="PackedScene" uid="uid://cL57cjUavQB" id="5_id" path="Background_walls_5.tscn"]
+
+[node name="map" type="Node2D"]
+[node name="Background_walls_5" parent="." instance=ExtResource("5_id")]
+[node name="Walls_4" parent="." instance=ExtResource("4_id")]
+[node name="Platforms_large_3" parent="." instance=ExtResource("3_id")]
+[node name="Platform_small_2" parent="." instance=ExtResource("2_id")]
+[node name="Banner_1" parent="." instance=ExtResource("1_id")]
+[node name="Windows_0" parent="." instance=ExtResource("0_id")]
