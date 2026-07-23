@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cvk6xartpje07"]
+[gd_scene format=4 uid="uid://cvk6xartpje07"]
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/player.tscn" id="1_h23n6"]
 [ext_resource type="Script" uid="uid://bmjt6hy5mg1lt" path="res://scripts/level_3.gd" id="1_uwxec"]
@@ -160,116 +160,116 @@ texture = ExtResource("8_q2dsb")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_p3r0x")
 
-[node name="level3" type="Node2D"]
+[node name="level3" type="Node2D" unique_id=622841055]
 script = ExtResource("1_uwxec")
 
-[node name="player" parent="." instance=ExtResource("1_h23n6")]
+[node name="player" parent="." unique_id=2104283613 instance=ExtResource("1_h23n6")]
 position = Vector2(94, 2611)
 
-[node name="ingredients" type="Node2D" parent="."]
+[node name="ingredients" type="Node2D" parent="." unique_id=1527936162]
 
-[node name="icecream" parent="ingredients" instance=ExtResource("3_p6vls")]
+[node name="icecream" parent="ingredients" unique_id=34839954 instance=ExtResource("3_p6vls")]
 position = Vector2(2598, 3006)
 spoil_time = 15.0
 
-[node name="chocolatesauce" parent="ingredients" instance=ExtResource("4_wae8j")]
-position = Vector2(4654, 3270)
+[node name="chocolatesauce" parent="ingredients" unique_id=565568331 instance=ExtResource("4_wae8j")]
+position = Vector2(4656, 3323)
 
-[node name="strawberries" parent="ingredients" instance=ExtResource("5_ha73p")]
-position = Vector2(8127, 2026)
+[node name="strawberries" parent="ingredients" unique_id=1730986 instance=ExtResource("5_ha73p")]
+position = Vector2(8125, 2028)
 
-[node name="l3_kitchendoor" parent="." instance=ExtResource("6_ha73p")]
+[node name="l3_kitchendoor" parent="." unique_id=334444491 instance=ExtResource("6_ha73p")]
 position = Vector2(8721, -294)
 
-[node name="indoor terrain" type="TileMapLayer" parent="."]
+[node name="indoor terrain" type="TileMapLayer" parent="." unique_id=372884141]
 scale = Vector2(4.8, 4.8)
 tile_map_data = PackedByteArray("AAD9/x8AAAACAAYAAAD9/yEAAAACAAYAAAD9/yMAAAACAAYAAAD9/yUAAAACAAYAAAD9/yYAAAACAAYAAAABACcAAAAKAAQAAAABACkAAAAOAAQAAAD//ysAAAAMAAQAAAD//ykAAAAIAAYAAAD//ycAAAAIAAQAAAD//ywAAAAMAAQAAAABAC4AAAAIAAQAAAD//y4AAAAGAAYAAAADAC4AAAAKAAQAAAADADAAAAAMAAQAAAADADIAAAAMAAQAAAADADQAAAAMAAQAAAADADYAAAAMAAQAAAADADgAAAAMAAQAAAADADkAAAAMAAQAAAADADsAAAAGAAYAAAAFADsAAAAIAAQAAAAGADsAAAAIAAQAAAAIADsAAAAMAAYAAAAIADkAAAAGAAQAAAAIADIAAAAGAAQAAAAIADQAAAAGAAQAAAAIADYAAAAGAAQAAAAIADgAAAAGAAQAAAABADAAAAACAAYAAAD//zAAAAACAAYAAAD//zIAAAACAAYAAAABADIAAAACAAYAAAABADQAAAACAAYAAAD//zQAAAACAAYAAAD//zYAAAACAAYAAAABADYAAAACAAYAAAABADgAAAACAAYAAAD//zgAAAACAAYAAAD//zoAAAACAAYAAAABADoAAAACAAYAAAABADsAAAACAAYAAAD//zsAAAACAAYAAAAKADsAAAACAAYAAAAIACsAAAAMAAIAAAAIADEAAAAEAAQAAAAKAC8AAAAEAAQAAAAKADEAAAAMAAYAAAAMAC8AAAAKAAQAAAAMADEAAAAMAAQAAAAMADMAAAAMAAQAAAAMADUAAAAMAAQAAAAMADcAAAAMAAQAAAAMADkAAAAMAAQAAAAMADsAAAAGAAYAAAAKADkAAAACAAYAAAAKADcAAAACAAYAAAAKADUAAAACAAYAAAAKADMAAAACAAYAAAAOADsAAAAIAAQAAAAQADsAAAAIAAQAAAASADsAAAAIAAQAAAAUADsAAAAIAAQAAAAWADsAAAAIAAQAAAAYADsAAAAIAAQAAAAaADsAAAAIAAQAAAAcADsAAAAIAAQAAAAeADsAAAAIAAQAAAAgADsAAAAIAAQAAAAiADsAAAAIAAQAAAAkADsAAAAIAAQAAAAmADsAAAAIAAQAAAAoADsAAAAMAAYAAAAoADkAAAAGAAQAAAAoADcAAAAGAAQAAAAoADUAAAAGAAQAAAAoADMAAAAGAAQAAAAoADEAAAAGAAQAAAAoAC8AAAAEAAQAAAAqAC8AAAAIAAQAAAArAC8AAAAIAAQAAAAtAC8AAAAKAAQAAAAtADEAAAAMAAQAAAAtADMAAAAMAAQAAAAtADUAAAAMAAQAAAAtADcAAAAMAAQAAAAtADkAAAAMAAQAAAAtADsAAAAGAAYAAAAqADsAAAACAAYAAAArADsAAAACAAYAAAAqADkAAAACAAYAAAAqADcAAAACAAYAAAAqADUAAAACAAYAAAAqADMAAAACAAYAAAAqADIAAAACAAYAAAAqADEAAAACAAYAAAArADEAAAACAAYAAAArADIAAAACAAYAAAArADMAAAACAAYAAAArADQAAAACAAYAAAArADUAAAACAAYAAAArADYAAAACAAYAAAArADcAAAACAAYAAAArADgAAAACAAYAAAArADkAAAACAAYAAAAvADsAAAAIAAQAAAAxADsAAAAIAAQAAAAzADsAAAAIAAQAAAA1ADsAAAAIAAQAAAA3ADsAAAAIAAQAAAA4ADsAAAAIAAQAAAAyADsAAAAIAAQAAAA6ADsAAAAMAAYAAAA6ADkAAAAGAAQAAAA6ADcAAAAGAAQAAAA6ADUAAAAGAAQAAAA6ADMAAAAGAAQAAAA6ADYAAAAGAAQAAAAtADQAAAAMAAQAAAATACQAAAAMAAIAAAAaACEAAAAMAAIAAABQACgAAAAMAAIAAABfAC4AAAACAAQAAABhAC4AAAAAAAQAAABmACsAAAAGAAIAAABpACsAAAAKAAIAAABnACsAAAAIAAIAAABqACUAAAAMAAIAAABoACEAAAAAAAQAAABnACEAAAACAAQAAABYACgAAAACAAQAAABZACgAAAAAAAQAAABMACwAAAAGAAIAAABNACwAAAAKAAIAAAAfACgAAAACAAQAAAAhACgAAAAAAAQAAAAQACgAAAACAAQAAAARACgAAAAAAAQAAAA7ACYAAAAIAAQAAAA4ACYAAAAEAAQAAAA6ACYAAAAIAAQAAAA2ACgAAAAEAAQAAAA4ACgAAAAMAAYAAAA2ACoAAAAGAAQAAAA2ACwAAAAGAAQAAAA2AC4AAAAEAAYAAAA4ADAAAAAEAAYAAAA4AC4AAAAKAAYAAAA6ADAAAAAKAAYAAAA6ADIAAAAGAAQAAAA4ACoAAAACAAYAAAA4ACwAAAACAAYAAAA6AC4AAAACAAYAAAA8ADEAAAAMAAQAAAA8ADMAAAAMAAQAAAA8ADYAAAAMAAQAAAA8ADUAAAAMAAQAAAA8ADgAAAAMAAQAAAA8ADoAAAAMAAQAAAA8ADsAAAAGAAYAAAA/ADsAAAAIAAQAAABBADsAAAAIAAQAAABCADsAAAAIAAQAAABEADsAAAAMAAYAAAAxACoAAAAGAAIAAAAyACoAAAAKAAIAAABEADkAAAAGAAQAAABEADcAAAAGAAQAAABEADUAAAAGAAQAAABEADMAAAAGAAQAAABEADEAAAAGAAQAAABEADAAAAAEAAQAAABGADEAAAAMAAQAAABGADAAAAAKAAQAAABGADMAAAAMAAQAAABGADUAAAAMAAQAAABGADcAAAAMAAQAAABGADkAAAAMAAQAAABGADQAAAAMAAQAAABGADsAAAAGAAYAAABIADsAAAAIAAQAAABKADsAAAAIAAQAAABMADsAAAAIAAQAAABOADsAAAAIAAQAAABQADsAAAAIAAQAAABSADsAAAAIAAQAAABUADsAAAAIAAQAAABWADsAAAAIAAQAAABYADsAAAAIAAQAAABaADsAAAAIAAQAAABcADsAAAAIAAQAAABeADsAAAAIAAQAAABgADsAAAAIAAQAAABjADsAAAAIAAQAAABiADsAAAAIAAQAAABlADsAAAAIAAQAAABnADsAAAAIAAQAAABpADsAAAAIAAQAAABrADsAAAAIAAQAAABsADsAAAAIAAQAAABXADsAAAAIAAQAAABuADsAAAAMAAYAAABuADkAAAAGAAQAAABuADcAAAAGAAQAAABuADUAAAAGAAQAAABuADQAAAAGAAQAAABuADIAAAAGAAQAAABuADAAAAAGAAQAAABuAC8AAAAGAAQAAABuAC0AAAAGAAQAAABuACoAAAAGAAQAAABuACsAAAAGAAQAAABuACgAAAAEAAQAAABwACYAAAAGAAQAAABwACQAAAAGAAQAAABwACgAAAAMAAYAAABuACIAAAAEAAYAAABwACIAAAAKAAYAAABsACAAAAAEAAYAAABuACAAAAAKAAYAAABsAB4AAAAEAAQAAABuAB4AAAAIAAQAAABwAB4AAAAMAAYAAABwABwAAAAGAAQAAABwABsAAAAGAAQAAABwABkAAAAKAAYAAABtABkAAAAEAAYAAABuABkAAAAAAAYAAABtABcAAAAGAAQAAABtABYAAAAGAAQAAABtABQAAAAEAAQAAABvABQAAAAMAAYAAABvABIAAAAGAAQAAABvABAAAAAGAAQAAABvAA8AAAAGAAQAAABvAA0AAAAEAAQAAABxAA0AAAAMAAYAAABxAAsAAAAGAAQAAABxAAkAAAAGAAQAAABxAAcAAAAGAAQAAABvAAUAAAAEAAYAAABxAAUAAAAKAAYAAABvAAMAAAAGAAQAAABvAAEAAAAGAAQAAABvAP//AAAEAAQAAABxAP//AAAIAAQAAAByAPb/AAACAAYAAAByAPj/AAACAAYAAAByAPr/AAACAAYAAAByAPz/AAACAAYAAAByAP7/AAACAAYAAAByAP//AAACAAYAAABxAAEAAAACAAYAAABxAAIAAAACAAYAAABxAAMAAAACAAYAAAByAAEAAAACAAYAAAByAAIAAAACAAYAAABxAA8AAAACAAYAAABxABEAAAACAAYAAABxABMAAAACAAYAAABxABQAAAACAAYAAABxABUAAAACAAYAAABxABYAAAACAAYAAABvABYAAAACAAYAAABvABcAAAACAAYAAABxABcAAAACAAYAAABwACAAAAACAAYAAABwACoAAAACAAYAAABwACsAAAACAAYAAABwACwAAAACAAYAAABwAC0AAAACAAYAAABwAC4AAAACAAYAAABwAC8AAAACAAYAAABwADAAAAACAAYAAABwADEAAAACAAYAAABwADIAAAACAAYAAABwADMAAAACAAYAAABwADQAAAACAAYAAABwADsAAAACAAYAAABwADoAAAACAAYAAABwADkAAAACAAYAAABwADgAAAACAAYAAABwADYAAAACAAYAAABoAAMAAAACAAQAAABqAAMAAAAAAAQAAABpABsAAAAMAAIAAABpAA8AAAAMAAIAAABpAAoAAAAMAAIAAAA8ACYAAAAKAAQAAAA8ACgAAAAOAAQAAAA6ACgAAAAIAAYAAAA8AC0AAAAKAAQAAAA6AC0AAAAGAAYAAAA6ACsAAAAMAAQAAAA6ACoAAAAMAAQAAAA8AC8AAAAMAAQAAAA8ADAAAAAMAAQAAAA8ADIAAAAMAAQAAAA8ADQAAAAMAAQAAAA8ADcAAAAMAAQAAAA+ADsAAAAIAAQAAABlABcAAAACAAQAAABmABcAAAAAAAQAAAA=")
 tile_set = SubResource("TileSet_5xqnf")
 
-[node name="indoor terrain2" type="TileMapLayer" parent="."]
+[node name="indoor terrain2" type="TileMapLayer" parent="." unique_id=2100373642]
 scale = Vector2(4.8, 4.8)
 tile_map_data = PackedByteArray("AAD9/x8AAAACAAYAAAD9/yEAAAACAAYAAAD9/yMAAAACAAYAAAD9/yUAAAACAAYAAAD9/yYAAAACAAYAAAABACcAAAAKAAQAAAABACkAAAAOAAQAAAD//ysAAAAMAAQAAAD//ykAAAAIAAYAAAD//ycAAAAIAAQAAAD//ywAAAAMAAQAAAABAC4AAAAIAAQAAAD//y4AAAAGAAYAAAADAC4AAAAKAAQAAAADADAAAAAMAAQAAAADADIAAAAMAAQAAAADADQAAAAMAAQAAAADADYAAAAMAAQAAAADADgAAAAMAAQAAAADADkAAAAMAAQAAAADADsAAAAGAAYAAAAFADsAAAAIAAQAAAAGADsAAAAIAAQAAAAIADsAAAAMAAYAAAAIADkAAAAGAAQAAAAIADIAAAAGAAQAAAAIADQAAAAGAAQAAAAIADYAAAAGAAQAAAAIADgAAAAGAAQAAAABADAAAAACAAYAAAD//zAAAAACAAYAAAD//zIAAAACAAYAAAABADIAAAACAAYAAAABADQAAAACAAYAAAD//zQAAAACAAYAAAD//zYAAAACAAYAAAABADYAAAACAAYAAAABADgAAAACAAYAAAD//zgAAAACAAYAAAD//zoAAAACAAYAAAABADoAAAACAAYAAAABADsAAAACAAYAAAD//zsAAAACAAYAAAAKADsAAAACAAYAAAAIACsAAAAMAAIAAAAIADEAAAAEAAQAAAAKAC8AAAAEAAQAAAAKADEAAAAMAAYAAAAMAC8AAAAKAAQAAAAMADEAAAAMAAQAAAAMADMAAAAMAAQAAAAMADUAAAAMAAQAAAAMADcAAAAMAAQAAAAMADkAAAAMAAQAAAAMADsAAAAGAAYAAAAKADkAAAACAAYAAAAKADcAAAACAAYAAAAKADUAAAACAAYAAAAKADMAAAACAAYAAAAOADsAAAAIAAQAAAAQADsAAAAIAAQAAAASADsAAAAIAAQAAAAUADsAAAAIAAQAAAAWADsAAAAIAAQAAAAYADsAAAAIAAQAAAAaADsAAAAIAAQAAAAcADsAAAAIAAQAAAAeADsAAAAIAAQAAAAgADsAAAAIAAQAAAAiADsAAAAIAAQAAAAkADsAAAAIAAQAAAAmADsAAAAIAAQAAAAoADsAAAAMAAYAAAAoADkAAAAGAAQAAAAoADcAAAAGAAQAAAAoADUAAAAGAAQAAAAoADMAAAAGAAQAAAAoADEAAAAGAAQAAAAoAC8AAAAEAAQAAAAqAC8AAAAIAAQAAAArAC8AAAAIAAQAAAAtAC8AAAAKAAQAAAAtADEAAAAMAAQAAAAtADMAAAAMAAQAAAAtADUAAAAMAAQAAAAtADcAAAAMAAQAAAAtADkAAAAMAAQAAAAtADsAAAAGAAYAAAAqADsAAAACAAYAAAArADsAAAACAAYAAAAqADkAAAACAAYAAAAqADcAAAACAAYAAAAqADUAAAACAAYAAAAqADMAAAACAAYAAAAqADIAAAACAAYAAAAqADEAAAACAAYAAAArADEAAAACAAYAAAArADIAAAACAAYAAAArADMAAAACAAYAAAArADQAAAACAAYAAAArADUAAAACAAYAAAArADYAAAACAAYAAAArADcAAAACAAYAAAArADgAAAACAAYAAAArADkAAAACAAYAAAAvADsAAAAIAAQAAAAxADsAAAAIAAQAAAAzADsAAAAIAAQAAAA1ADsAAAAIAAQAAAA3ADsAAAAIAAQAAAA4ADsAAAAIAAQAAAAyADsAAAAIAAQAAAA6ADsAAAAMAAYAAAA6ADkAAAAGAAQAAAA6ADcAAAAGAAQAAAA6ADUAAAAGAAQAAAA6ADMAAAAGAAQAAAA6ADYAAAAGAAQAAAAtADQAAAAMAAQAAAATACQAAAAMAAIAAAAaACEAAAAMAAIAAABQACgAAAAMAAIAAABYACgAAAACAAQAAABZACgAAAAAAAQAAABMACwAAAAGAAIAAABNACwAAAAKAAIAAAAfACgAAAACAAQAAAAhACgAAAAAAAQAAAAQACgAAAACAAQAAAARACgAAAAAAAQAAAA7ACYAAAAIAAQAAAA4ACYAAAAEAAQAAAA6ACYAAAAIAAQAAAA2ACgAAAAEAAQAAAA4ACgAAAAMAAYAAAA2ACoAAAAGAAQAAAA2ACwAAAAGAAQAAAA2AC4AAAAEAAYAAAA4ADAAAAAEAAYAAAA4AC4AAAAKAAYAAAA6ADAAAAAKAAYAAAA6ADIAAAAGAAQAAAA4ACoAAAACAAYAAAA4ACwAAAACAAYAAAA6AC4AAAACAAYAAAA8ADEAAAAMAAQAAAA8ADMAAAAMAAQAAAA8ADYAAAAMAAQAAAA8ADUAAAAMAAQAAAA8ADgAAAAMAAQAAAA8ADoAAAAMAAQAAAA8ADsAAAAGAAYAAAA/ADsAAAAIAAQAAABBADsAAAAIAAQAAABCADsAAAAIAAQAAABEADsAAAAMAAYAAAAxACoAAAAGAAIAAAAyACoAAAAKAAIAAABEADkAAAAGAAQAAABEADcAAAAGAAQAAABEADUAAAAGAAQAAABEADMAAAAGAAQAAABEADEAAAAGAAQAAABEADAAAAAEAAQAAABGADEAAAAMAAQAAABGADAAAAAKAAQAAABGADMAAAAMAAQAAABGADUAAAAMAAQAAABGADcAAAAMAAQAAABGADkAAAAMAAQAAABGADQAAAAMAAQAAABGADsAAAAGAAYAAABIADsAAAAIAAQAAABKADsAAAAIAAQAAABMADsAAAAIAAQAAABOADsAAAAIAAQAAABQADsAAAAIAAQAAABSADsAAAAIAAQAAABUADsAAAAIAAQAAABWADsAAAAIAAQAAABYADsAAAAIAAQAAABaADsAAAAIAAQAAABcADsAAAAIAAQAAABeADsAAAAIAAQAAABgADsAAAAIAAQAAABjADsAAAAIAAQAAABiADsAAAAIAAQAAABlADsAAAAIAAQAAABnADsAAAAIAAQAAABpADsAAAAIAAQAAABrADsAAAAIAAQAAABsADsAAAAIAAQAAABXADsAAAAIAAQAAABuADsAAAAMAAYAAABuADkAAAAGAAQAAABuADcAAAAGAAQAAABuADUAAAAGAAQAAABuADQAAAAGAAQAAABuADIAAAAGAAQAAABwADIAAAACAAYAAABwADMAAAACAAYAAABwADQAAAACAAYAAABwADsAAAACAAYAAABwADoAAAACAAYAAABwADkAAAACAAYAAABwADgAAAACAAYAAABwADYAAAACAAYAAABpABsAAAAMAAIAAABpAAoAAAAMAAIAAAA8ACYAAAAKAAQAAAA8ACgAAAAOAAQAAAA6ACgAAAAIAAYAAAA8AC0AAAAKAAQAAAA6AC0AAAAGAAYAAAA6ACsAAAAMAAQAAAA6ACoAAAAMAAQAAAA8AC8AAAAMAAQAAAA8ADAAAAAMAAQAAAA8ADIAAAAMAAQAAAA8ADQAAAAMAAQAAAA8ADcAAAAMAAQAAAA+ADsAAAAIAAQAAABsAB4AAAAEAAQAAABuAB4AAAAIAAQAAABtABkAAAAEAAYAAABlABcAAAACAAQAAABmABcAAAAAAAQAAABtABcAAAAGAAQAAABtABYAAAAGAAQAAABtABQAAAAEAAQAAABwABkAAAAKAAYAAABwABsAAAAGAAQAAABwAB4AAAAMAAYAAABvABIAAAAGAAQAAABvAA8AAAAGAAQAAABvABAAAAAGAAQAAABvAA0AAAAEAAQAAABxAAsAAAAGAAQAAABxAAkAAAAGAAQAAABxAAcAAAAGAAQAAABvAAUAAAAEAAYAAABvAP//AAAEAAQAAABxAP//AAAIAAQAAABvAAEAAAAGAAQAAABvAAMAAAAGAAQAAABoAAMAAAACAAQAAABqAAMAAAAAAAQAAABpAA8AAAAMAAIAAABiAAYAAAAIAAIAAABjAAYAAAAKAAIAAABgAAYAAAAGAAIAAAA=")
 tile_set = SubResource("TileSet_5xqnf")
 
-[node name="movingobstacles" type="Node2D" parent="."]
+[node name="movingobstacles" type="Node2D" parent="." unique_id=411490616]
 
-[node name="movingobstacle" parent="movingobstacles" instance=ExtResource("4_ah8om")]
-position = Vector2(2075, 2367)
+[node name="movingobstacle" parent="movingobstacles" unique_id=1592601453 instance=ExtResource("4_ah8om")]
+position = Vector2(2077, 2398)
 speed = 80
 travel_distance = 100
 
-[node name="movingobstacle2" parent="movingobstacles" instance=ExtResource("4_ah8om")]
-position = Vector2(3237, 3410)
+[node name="movingobstacle2" parent="movingobstacles" unique_id=1750877769 instance=ExtResource("4_ah8om")]
+position = Vector2(3237, 3416)
 speed = 130
 
-[node name="movingobstacle3" parent="movingobstacles" instance=ExtResource("4_ah8om")]
-position = Vector2(7980, 3170)
+[node name="movingobstacle3" parent="movingobstacles" unique_id=781471157 instance=ExtResource("4_ah8om")]
+position = Vector2(7980, 3175)
 speed = 140
 travel_distance = 100
 
-[node name="movingobstacle5" parent="movingobstacles" instance=ExtResource("4_ah8om")]
-position = Vector2(8091, 3190)
+[node name="movingobstacle5" parent="movingobstacles" unique_id=1300905314 instance=ExtResource("4_ah8om")]
+position = Vector2(8091, 3195)
 travel_distance = 80
 
-[node name="movingobstacle6" parent="movingobstacles" instance=ExtResource("4_ah8om")]
-position = Vector2(8148, 83)
+[node name="movingobstacle6" parent="movingobstacles" unique_id=221720816 instance=ExtResource("4_ah8om")]
+position = Vector2(8149, 112)
 speed = 150
 
-[node name="movingobstacle4" parent="movingobstacles" instance=ExtResource("4_ah8om")]
-position = Vector2(3349, 3400)
+[node name="movingobstacle4" parent="movingobstacles" unique_id=924200362 instance=ExtResource("4_ah8om")]
+position = Vector2(3349, 3406)
 speed = 150
 travel_distance = 100
 
-[node name="slipperyfloors" type="Node2D" parent="."]
+[node name="slipperyfloors" type="Node2D" parent="." unique_id=287027100]
 
-[node name="slipperyfloor" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor" parent="slipperyfloors" unique_id=1133939568 instance=ExtResource("4_1pn4d")]
 position = Vector2(1035, 3529)
 
-[node name="slipperyfloor4" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor4" parent="slipperyfloors" unique_id=1933877668 instance=ExtResource("4_1pn4d")]
 position = Vector2(2071, 2532)
 
-[node name="slipperyfloor5" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor5" parent="slipperyfloors" unique_id=2069742483 instance=ExtResource("4_1pn4d")]
 position = Vector2(2445, 3067)
 
-[node name="slipperyfloor11" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor11" parent="slipperyfloors" unique_id=1983188097 instance=ExtResource("4_1pn4d")]
 position = Vector2(3806, 3221)
 
-[node name="slipperyfloor6" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor6" parent="slipperyfloors" unique_id=1965535755 instance=ExtResource("4_1pn4d")]
 position = Vector2(4345, 2837)
 
-[node name="slipperyfloor12" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor12" parent="slipperyfloors" unique_id=1377656277 instance=ExtResource("4_1pn4d")]
 position = Vector2(4421, 2837)
 
-[node name="slipperyfloor7" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor7" parent="slipperyfloors" unique_id=1266582582 instance=ExtResource("4_1pn4d")]
 position = Vector2(5892, 3373)
 
-[node name="slipperyfloor8" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor8" parent="slipperyfloors" unique_id=1188138576 instance=ExtResource("4_1pn4d")]
 position = Vector2(6816, 3067)
 
-[node name="slipperyfloor9" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor9" parent="slipperyfloors" unique_id=880038517 instance=ExtResource("4_1pn4d")]
 position = Vector2(8486, 2226)
 
-[node name="slipperyfloor13" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor13" parent="slipperyfloors" unique_id=747473777 instance=ExtResource("4_1pn4d")]
 position = Vector2(7936, 1763)
 
-[node name="slipperyfloor10" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor10" parent="slipperyfloors" unique_id=786601110 instance=ExtResource("4_1pn4d")]
 position = Vector2(8599, -157)
 
-[node name="slipperyfloor2" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor2" parent="slipperyfloors" unique_id=805231086 instance=ExtResource("4_1pn4d")]
 position = Vector2(959, 3529)
 
-[node name="slipperyfloor3" parent="slipperyfloors" instance=ExtResource("4_1pn4d")]
+[node name="slipperyfloor3" parent="slipperyfloors" unique_id=2074084296 instance=ExtResource("4_1pn4d")]
 position = Vector2(883, 3529)
 
-[node name="UI layer" type="CanvasLayer" parent="."]
+[node name="UI layer" type="CanvasLayer" parent="." unique_id=912383477]
 
-[node name="icecream_timer" type="Label" parent="UI layer"]
+[node name="icecream_timer" type="Label" parent="UI layer" unique_id=1486955164]
 offset_left = 371.0
 offset_top = 109.0
 offset_right = 411.0
 offset_bottom = 132.0
 
-[node name="Label" type="Label" parent="UI layer"]
+[node name="Label" type="Label" parent="UI layer" unique_id=640520476]
 offset_left = 19.0
 offset_top = 11.0
 offset_right = 145.0
@@ -277,7 +277,7 @@ offset_bottom = 60.0
 text = "press esc to
 go to the main menu"
 
-[node name="arrow" type="Label" parent="UI layer"]
+[node name="arrow" type="Label" parent="UI layer" unique_id=2002073543]
 visible = false
 offset_left = 1054.0
 offset_top = 26.0
@@ -285,56 +285,56 @@ offset_right = 1130.0
 offset_bottom = 49.0
 text = "kitchen ->"
 
-[node name="Label2" type="Label" parent="UI layer"]
+[node name="Label2" type="Label" parent="UI layer" unique_id=1192830397]
 offset_left = 468.0
 offset_top = 9.0
 offset_right = 635.0
 offset_bottom = 32.0
 text = "ingredients to collect:"
 
-[node name="ingredientUI" type="Node2D" parent="UI layer"]
+[node name="ingredientUI" type="Node2D" parent="UI layer" unique_id=145948912]
 
-[node name="strawberries" type="Sprite2D" parent="UI layer/ingredientUI"]
+[node name="strawberries" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=778605846]
 position = Vector2(670.41815, 49.418)
 scale = Vector2(0.13832773, 0.13832773)
 texture = ExtResource("10_q2dsb")
 
-[node name="strawberriestext" type="Label" parent="UI layer/ingredientUI"]
+[node name="strawberriestext" type="Label" parent="UI layer/ingredientUI" unique_id=621863697]
 offset_left = 623.0
 offset_top = 77.0
 offset_right = 755.0
 offset_bottom = 100.0
 text = "Strawberries"
 
-[node name="chocolatesaucetext" type="Label" parent="UI layer/ingredientUI"]
+[node name="chocolatesaucetext" type="Label" parent="UI layer/ingredientUI" unique_id=554649237]
 offset_left = 490.0
 offset_top = 35.0
 offset_right = 647.0
 offset_bottom = 58.0
 text = "Chocolate sauce"
 
-[node name="chocolatesauce" type="Sprite2D" parent="UI layer/ingredientUI"]
+[node name="chocolatesauce" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1085823313]
 position = Vector2(546, 84)
 scale = Vector2(0.11627769, 0.11627769)
 texture = ExtResource("11_q2dsb")
 
-[node name="icecreamtext" type="Label" parent="UI layer/ingredientUI"]
+[node name="icecreamtext" type="Label" parent="UI layer/ingredientUI" unique_id=968416659]
 offset_left = 406.0
 offset_top = 79.0
 offset_right = 514.0
 offset_bottom = 102.0
 text = "Ice cream"
 
-[node name="icecream" type="Sprite2D" parent="UI layer/ingredientUI"]
+[node name="icecream" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1417680069]
 position = Vector2(442, 56)
 scale = Vector2(0.05323795, 0.05323795)
 texture = ExtResource("10_ax3dk")
 
-[node name="tutorialpanel" type="Panel" parent="UI layer"]
+[node name="tutorialpanel" type="Panel" parent="UI layer" unique_id=424290132]
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Label" type="Label" parent="UI layer/tutorialpanel"]
+[node name="Label" type="Label" parent="UI layer/tutorialpanel" unique_id=1627736578]
 layout_mode = 0
 offset_left = 156.0
 offset_top = 54.0
@@ -360,7 +360,7 @@ enter the kitchen - right mouse button (RMB)
 
 make it through the obstacles, collect the ingredients, reach the kitchen and then make the dish!"
 
-[node name="Button" type="Button" parent="UI layer/tutorialpanel"]
+[node name="Button" type="Button" parent="UI layer/tutorialpanel" unique_id=1344860302]
 layout_mode = 0
 offset_left = 446.0
 offset_top = 572.0
