@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://lrwjnqu161g8"]
+[gd_scene load_steps=7 format=3 uid="uid://lrwjnqu161g8"]
 
 [ext_resource type="Script" uid="uid://bqtl31xi4s82w" path="res://scripts/l1_cookingscene.gd" id="1_ppsmb"]
 [ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="2_6sjqm"]
 [ext_resource type="Texture2D" uid="uid://i3qy5hq3oekd" path="res://assets/ingredients/lettuce art.png" id="3_ppsmb"]
 [ext_resource type="Texture2D" uid="uid://cyeg5aronxsnu" path="res://assets/ingredients/tomato art.png" id="4_8txkr"]
-[ext_resource type="Texture2D" uid="uid://btwubrb407nod" path="res://assets/ingredients/salad.png" id="6_ppsmb"]
+[ext_resource type="Texture2D" uid="uid://cj183i6gwlbbo" path="res://assets/ingredients/cucumber art.png" id="4_ppsmb"]
+[ext_resource type="Texture2D" uid="uid://cs4i1q5a06uch" path="res://assets/ingredients/salad art.png" id="6_6sjqm"]
 
 [node name="l1_cookingscene" type="Node2D"]
 script = ExtResource("1_ppsmb")
@@ -56,8 +57,9 @@ offset_bottom = 263.0
 text = "cucumber"
 
 [node name="cucumber" type="Sprite2D" parent="ingredientUI"]
-position = Vector2(127, 212)
-scale = Vector2(0.09836873, 0.09836873)
+position = Vector2(130, 211)
+scale = Vector2(0.18318436, 0.18318436)
+texture = ExtResource("4_ppsmb")
 
 [node name="tomatotext" type="Label" parent="ingredientUI"]
 offset_left = 100.0
@@ -111,9 +113,9 @@ offset_bottom = 302.0
 text = "congratulations, here is your finished salad!!"
 
 [node name="salad" type="Sprite2D" parent="correctanswer"]
-position = Vector2(549, 470.00003)
-scale = Vector2(0.65308046, 0.65308046)
-texture = ExtResource("6_ppsmb")
+position = Vector2(547, 460)
+scale = Vector2(0.7185858, 0.7185858)
+texture = ExtResource("6_6sjqm")
 
 [node name="levelcompletionbutton" type="Button" parent="."]
 offset_left = 458.0

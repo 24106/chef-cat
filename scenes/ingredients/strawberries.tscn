@@ -1,25 +1,25 @@
-[gd_scene format=3 uid="uid://b4jf5btpmwfq5"]
+[gd_scene load_steps=4 format=3 uid="uid://b4jf5btpmwfq5"]
 
 [ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_wmf5h"]
-[ext_resource type="Texture2D" uid="uid://b0a6i6bofe7cd" path="res://assets/strawberries.png" id="2_wmf5h"]
+[ext_resource type="Texture2D" uid="uid://d4bl1d6i8o3wl" path="res://assets/ingredients/strawberries art.png" id="2_wmf5h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fcf3i"]
 radius = 58.00862
 
-[node name="strawberries" type="Area2D" unique_id=1530174558]
+[node name="strawberries" type="Area2D"]
 script = ExtResource("1_wmf5h")
 ingredient_name = "strawberries"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
-position = Vector2(0, -1)
-scale = Vector2(0.17999999, 0.17999999)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -5)
+scale = Vector2(0.26, 0.26)
 texture = ExtResource("2_wmf5h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 0)
 shape = SubResource("CircleShape2D_fcf3i")
 
-[node name="Label" type="Label" parent="." unique_id=463640050]
+[node name="Label" type="Label" parent="."]
 visible = false
 offset_left = -47.0
 offset_top = -75.0

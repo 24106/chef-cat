@@ -1,25 +1,25 @@
-[gd_scene format=3 uid="uid://ekffug3swemm"]
+[gd_scene load_steps=4 format=3 uid="uid://ekffug3swemm"]
 
 [ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_mxd63"]
-[ext_resource type="Texture2D" uid="uid://revoo1rekm4d" path="res://assets/pasta.png" id="2_mxd63"]
+[ext_resource type="Texture2D" uid="uid://bg0ooc1eljequ" path="res://assets/ingredients/pasta art.png" id="2_mxd63"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8bec"]
-size = Vector2(42, 70)
+size = Vector2(89, 82)
 
-[node name="pasta" type="Area2D" unique_id=1530174558]
+[node name="pasta" type="Area2D"]
 script = ExtResource("1_mxd63")
 ingredient_name = "pasta"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
-position = Vector2(0, 5.9604645e-08)
-scale = Vector2(0.17999998, 0.17999998)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(14.913954, 2.4999976)
+scale = Vector2(0.26645768, 0.26645768)
 texture = ExtResource("2_mxd63")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
-position = Vector2(-1, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.5, 3)
 shape = SubResource("RectangleShape2D_y8bec")
 
-[node name="Label" type="Label" parent="." unique_id=463640050]
+[node name="Label" type="Label" parent="."]
 visible = false
 offset_left = -57.0
 offset_top = -61.0

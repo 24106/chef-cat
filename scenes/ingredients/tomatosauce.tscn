@@ -1,25 +1,25 @@
-[gd_scene format=3 uid="uid://b7r2rbxvgeqou"]
+[gd_scene load_steps=4 format=3 uid="uid://b7r2rbxvgeqou"]
 
 [ext_resource type="Script" uid="uid://dbh537pxjwjg7" path="res://scripts/timed_ingredients.gd" id="1_ipyih"]
-[ext_resource type="Texture2D" uid="uid://c2nccuh42krbt" path="res://assets/tomato sauce.png" id="2_ipyih"]
+[ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="2_ipyih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kw16"]
-size = Vector2(44, 91)
+size = Vector2(55, 136)
 
-[node name="tomatosauce" type="Area2D" unique_id=1530174558]
+[node name="tomatosauce" type="Area2D"]
 script = ExtResource("1_ipyih")
 spoil_time = 20.0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
-position = Vector2(1.1920929e-07, 1.1920929e-07)
-scale = Vector2(0.039999995, 0.039999995)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -4)
+scale = Vector2(0.43812865, 0.43812865)
 texture = ExtResource("2_ipyih")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
-position = Vector2(0, -1.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -3)
 shape = SubResource("RectangleShape2D_4kw16")
 
-[node name="Label" type="Label" parent="." unique_id=463640050]
+[node name="Label" type="Label" parent="."]
 visible = false
 offset_left = -55.0
 offset_top = -72.0
