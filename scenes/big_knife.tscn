@@ -4,20 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://dqiemf8adqwcj" path="res://assets/big kitchen knife.png" id="2_pu1cs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cno7v"]
-size = Vector2(15.5, 71)
+size = Vector2(24, 97.1875)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pu1cs"]
+height = 94.0
 
 [node name="big_knife" type="CharacterBody2D" unique_id=1808693964]
 script = ExtResource("1_k8yae")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1502767707]
-position = Vector2(5.875016, 5.875016)
-scale = Vector2(0.03010415, 0.03010415)
+position = Vector2(23.375023, 18.875023)
+scale = Vector2(0.044687483, 0.040937483)
 texture = ExtResource("2_pu1cs")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=115963941]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=663019803]
-position = Vector2(6.25, 6.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=820439211]
+position = Vector2(24, 19.40625)
 shape = SubResource("RectangleShape2D_cno7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1326157190]
+position = Vector2(24, 20)
+shape = SubResource("CapsuleShape2D_pu1cs")
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

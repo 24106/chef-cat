@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cobij0gp333x7" path="res://assets/New folder/tileset.png" id="7_172wr"]
 [ext_resource type="Texture2D" uid="uid://bg0ooc1eljequ" path="res://assets/ingredients/pasta art.png" id="10_172wr"]
 [ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="11_172wr"]
+[ext_resource type="PackedScene" uid="uid://dbppudbneugdt" path="res://scenes/small_knife.tscn" id="11_igmy8"]
 [ext_resource type="Texture2D" uid="uid://gdv5unlqygdt" path="res://assets/ingredients/mushrooms.png" id="12_fldb1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qsfm"]
@@ -368,31 +369,31 @@ scale = Vector2(4.8, 4.8)
 tile_map_data = PackedByteArray("AAATACIAAAAEAAQAAAAVACIAAAAKAAQAAAAVACQAAAAGAAYAAAAYACQAAAAKAAQAAAAbACYAAAAKAAQAAAAXACQAAAAIAAQAAAATACQAAAAGAAQAAAARACYAAAAEAAQAAAATACYAAAAMAAYAAAARACkAAAAMAAYAAAARACcAAAAGAAQAAAAPACkAAAAIAAQAAAAOACkAAAAIAAQAAAANACkAAAAIAAQAAAAMACkAAAAIAAQAAAAaACYAAAAIAAQAAAAbACgAAAAOAAQAAAAdACsAAAACAAQAAAAeACsAAAAAAAQAAAAbAC8AAAAIAAQAAAAdAC8AAAAIAAQAAAAfAC8AAAAIAAQAAAAhAC8AAAAIAAQAAAAZAC0AAAAKAAQAAAAXACsAAAAMAAQAAAAXACoAAAAMAAQAAAAZACgAAAAAAAYAAAA=")
 tile_set = SubResource("TileSet_fldb1")
 
-[node name="movingobstacles" type="Node2D" parent="." unique_id=235818971]
+[node name="knifes" type="Node2D" parent="." unique_id=235818971]
 
-[node name="movingobstacle" parent="movingobstacles" unique_id=1885988125 instance=ExtResource("4_b4j7a")]
-position = Vector2(1816, 431)
+[node name="small knife 1" parent="knifes" unique_id=1808693964 instance=ExtResource("11_igmy8")]
+position = Vector2(1832, 405)
 speed = 250
 travel_distance = 80
 
-[node name="movingobstacle2" parent="movingobstacles" unique_id=340595179 instance=ExtResource("4_b4j7a")]
-position = Vector2(3755, 3272)
+[node name="big knife 1" parent="knifes" unique_id=340595179 instance=ExtResource("4_b4j7a")]
+position = Vector2(3755, 3230)
 speed = 180
 travel_distance = 80
 
-[node name="movingobstacle3" parent="movingobstacles" unique_id=677177338 instance=ExtResource("4_b4j7a")]
-position = Vector2(4048, 3272)
+[node name="big knife 2" parent="knifes" unique_id=677177338 instance=ExtResource("4_b4j7a")]
+position = Vector2(4048, 3230)
 speed = 170
 travel_distance = 80
 
-[node name="movingobstacle5" parent="movingobstacles" unique_id=2030459679 instance=ExtResource("4_b4j7a")]
-position = Vector2(7915, 36)
-speed = 160
-
-[node name="movingobstacle4" parent="movingobstacles" unique_id=310834085 instance=ExtResource("4_b4j7a")]
-position = Vector2(3858, 3252)
+[node name="small knife 2" parent="knifes" unique_id=1772813455 instance=ExtResource("11_igmy8")]
+position = Vector2(3844, 3227)
 speed = 230
 travel_distance = 100
+
+[node name="big knife 3" parent="knifes" unique_id=2030459679 instance=ExtResource("4_b4j7a")]
+position = Vector2(7915, -6)
+speed = 160
 
 [node name="slipperyfloors" type="Node2D" parent="." unique_id=167498621]
 
