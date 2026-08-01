@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bg0ooc1eljequ" path="res://assets/ingredients/pasta art.png" id="10_172wr"]
 [ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="11_172wr"]
 [ext_resource type="PackedScene" uid="uid://dbppudbneugdt" path="res://scenes/small_knife.tscn" id="11_igmy8"]
-[ext_resource type="Texture2D" uid="uid://gdv5unlqygdt" path="res://assets/ingredients/mushrooms.png" id="12_fldb1"]
+[ext_resource type="Texture2D" uid="uid://ivrwbjpb1u0t" path="res://assets/ingredients/mushrooms art.png" id="16_igmy8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qsfm"]
 texture = ExtResource("7_172wr")
@@ -354,7 +354,7 @@ position = Vector2(6278, 2548)
 spoil_time = 40.0
 
 [node name="mushrooms" parent="ingredients" unique_id=1314241201 instance=ExtResource("5_6cvei")]
-position = Vector2(6514, 796)
+position = Vector2(6518, 803)
 
 [node name="l2_kitchendoor" parent="." unique_id=1020096607 instance=ExtResource("6_6cvei")]
 position = Vector2(8721, -139)
@@ -507,9 +507,9 @@ scale = Vector2(0.24519588, 0.24519588)
 texture = ExtResource("11_172wr")
 
 [node name="mushrooms" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=969666716]
-position = Vector2(645, 60.000004)
-scale = Vector2(0.10681142, 0.10681142)
-texture = ExtResource("12_fldb1")
+position = Vector2(653.66296, 52.997284)
+scale = Vector2(0.8000724, 0.8000724)
+texture = ExtResource("16_igmy8")
 
 [node name="tutorialpanel" type="Panel" parent="UI layer" unique_id=1680343612]
 offset_right = 1152.0

@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://bsoq344miamrp"]
 
 [ext_resource type="Script" uid="uid://dbh537pxjwjg7" path="res://scripts/timed_ingredients.gd" id="1_bd6am"]
-[ext_resource type="Texture2D" uid="uid://dfmvo8eegc78l" path="res://assets/ice cream.png" id="2_bd6am"]
+[ext_resource type="Texture2D" uid="uid://4en06tccb5mn" path="res://assets/ingredients/ice cream art.png" id="2_bd6am"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kw16"]
-size = Vector2(103, 103)
+size = Vector2(112, 100)
 
 [node name="icecream" type="Area2D" unique_id=1530174558]
 script = ExtResource("1_bd6am")
 ingredient_name = "icecream"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
-position = Vector2(-0.4999981, -0.4999981)
-scale = Vector2(0.13125, 0.13125)
+position = Vector2(2.763676, 2.4343812)
+scale = Vector2(0.13856766, 0.13856766)
 texture = ExtResource("2_bd6am")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]
-position = Vector2(-0.5, -1.5)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_4kw16")
 
 [node name="Label" type="Label" parent="." unique_id=463640050]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8vhtlyuxnagx"
-path="res://.godot/imported/chocolate sauce.png-83ca132064625b9f4fe121bf27c95354.ctex"
+uid="uid://cjutqrd7xaamc"
+path="res://.godot/imported/pasta dish art.png-1661b40ac03990dc6a372f260dd48274.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ingredients/chocolate sauce.png"
-dest_files=["res://.godot/imported/chocolate sauce.png-83ca132064625b9f4fe121bf27c95354.ctex"]
+source_file="res://assets/ingredients/pasta dish art.png"
+dest_files=["res://.godot/imported/pasta dish art.png-1661b40ac03990dc6a372f260dd48274.ctex"]
 
 [params]
 

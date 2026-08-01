@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://bw0oft3mjbe7o"]
 
 [ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_ffyny"]
-[ext_resource type="Texture2D" uid="uid://gdv5unlqygdt" path="res://assets/mushrooms.png" id="2_ffyny"]
+[ext_resource type="Texture2D" uid="uid://ivrwbjpb1u0t" path="res://assets/ingredients/mushrooms art.png" id="2_ffyny"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehhyp"]
-radius = 54.02083
+radius = 65.00192
 
 [node name="mushrooms" type="Area2D" unique_id=1530174558]
 script = ExtResource("1_ffyny")
 ingredient_name = "mushrooms"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=307069668]
-position = Vector2(0, -1)
-scale = Vector2(0.2109375, 0.2109375)
+position = Vector2(0, -0.9999995)
+scale = Vector2(1.3194009, 1.319401)
 texture = ExtResource("2_ffyny")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=879426680]

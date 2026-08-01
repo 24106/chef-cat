@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b10cw8lmjsgd"
-path="res://.godot/imported/pasta_dish.png-fe621998116dae9f63834a2e7ee9bde1.ctex"
+uid="uid://b3fxfohc5ywch"
+path="res://.godot/imported/Screenshot_2026-08-01_at_7.10.03_PM-removebg-preview.png-61dfd57332eed4fb01a4add07779e5ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ingredients/pasta_dish.png"
-dest_files=["res://.godot/imported/pasta_dish.png-fe621998116dae9f63834a2e7ee9bde1.ctex"]
+source_file="res://assets/ingredients/Screenshot_2026-08-01_at_7.10.03_PM-removebg-preview.png"
+dest_files=["res://.godot/imported/Screenshot_2026-08-01_at_7.10.03_PM-removebg-preview.png-61dfd57332eed4fb01a4add07779e5ac.ctex"]
 
 [params]
 
