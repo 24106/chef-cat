@@ -2,20 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/player.tscn" id="1_014kd"]
 [ext_resource type="Script" uid="uid://blkgjuiyo78sy" path="res://scripts/level_1.gd" id="1_rus8k"]
-[ext_resource type="Texture2D" uid="uid://7kf4oghjpbk0" path="res://assets/tileset modified.png" id="3_7gny6"]
-[ext_resource type="Texture2D" uid="uid://c6qwallj7r6ym" path="res://assets/tileset (1).png" id="4_2aecg"]
-[ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/slipperyfloor.tscn" id="4_5xbjy"]
+[ext_resource type="Texture2D" path="res://assets/tileset modified.png" id="3_7gny6"]
+[ext_resource type="Texture2D" path="res://assets/tileset (1).png" id="4_2aecg"]
+[ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/smallslipperyfloor.tscn" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://bvgwdhjyvsyoh" path="res://scenes/ingredients/cucumber.tscn" id="4_15mv3"]
 [ext_resource type="PackedScene" uid="uid://dnw2ahjo76wht" path="res://scenes/big_knife.tscn" id="5_4nkto"]
-[ext_resource type="Texture2D" uid="uid://cw4waqgt8luxo" path="res://assets/tileset.png" id="5_6dial"]
+[ext_resource type="Texture2D" path="res://assets/tileset.png" id="5_6dial"]
 [ext_resource type="PackedScene" uid="uid://j2fad4sqkyxh" path="res://scenes/ingredients/lettuce.tscn" id="5_e3sih"]
 [ext_resource type="PackedScene" uid="uid://c2bon1ck2j3s3" path="res://scenes/ingredients/tomato.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://be8klt5jxnt3s" path="res://scenes/l1_kitchendoor.tscn" id="7_pa8r4"]
-[ext_resource type="Texture2D" uid="uid://cobij0gp333x7" path="res://assets/New folder/tileset.png" id="9_2aecg"]
+[ext_resource type="Texture2D" path="res://assets/New folder/tileset.png" id="9_2aecg"]
 [ext_resource type="Texture2D" uid="uid://cyeg5aronxsnu" path="res://assets/ingredients/tomato art.png" id="10_2os1m"]
 [ext_resource type="Texture2D" uid="uid://cj183i6gwlbbo" path="res://assets/ingredients/cucumber art.png" id="11_go7sj"]
 [ext_resource type="PackedScene" uid="uid://dbppudbneugdt" path="res://scenes/small_knife.tscn" id="12_7nomh"]
 [ext_resource type="Texture2D" uid="uid://i3qy5hq3oekd" path="res://assets/ingredients/lettuce art.png" id="12_go7sj"]
+[ext_resource type="PackedScene" uid="uid://bsgsjofuxfrpi" path="res://scenes/largeslipperyfloor.tscn" id="14_1s4pk"]
+[ext_resource type="PackedScene" uid="uid://c16dyubw12s2u" path="res://scenes/mediumslipperyfloor.tscn" id="15_x2xxo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nomh"]
 texture = ExtResource("9_2aecg")
@@ -400,35 +402,26 @@ speed = 180
 
 [node name="slipperyfloors" type="Node2D" parent="." unique_id=853081771]
 
-[node name="slipperyfloor" parent="slipperyfloors" unique_id=1240629885 instance=ExtResource("4_5xbjy")]
-position = Vector2(1112, -156)
+[node name="large1" parent="slipperyfloors" unique_id=1613145165 instance=ExtResource("14_1s4pk")]
+position = Vector2(1112, -155.1)
 
-[node name="slipperyfloor2" parent="slipperyfloors" unique_id=1690315331 instance=ExtResource("4_5xbjy")]
-position = Vector2(1188, -156)
+[node name="small1" parent="slipperyfloors" unique_id=775620972 instance=ExtResource("4_5xbjy")]
+position = Vector2(1152, 1150.2)
 
-[node name="slipperyfloor3" parent="slipperyfloors" unique_id=6486180 instance=ExtResource("4_5xbjy")]
-position = Vector2(1264, -156)
+[node name="medium1" parent="slipperyfloors" unique_id=364504545 instance=ExtResource("15_x2xxo")]
+position = Vector2(2933, 1918.2)
 
-[node name="slipperyfloor4" parent="slipperyfloors" unique_id=491095995 instance=ExtResource("4_5xbjy")]
-position = Vector2(1152, 1150)
+[node name="small2" parent="slipperyfloors" unique_id=1636863980 instance=ExtResource("4_5xbjy")]
+position = Vector2(4236, 2379)
 
-[node name="slipperyfloor5" parent="slipperyfloors" unique_id=319190475 instance=ExtResource("4_5xbjy")]
-position = Vector2(3008, 1919)
+[node name="small3" parent="slipperyfloors" unique_id=1217308230 instance=ExtResource("4_5xbjy")]
+position = Vector2(5230, 2686.2)
 
-[node name="slipperyfloor6" parent="slipperyfloors" unique_id=1078051272 instance=ExtResource("4_5xbjy")]
-position = Vector2(2932, 1919)
+[node name="small4" parent="slipperyfloors" unique_id=816855172 instance=ExtResource("4_5xbjy")]
+position = Vector2(6074, 689.4)
 
-[node name="slipperyfloor7" parent="slipperyfloors" unique_id=150433163 instance=ExtResource("4_5xbjy")]
-position = Vector2(4236, 2378)
-
-[node name="slipperyfloor8" parent="slipperyfloors" unique_id=1984076296 instance=ExtResource("4_5xbjy")]
-position = Vector2(5230, 2683)
-
-[node name="slipperyfloor9" parent="slipperyfloors" unique_id=807341267 instance=ExtResource("4_5xbjy")]
-position = Vector2(6074, 689)
-
-[node name="slipperyfloor10" parent="slipperyfloors" unique_id=103237256 instance=ExtResource("4_5xbjy")]
-position = Vector2(7885, 227)
+[node name="small5" parent="slipperyfloors" unique_id=1424191004 instance=ExtResource("4_5xbjy")]
+position = Vector2(7885, 228.6)
 
 [node name="UIlayer" type="CanvasLayer" parent="." unique_id=1389657258]
 

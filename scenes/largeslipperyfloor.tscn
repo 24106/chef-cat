@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bsgsjofuxfrpi"]
+
+[ext_resource type="Script" uid="uid://q7hrdajaunss" path="res://scripts/slipperyfloor.gd" id="1_psmcv"]
+[ext_resource type="Texture2D" uid="uid://dut6omj144wic" path="res://assets/obstacles/large_slippery_floor.png" id="2_psmcv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvr6g"]
+size = Vector2(242, 12)
+
+[node name="largeslipperyfloor" type="Area2D" unique_id=1613145165]
+script = ExtResource("1_psmcv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=150693172]
+position = Vector2(83, 65.99999)
+scale = Vector2(2.7187498, 2.34375)
+texture = ExtResource("2_psmcv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=970503446]
+position = Vector2(83, 1)
+shape = SubResource("RectangleShape2D_cvr6g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

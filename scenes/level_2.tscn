@@ -2,19 +2,21 @@
 
 [ext_resource type="Script" uid="uid://d2bi7ir3nmmvh" path="res://scripts/level_2.gd" id="1_eqxsl"]
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/player.tscn" id="1_pbc48"]
-[ext_resource type="Texture2D" uid="uid://7kf4oghjpbk0" path="res://assets/tileset modified.png" id="3_guvtl"]
+[ext_resource type="Texture2D" path="res://assets/tileset modified.png" id="3_guvtl"]
 [ext_resource type="PackedScene" uid="uid://ekffug3swemm" path="res://scenes/ingredients/pasta.tscn" id="3_y0kc7"]
 [ext_resource type="PackedScene" uid="uid://dnw2ahjo76wht" path="res://scenes/big_knife.tscn" id="4_b4j7a"]
-[ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/slipperyfloor.tscn" id="4_eqxsl"]
-[ext_resource type="Texture2D" uid="uid://c6qwallj7r6ym" path="res://assets/tileset (1).png" id="4_igmy8"]
+[ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/smallslipperyfloor.tscn" id="4_eqxsl"]
+[ext_resource type="Texture2D" path="res://assets/tileset (1).png" id="4_igmy8"]
 [ext_resource type="PackedScene" uid="uid://b7r2rbxvgeqou" path="res://scenes/ingredients/tomatosauce.tscn" id="4_ne2mo"]
 [ext_resource type="PackedScene" uid="uid://bw0oft3mjbe7o" path="res://scenes/ingredients/mushrooms.tscn" id="5_6cvei"]
-[ext_resource type="Texture2D" uid="uid://cw4waqgt8luxo" path="res://assets/tileset.png" id="5_wdtqu"]
+[ext_resource type="Texture2D" path="res://assets/tileset.png" id="5_wdtqu"]
 [ext_resource type="PackedScene" uid="uid://bspmtkpd57uo3" path="res://scenes/l2_kitchendoor.tscn" id="6_6cvei"]
-[ext_resource type="Texture2D" uid="uid://cobij0gp333x7" path="res://assets/New folder/tileset.png" id="7_172wr"]
+[ext_resource type="Texture2D" path="res://assets/New folder/tileset.png" id="7_172wr"]
 [ext_resource type="Texture2D" uid="uid://bg0ooc1eljequ" path="res://assets/ingredients/pasta art.png" id="10_172wr"]
 [ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="11_172wr"]
 [ext_resource type="PackedScene" uid="uid://dbppudbneugdt" path="res://scenes/small_knife.tscn" id="11_igmy8"]
+[ext_resource type="PackedScene" uid="uid://bsgsjofuxfrpi" path="res://scenes/largeslipperyfloor.tscn" id="14_wdtqu"]
+[ext_resource type="PackedScene" uid="uid://c16dyubw12s2u" path="res://scenes/mediumslipperyfloor.tscn" id="15_7qsfm"]
 [ext_resource type="Texture2D" uid="uid://ivrwbjpb1u0t" path="res://assets/ingredients/mushrooms art.png" id="16_igmy8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qsfm"]
@@ -397,50 +399,41 @@ speed = 160
 
 [node name="slipperyfloors" type="Node2D" parent="." unique_id=167498621]
 
-[node name="slipperyfloor" parent="slipperyfloors" unique_id=1988244453 instance=ExtResource("4_eqxsl")]
-position = Vector2(1910, 995)
+[node name="small1" parent="slipperyfloors" unique_id=1613145165 instance=ExtResource("4_eqxsl")]
+position = Vector2(1421, 2839.9)
 
-[node name="slipperyfloor2" parent="slipperyfloors" unique_id=998099899 instance=ExtResource("4_eqxsl")]
-position = Vector2(1422, 2844)
+[node name="small2" parent="slipperyfloors" unique_id=712531891 instance=ExtResource("4_eqxsl")]
+position = Vector2(1910, 996.5)
 
-[node name="slipperyfloor3" parent="slipperyfloors" unique_id=1163724447 instance=ExtResource("4_eqxsl")]
-position = Vector2(2794, 3530)
+[node name="small3" parent="slipperyfloors" unique_id=1064494293 instance=ExtResource("4_eqxsl")]
+position = Vector2(1995, 3377.5)
 
-[node name="slipperyfloor4" parent="slipperyfloors" unique_id=279355973 instance=ExtResource("4_eqxsl")]
-position = Vector2(2718, 3530)
+[node name="large1" parent="slipperyfloors" unique_id=135733811 instance=ExtResource("14_wdtqu")]
+position = Vector2(2635, 3531.3)
 
-[node name="slipperyfloor5" parent="slipperyfloors" unique_id=1025195232 instance=ExtResource("4_eqxsl")]
-position = Vector2(2642, 3530)
+[node name="small4" parent="slipperyfloors" unique_id=522078446 instance=ExtResource("4_eqxsl")]
+position = Vector2(3386, 2916.6)
 
-[node name="slipperyfloor6" parent="slipperyfloors" unique_id=812195266 instance=ExtResource("4_eqxsl")]
-position = Vector2(1999, 3381)
+[node name="small5" parent="slipperyfloors" unique_id=972280796 instance=ExtResource("4_eqxsl")]
+position = Vector2(4569, 3607.8)
 
-[node name="slipperyfloor7" parent="slipperyfloors" unique_id=671181643 instance=ExtResource("4_eqxsl")]
-position = Vector2(3383, 2916)
+[node name="small6" parent="slipperyfloors" unique_id=2015361009 instance=ExtResource("4_eqxsl")]
+position = Vector2(5538, 2609.4)
 
-[node name="slipperyfloor8" parent="slipperyfloors" unique_id=1842388759 instance=ExtResource("4_eqxsl")]
-position = Vector2(4569, 3609)
+[node name="medium1" parent="slipperyfloors" unique_id=477715694 instance=ExtResource("15_7qsfm")]
+position = Vector2(6090, 2455.8)
 
-[node name="slipperyfloor9" parent="slipperyfloors" unique_id=959754079 instance=ExtResource("4_eqxsl")]
-position = Vector2(5539, 2608)
+[node name="small7" parent="slipperyfloors" unique_id=559532939 instance=ExtResource("4_eqxsl")]
+position = Vector2(6594, 3454.2)
 
-[node name="slipperyfloor10" parent="slipperyfloors" unique_id=2131528147 instance=ExtResource("4_eqxsl")]
-position = Vector2(6164, 2455)
+[node name="small8" parent="slipperyfloors" unique_id=1251708337 instance=ExtResource("4_eqxsl")]
+position = Vector2(8381, 2302.2)
 
-[node name="slipperyfloor11" parent="slipperyfloors" unique_id=1802473123 instance=ExtResource("4_eqxsl")]
-position = Vector2(6088, 2455)
+[node name="small9" parent="slipperyfloors" unique_id=863356829 instance=ExtResource("4_eqxsl")]
+position = Vector2(7182, 2686.2)
 
-[node name="slipperyfloor12" parent="slipperyfloors" unique_id=887746907 instance=ExtResource("4_eqxsl")]
-position = Vector2(6594, 3456)
-
-[node name="slipperyfloor13" parent="slipperyfloors" unique_id=1787721307 instance=ExtResource("4_eqxsl")]
-position = Vector2(7182, 2684)
-
-[node name="slipperyfloor14" parent="slipperyfloors" unique_id=919014984 instance=ExtResource("4_eqxsl")]
-position = Vector2(8381, 2300)
-
-[node name="slipperyfloor15" parent="slipperyfloors" unique_id=2097263155 instance=ExtResource("4_eqxsl")]
-position = Vector2(7103, 304)
+[node name="medium2" parent="slipperyfloors" unique_id=677742407 instance=ExtResource("15_7qsfm")]
+position = Vector2(7077, 305.4)
 
 [node name="UI layer" type="CanvasLayer" parent="." unique_id=1534919478]
 
