@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 @onready var sprint_bar = $CanvasLayer/ProgressBar
 
+@onready var animated_sprite = $AnimatedSprite2D
+
+
 var speed = 600
 var sprint_speed = 925
 var current_speed = speed
@@ -36,6 +39,7 @@ var ice_input_delay = 0
 var collected_ingredients = []
 var ingredient_failed = false
 
+
 func _physics_process(delta: float) -> void:
 	if slippery:
 		ice_input_delay += delta
@@ -56,6 +60,8 @@ func _physics_process(delta: float) -> void:
 
 	player_movement()
 	jump()
+	
+	update_animation()
 
 	if global_position.y > 3675:
 		get_tree().reload_current_scene()
@@ -120,3 +126,23 @@ func exit_slippery():
 func add_ingredient(name):
 	if name not in collected_ingredients:
 		collected_ingredients.append(name)
+
+
+func update_animation():
+
+	var moving = abs(velocity.x) > 10
+	var airborne = !is_on_floor()
+
+	# Flip sprite depending on movement direction
+	if velocity.x != 0:
+		animated_sprite.flip_h = velocity.x < 0
+
+	# Moving or jumping
+	if moving or airborne:
+		if animated_sprite.animation != "move":
+			animated_sprite.play("move")
+		return
+
+	# Standing still
+	if animated_sprite.animation != "standing_idle":
+		animated_sprite.play("standing_idle")
