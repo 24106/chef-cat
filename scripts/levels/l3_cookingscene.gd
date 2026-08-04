@@ -23,7 +23,7 @@ func correct_answer():
 
 
 func wrong_answer():
-	get_tree().change_scene_to_file("res://scenes/level_3_lose_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_3_lose_screen.tscn")
 
 
 func _on_button_pressed() -> void:
@@ -37,4 +37,4 @@ func _on_button_3_pressed() -> void:
 
 
 func _on_levelcompletionbutton_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_3_win_screen.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_3_win_screen.tscn")

@@ -16,12 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/obstacles/smallslipperyfloor.tscn" id="14_ju8vr"]
 [ext_resource type="PackedScene" uid="uid://c16dyubw12s2u" path="res://scenes/obstacles/mediumslipperyfloor.tscn" id="15_tio2m"]
 [ext_resource type="Texture2D" uid="uid://cver3ceh5fmm4" path="res://assets/ui/kitchen arrow.png" id="16_p0p7o"]
-[ext_resource type="Texture2D" uid="uid://cub2fu5g5t0su" path="res://assets/ui/ingredient circle with timer.png" id="17_jnyl3"]
 [ext_resource type="Texture2D" uid="uid://lnwaokkx2ulo" path="res://assets/ui/ingredient circle.png" id="18_2gq65"]
 [ext_resource type="Texture2D" uid="uid://d4bl1d6i8o3wl" path="res://assets/ingredients/strawberries art.png" id="19_fk6jg"]
 [ext_resource type="Texture2D" uid="uid://rfakvhqaf6a1" path="res://assets/ingredients/chocolate art.png" id="20_v1m6f"]
 [ext_resource type="Texture2D" uid="uid://4en06tccb5mn" path="res://assets/ingredients/ice cream art.png" id="21_vn4iy"]
 [ext_resource type="Texture2D" uid="uid://catcxu5r47qcs" path="res://assets/ui/green tick.png" id="22_y7n6r"]
+[ext_resource type="Texture2D" uid="uid://bu1pbtqsbvywf" path="res://assets/ui/hourglass.png" id="23_kdsi4"]
 [ext_resource type="Texture2D" uid="uid://2hvnwq8fenii" path="res://assets/ui/red cross.png" id="23_ly8gl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8uepa"]
@@ -439,6 +439,16 @@ position = Vector2(8600, -155.4)
 
 [node name="UI layer" type="CanvasLayer" parent="." unique_id=263901170]
 
+[node name="Label3" type="Label" parent="UI layer" unique_id=1056786422]
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 181.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.46666667)
+text = "press esc to
+go to the main menu"
+
 [node name="arrow_kitchen" type="Sprite2D" parent="UI layer" unique_id=484032822]
 visible = false
 position = Vector2(1073, 63)
@@ -451,19 +461,13 @@ offset_top = 109.0
 offset_right = 411.0
 offset_bottom = 132.0
 
-[node name="Label" type="Label" parent="UI layer" unique_id=1291210048]
-offset_left = 19.0
-offset_top = 11.0
-offset_right = 145.0
-offset_bottom = 60.0
-text = "press esc to
-go to the main menu"
-
 [node name="Label2" type="Label" parent="UI layer" unique_id=1775489406]
 offset_left = 468.0
 offset_top = 9.0
 offset_right = 635.0
 offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.47843137)
 text = "ingredients to collect:"
 
 [node name="ingredientUI" type="Node2D" parent="UI layer" unique_id=1734308397]
@@ -471,7 +475,7 @@ text = "ingredients to collect:"
 [node name="icecream_circle" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=761932930]
 position = Vector2(464, 70)
 scale = Vector2(0.022421857, 0.021321362)
-texture = ExtResource("17_jnyl3")
+texture = ExtResource("18_2gq65")
 
 [node name="chocolate_circle" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=764534842]
 position = Vector2(542, 70)
@@ -494,8 +498,8 @@ scale = Vector2(0.8914727, 0.8914727)
 texture = ExtResource("20_v1m6f")
 
 [node name="icecream" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1242467174]
-position = Vector2(461.87283, 67)
-scale = Vector2(0.067549676, 0.059850376)
+position = Vector2(465.38342, 71)
+scale = Vector2(0.073178805, 0.0648379)
 texture = ExtResource("21_vn4iy")
 
 [node name="icecream_tick" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=638296867]
@@ -516,14 +520,18 @@ position = Vector2(642, 95)
 scale = Vector2(0.03413464, 0.03413464)
 texture = ExtResource("22_y7n6r")
 
-[node name="chocolate_cross" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=579645911]
+[node name="icecream_cross" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=579645911]
 visible = false
 position = Vector2(565.00006, 90.00001)
 scale = Vector2(0.03261719, 0.03261719)
 texture = ExtResource("23_ly8gl")
 
+[node name="hourglass" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1215379050]
+position = Vector2(440.00003, 97)
+scale = Vector2(0.03759765, 0.03759765)
+texture = ExtResource("23_kdsi4")
+
 [node name="tutorialpanel" type="Panel" parent="UI layer" unique_id=258914934]
-visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 
@@ -533,6 +541,7 @@ offset_left = 156.0
 offset_top = 54.0
 offset_right = 965.0
 offset_bottom = 545.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 text = "welcome to level 3 (the last level) of chef cat
 
 your third and final dish to make is an ice cream sundae dessert
@@ -541,12 +550,12 @@ your third and final dish to make is an ice cream sundae dessert
 
 you need to collect all these ingredients:
  - ice cream
- - chocolate sauce
+ - chocolate
  - strawberries
 
 controls:
 left/right movement - a/d keys or arrow keys
-jump - space, w key or up arrow
+jump (single, double or triple) - space, w key or up arrow
 sprint - shift
 pick up ingredients - left mouse button (LMB)
 enter the kitchen - right mouse button (RMB)
@@ -559,6 +568,8 @@ offset_left = 446.0
 offset_top = 572.0
 offset_right = 643.0
 offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 text = "click here to start level 3"
 
 [connection signal="pressed" from="UI layer/tutorialpanel/Button" to="." method="_on_button_pressed"]

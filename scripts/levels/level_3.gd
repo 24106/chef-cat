@@ -4,16 +4,17 @@ var required_ingredients = ["icecream", "chocolatesauce", "strawberries"]
 
 var ingredients_started = false
 
-@onready var arrow = $"UI layer"/arrow
+@onready var arrow = $"UI layer"/arrow_kitchen
 @onready var player = $player
 
 @onready var tutorialpanel = $"UI layer"/tutorialpanel
 @onready var tutorialtext = $"UI layer"/tutorialpanel/Label
 @onready var tutorialbutton = $"UI layer"/tutorialpanel/Button
 
-@onready var icecream_label = $"UI layer"/ingredientUI/icecreamtext
-@onready var chocolatesauce_label = $"UI layer"/ingredientUI/chocolatesaucetext
-@onready var strawberries_label = $"UI layer"/ingredientUI/strawberriestext
+@onready var icecream_tick = $"UI layer"/ingredientUI/icecream_tick
+@onready var chocolate_tick = $"UI layer"/ingredientUI/chocolate_tick
+@onready var strawberries_tick = $"UI layer"/ingredientUI/strawberries_tick
+@onready var icecream_cross = $"UI layer"/ingredientUI/icecream_cross
 
 @onready var icecream_timer = $"UI layer"/icecream_timer
 @onready var icecream = $ingredients/icecream
@@ -21,12 +22,14 @@ var ingredients_started = false
 
 func _ready():
 	arrow.visible = false
-	
 	tutorialbutton.visible = true
 	tutorialpanel.visible = true
 	tutorialtext.visible = true
-	
 	icecream_timer.visible = false
+	icecream_tick.visible = false
+	chocolate_tick.visible = false
+	strawberries_tick.visible = false
+	icecream_cross.visible = false
 
 
 func _physics_process(delta):
@@ -40,9 +43,9 @@ func _physics_process(delta):
 		icecream_timer.visible = true
 		
 		if time_left > 0:
-			icecream_timer.text = "Ice cream spoils in: " + str(round(time_left))
+			icecream_timer.text = "spoils in: " + str(round(time_left))
 		else:
-			icecream_timer.text = "Ice cream spoiled!"
+			icecream_cross.visible = true
 	
 	else:
 		icecream_timer.visible = false
@@ -68,21 +71,21 @@ func check_ingredients():
 func update_ingredient_UI():
 
 	if "icecream" in player.collected_ingredients:
-		icecream_label.text = "Ice cream ✓"
+		icecream_tick.visible = true
 	else:
-		icecream_label.text = "Ice cream"
+		icecream_tick.visible = false
 
 
 	if "chocolatesauce" in player.collected_ingredients:
-		chocolatesauce_label.text = "Chocolate sauce ✓"
+		chocolate_tick.visible = true
 	else:
-		chocolatesauce_label.text = "Chocolate sauce"
+		chocolate_tick.visible = false
 
 
 	if "strawberries" in player.collected_ingredients:
-		strawberries_label.text = "Strawberries ✓"
+		strawberries_tick.visible = true
 	else:
-		strawberries_label.text = "Strawberries"
+		strawberries_tick.visible = false
 
 
 func _on_button_pressed() -> void:

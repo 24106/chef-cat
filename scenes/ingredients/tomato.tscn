@@ -1,30 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2bon1ck2j3s3"]
+[gd_scene format=3 uid="uid://c2bon1ck2j3s3"]
 
 [ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_rcex7"]
 [ext_resource type="Texture2D" uid="uid://cyeg5aronxsnu" path="res://assets/ingredients/tomato art.png" id="2_m0jnx"]
+[ext_resource type="Texture2D" uid="uid://oqa7mwshli5" path="res://assets/ui/ingredient sign.png" id="3_00c75"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00c75"]
 size = Vector2(82, 51)
 
-[node name="tomato" type="Area2D"]
+[node name="tomato" type="Area2D" unique_id=1848690896]
 script = ExtResource("1_rcex7")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1935651586]
 position = Vector2(2.500002, 19.500002)
 scale = Vector2(1.01, 1.01)
 texture = ExtResource("2_m0jnx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318260528]
 position = Vector2(5, 2.5)
 shape = SubResource("RectangleShape2D_00c75")
 
-[node name="Label" type="Label" parent="."]
+[node name="sign" type="Sprite2D" parent="." unique_id=947196161]
 visible = false
-offset_left = -57.0
-offset_top = -55.0
-offset_right = 58.0
-offset_bottom = -32.0
-text = "click to pick up"
+position = Vector2(4, -70.00001)
+scale = Vector2(0.034531236, 0.034531236)
+texture = ExtResource("3_00c75")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

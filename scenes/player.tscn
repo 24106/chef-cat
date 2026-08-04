@@ -418,6 +418,7 @@ step = 1.0
 value = 10.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=131289202]
+visible = false
 position = Vector2(1111, 604)
 scale = Vector2(0.05531245, 0.05531245)
 sprite_frames = SubResource("SpriteFrames_hax0n")

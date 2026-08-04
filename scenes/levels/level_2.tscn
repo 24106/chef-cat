@@ -20,9 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://lnwaokkx2ulo" path="res://assets/ui/ingredient circle.png" id="16_bv48q"]
 [ext_resource type="Texture2D" uid="uid://ivrwbjpb1u0t" path="res://assets/ingredients/mushrooms art.png" id="16_igmy8"]
 [ext_resource type="Texture2D" uid="uid://cver3ceh5fmm4" path="res://assets/ui/kitchen arrow.png" id="16_vhnap"]
-[ext_resource type="Texture2D" uid="uid://cub2fu5g5t0su" path="res://assets/ui/ingredient circle with timer.png" id="17_1sb0y"]
 [ext_resource type="Texture2D" uid="uid://catcxu5r47qcs" path="res://assets/ui/green tick.png" id="21_vhnap"]
 [ext_resource type="Texture2D" uid="uid://2hvnwq8fenii" path="res://assets/ui/red cross.png" id="22_vwfin"]
+[ext_resource type="Texture2D" uid="uid://bu1pbtqsbvywf" path="res://assets/ui/hourglass.png" id="23_5niy6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qsfm"]
 texture = ExtResource("7_172wr")
@@ -442,6 +442,16 @@ position = Vector2(7077, 305.4)
 
 [node name="UI layer" type="CanvasLayer" parent="." unique_id=1534919478]
 
+[node name="Label2" type="Label" parent="UI layer" unique_id=1348472753]
+offset_left = 19.0
+offset_top = 11.0
+offset_right = 181.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.46666667)
+text = "press esc to
+go to the main menu"
+
 [node name="arrow_kitchen" type="Sprite2D" parent="UI layer" unique_id=618910656]
 visible = false
 position = Vector2(1073, 63)
@@ -454,19 +464,13 @@ offset_top = 121.0
 offset_right = 533.0
 offset_bottom = 144.0
 
-[node name="Label" type="Label" parent="UI layer" unique_id=1838480297]
-offset_left = 19.0
-offset_top = 11.0
-offset_right = 145.0
-offset_bottom = 60.0
-text = "press esc to
-go to the main menu"
-
-[node name="Label2" type="Label" parent="UI layer" unique_id=939744061]
+[node name="Label3" type="Label" parent="UI layer" unique_id=166323641]
 offset_left = 468.0
 offset_top = 9.0
 offset_right = 635.0
 offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.47843137)
 text = "ingredients to collect:"
 
 [node name="ingredientUI" type="Node2D" parent="UI layer" unique_id=1843276088]
@@ -479,7 +483,7 @@ texture = ExtResource("16_bv48q")
 [node name="sauce_circle" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=662416191]
 position = Vector2(542, 70)
 scale = Vector2(0.022421857, 0.021321362)
-texture = ExtResource("17_1sb0y")
+texture = ExtResource("16_bv48q")
 
 [node name="mushrooms_circle" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1875358775]
 position = Vector2(621, 70)
@@ -492,7 +496,7 @@ scale = Vector2(0.1598994, 0.1598994)
 texture = ExtResource("10_172wr")
 
 [node name="tomatosauce" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=916268516]
-position = Vector2(538.00006, 69.99999)
+position = Vector2(542, 69.99999)
 scale = Vector2(0.17893615, 0.17893612)
 texture = ExtResource("11_172wr")
 
@@ -525,6 +529,11 @@ position = Vector2(565.00006, 90.00001)
 scale = Vector2(0.03261719, 0.03261719)
 texture = ExtResource("22_vwfin")
 
+[node name="hourglass" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=819770388]
+position = Vector2(519, 97)
+scale = Vector2(0.03759765, 0.03759765)
+texture = ExtResource("23_5niy6")
+
 [node name="tutorialpanel" type="Panel" parent="UI layer" unique_id=1680343612]
 offset_right = 1152.0
 offset_bottom = 648.0
@@ -535,6 +544,7 @@ offset_left = 156.0
 offset_top = 54.0
 offset_right = 965.0
 offset_bottom = 545.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 text = "welcome to level 2 of chef cat
 
 your second dish to make is a main of pasta
@@ -549,7 +559,7 @@ you need to collect all these ingredients:
 
 controls:
 left/right movement - a/d keys or arrow keys
-jump - space, w key or up arrow
+jump (single, double or triple) - space, w key or up arrow
 sprint - shift
 pick up ingredients - left mouse button (LMB)
 enter the kitchen - right mouse button (RMB)
@@ -562,6 +572,8 @@ offset_left = 446.0
 offset_top = 572.0
 offset_right = 643.0
 offset_bottom = 603.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 text = "click here to start level 2"
 
 [connection signal="pressed" from="UI layer/tutorialpanel/Button" to="." method="_on_button_pressed"]

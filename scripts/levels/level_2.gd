@@ -13,6 +13,7 @@ var ingredients_started = false
 @onready var pasta_tick = $UIlayer/ingredientUI/pasta_tick
 @onready var sauce_tick = $UIlayer/ingredientUI/sauce_tick
 @onready var mushrooms_tick = $UIlayer/ingredientUI/mushrooms_tick
+@onready var sauce_cross = $UIlayer/ingredientUI/sauce_cross
 
 @onready var tomatosauce_timer = $"UI layer"/tomatosauce_timer
 @onready var tomatosauce = $ingredients/tomatosauce
@@ -22,6 +23,10 @@ func _ready():
 	tutorialbutton.visible = true
 	tutorialpanel.visible = true
 	tutorialtext.visible = true
+	pasta_tick.visible = false
+	sauce_tick.visible = false
+	mushrooms_tick.visible = false
+	sauce_cross.visible = false
 
 
 func _physics_process(delta):
@@ -35,9 +40,9 @@ func _physics_process(delta):
 		tomatosauce_timer.visible = true
 		
 		if time_left > 0:
-			tomatosauce_timer.text = "Spoils in: " + str(round(time_left))
+			tomatosauce_timer.text = "spoils in: " + str(round(time_left))
 		else:
-			tomatosauce_timer.text = "Tomato sauce spoiled"
+			sauce_cross.visible = true
 	else:
 		tomatosauce_timer.visible = false
 
@@ -61,21 +66,21 @@ func check_ingredients():
 func update_ingredient_UI():
 
 	if "pasta" in player.collected_ingredients:
-		pasta_label.text = "Pasta ✓"
+		pasta_tick.visible = true
 	else:
-		pasta_label.text = "Pasta"
+		pasta_tick.visible = false
 
 
 	if "tomatosauce" in player.collected_ingredients:
-		tomatosauce_label.text = "Tomato sauce ✓"
+		sauce_tick.visible = true
 	else:
-		tomatosauce_label.text = "Tomato sauce"
+		sauce_tick.visible = false
 
 
 	if "mushrooms" in player.collected_ingredients:
-		mushrooms_label.text = "Mushrooms ✓"
+		mushrooms_tick.visible = true
 	else:
-		mushrooms_label.text = "Mushrooms"
+		mushrooms_tick.visible = false
 
 
 func _on_button_pressed() -> void:

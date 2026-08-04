@@ -5,7 +5,7 @@ extends Area2D
 var player_in_range = false
 var collected = false
 
-@onready var prompt = $Label
+@onready var prompt = $sign
 
 
 func _ready():

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqgwnq2wbmbim"
-path="res://.godot/imported/left click sign.png-d535f327eec24c499e1077d8e41700eb.ctex"
+uid="uid://ckk3djdvmgv0j"
+path="res://.godot/imported/level 3 pass.png-d6c2b093f1bfe82f4d52e4b8d6a22adf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/left click sign.png"
-dest_files=["res://.godot/imported/left click sign.png-d535f327eec24c499e1077d8e41700eb.ctex"]
+source_file="res://assets/level 3 pass.png"
+dest_files=["res://.godot/imported/level 3 pass.png-d6c2b093f1bfe82f4d52e4b8d6a22adf.ctex"]
 
 [params]
 

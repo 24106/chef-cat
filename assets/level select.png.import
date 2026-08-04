@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cub2fu5g5t0su"
-path="res://.godot/imported/ingredient circle with timer.png-8fbdd1b1928d54063c78ad1e11582567.ctex"
+uid="uid://d3n3nqsmb78fn"
+path="res://.godot/imported/level select.png-50eb369431ae8e42c3cd115c0343823b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/ingredient circle with timer.png"
-dest_files=["res://.godot/imported/ingredient circle with timer.png-8fbdd1b1928d54063c78ad1e11582567.ctex"]
+source_file="res://assets/level select.png"
+dest_files=["res://.godot/imported/level select.png-50eb369431ae8e42c3cd115c0343823b.ctex"]
 
 [params]
 

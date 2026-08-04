@@ -1,31 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7r2rbxvgeqou"]
+[gd_scene format=3 uid="uid://b7r2rbxvgeqou"]
 
 [ext_resource type="Script" uid="uid://dbh537pxjwjg7" path="res://scripts/timed_ingredients.gd" id="1_ipyih"]
 [ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="2_ipyih"]
+[ext_resource type="Texture2D" uid="uid://oqa7mwshli5" path="res://assets/ui/ingredient sign.png" id="3_4kw16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4kw16"]
 size = Vector2(55, 136)
 
-[node name="tomatosauce" type="Area2D"]
+[node name="tomatosauce" type="Area2D" unique_id=2104057281]
 script = ExtResource("1_ipyih")
 spoil_time = 20.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1184260277]
 position = Vector2(1, -4)
 scale = Vector2(0.43812865, 0.43812865)
 texture = ExtResource("2_ipyih")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1151749080]
 position = Vector2(1.5, -3)
 shape = SubResource("RectangleShape2D_4kw16")
 
-[node name="Label" type="Label" parent="."]
+[node name="sign" type="Sprite2D" parent="." unique_id=1931478218]
 visible = false
-offset_left = -55.0
-offset_top = -72.0
-offset_right = 60.0
-offset_bottom = -49.0
-text = "click to pick up"
+position = Vector2(2.3841858e-07, -123)
+scale = Vector2(0.034531236, 0.034531236)
+texture = ExtResource("3_4kw16")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

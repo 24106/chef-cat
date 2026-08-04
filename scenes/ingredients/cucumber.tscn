@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7img3g7ji2rw" path="res://scripts/ingredient.gd" id="1_sfjeg"]
 [ext_resource type="Texture2D" uid="uid://cj183i6gwlbbo" path="res://assets/ingredients/cucumber art.png" id="2_sfjeg"]
+[ext_resource type="Texture2D" uid="uid://oqa7mwshli5" path="res://assets/ui/ingredient sign.png" id="3_rnjem"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ssx0k"]
 radius = 49.0
@@ -19,13 +20,11 @@ texture = ExtResource("2_sfjeg")
 position = Vector2(17, 11)
 shape = SubResource("CircleShape2D_ssx0k")
 
-[node name="Label" type="Label" parent="." unique_id=2062104556]
+[node name="sign" type="Sprite2D" parent="." unique_id=1685920094]
 visible = false
-offset_left = -57.0
-offset_top = -51.0
-offset_right = 58.0
-offset_bottom = -28.0
-text = "click to pick up"
+position = Vector2(13.999999, -78)
+scale = Vector2(0.034531236, 0.034531236)
+texture = ExtResource("3_rnjem")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
