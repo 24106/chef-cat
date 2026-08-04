@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7kf4oghjpbk0"
-path="res://.godot/imported/tileset modified.png-cf39a1f37a6a6b8aa75215c673ab5a57.ctex"
+uid="uid://ttjumkhatsgx"
+path="res://.godot/imported/sprint bar (5:5).png-9d92dfdaefaea2181740b5cf3385c258.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/terrain/tileset modified.png"
-dest_files=["res://.godot/imported/tileset modified.png-cf39a1f37a6a6b8aa75215c673ab5a57.ctex"]
+source_file="res://assets/sprint bar (5:5).png"
+dest_files=["res://.godot/imported/sprint bar (5:5).png-9d92dfdaefaea2181740b5cf3385c258.ctex"]
 
 [params]
 

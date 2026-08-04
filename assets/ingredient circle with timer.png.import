@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinfkodr8tgap"
-path="res://.godot/imported/cat_standing_idle.png-6592acb2300be52ec15c5763d9a46533.ctex"
+uid="uid://cub2fu5g5t0su"
+path="res://.godot/imported/ingredient circle with timer.png-cc0880372bd478baecb8a1f78c6c5778.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chef cat/cat_standing_idle.png"
-dest_files=["res://.godot/imported/cat_standing_idle.png-6592acb2300be52ec15c5763d9a46533.ctex"]
+source_file="res://assets/ingredient circle with timer.png"
+dest_files=["res://.godot/imported/ingredient circle with timer.png-cc0880372bd478baecb8a1f78c6c5778.ctex"]
 
 [params]
 

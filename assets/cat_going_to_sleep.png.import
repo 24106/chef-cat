@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bge6qk3c7q3xg"
-path="res://.godot/imported/cat_jumping.png-2415d799fc0589e4064b90af99c12a4e.ctex"
+uid="uid://cvn38vficiuc1"
+path="res://.godot/imported/cat_going_to_sleep.png-19b08ab86196eef3ff0ebd0b2385b6f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chef cat/cat_jumping.png"
-dest_files=["res://.godot/imported/cat_jumping.png-2415d799fc0589e4064b90af99c12a4e.ctex"]
+source_file="res://assets/cat_going_to_sleep.png"
+dest_files=["res://.godot/imported/cat_going_to_sleep.png-19b08ab86196eef3ff0ebd0b2385b6f9.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cro12id0b1wjs"
-path="res://.godot/imported/cat_sleeping_idle.png-f79e5359109ef81044f6591a9b50b89f.ctex"
+uid="uid://cexke5vi5jj3u"
+path="res://.godot/imported/sprint bar (0:5).png-76e2f8495aee4f9606b5c481d3b188e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chef cat/cat_sleeping_idle.png"
-dest_files=["res://.godot/imported/cat_sleeping_idle.png-f79e5359109ef81044f6591a9b50b89f.ctex"]
+source_file="res://assets/sprint bar (0:5).png"
+dest_files=["res://.godot/imported/sprint bar (0:5).png-76e2f8495aee4f9606b5c481d3b188e4.ctex"]
 
 [params]
 

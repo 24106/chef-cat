@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh0lbrmiootkd"
-path="res://.godot/imported/cat_lying_down.png-665a83e27f4d8a7439ef20fa4a544664.ctex"
+uid="uid://cro12id0b1wjs"
+path="res://.godot/imported/cat_sleeping_idle.png-c99e3b79d8fcdfa14c192e89e766c1d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chef cat/cat_lying_down.png"
-dest_files=["res://.godot/imported/cat_lying_down.png-665a83e27f4d8a7439ef20fa4a544664.ctex"]
+source_file="res://assets/cat_sleeping_idle.png"
+dest_files=["res://.godot/imported/cat_sleeping_idle.png-c99e3b79d8fcdfa14c192e89e766c1d8.ctex"]
 
 [params]
 

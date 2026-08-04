@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cauwk4rhfu2tv"
-path="res://.godot/imported/basic tilemap.png-1e466e09d30ff58b9286d6ab87909ae8.ctex"
+uid="uid://hdh72s1w608s"
+path="res://.godot/imported/sprint bar (1:5).png-23145b77534b63396a52311840110dea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/terrain/basic tilemap.png"
-dest_files=["res://.godot/imported/basic tilemap.png-1e466e09d30ff58b9286d6ab87909ae8.ctex"]
+source_file="res://assets/sprint bar (1:5).png"
+dest_files=["res://.godot/imported/sprint bar (1:5).png-23145b77534b63396a52311840110dea.ctex"]
 
 [params]
 
