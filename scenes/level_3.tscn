@@ -2,21 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/player.tscn" id="1_h23n6"]
 [ext_resource type="Script" uid="uid://bmjt6hy5mg1lt" path="res://scripts/level_3.gd" id="1_uwxec"]
-[ext_resource type="Texture2D" path="res://assets/tileset modified.png" id="3_5xqnf"]
+[ext_resource type="Texture2D" uid="uid://7kf4oghjpbk0" path="res://assets/tileset modified.png" id="3_5xqnf"]
 [ext_resource type="PackedScene" uid="uid://bsoq344miamrp" path="res://scenes/ingredients/icecream.tscn" id="3_p6vls"]
 [ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/smallslipperyfloor.tscn" id="4_1pn4d"]
 [ext_resource type="PackedScene" uid="uid://dnw2ahjo76wht" path="res://scenes/big_knife.tscn" id="4_ah8om"]
-[ext_resource type="Texture2D" path="res://assets/tileset (1).png" id="4_una4e"]
+[ext_resource type="Texture2D" uid="uid://c6qwallj7r6ym" path="res://assets/tileset (1).png" id="4_una4e"]
 [ext_resource type="PackedScene" uid="uid://djwi0x33fgf2q" path="res://scenes/ingredients/chocolate.tscn" id="4_wae8j"]
-[ext_resource type="Texture2D" path="res://assets/tileset.png" id="5_ema3p"]
+[ext_resource type="Texture2D" uid="uid://x87ghratvvfe" path="res://assets/tileset.png" id="5_ema3p"]
 [ext_resource type="PackedScene" uid="uid://b4jf5btpmwfq5" path="res://scenes/ingredients/strawberries.tscn" id="5_ha73p"]
 [ext_resource type="PackedScene" uid="uid://cvwkyowxcbbv4" path="res://scenes/l3_kitchendoor.tscn" id="6_ha73p"]
-[ext_resource type="Texture2D" path="res://assets/New folder/tileset.png" id="8_q2dsb"]
+[ext_resource type="Texture2D" uid="uid://bg20011d3yky0" path="res://assets/New folder/tileset.png" id="8_q2dsb"]
 [ext_resource type="Texture2D" uid="uid://d4bl1d6i8o3wl" path="res://assets/ingredients/strawberries art.png" id="10_q2dsb"]
 [ext_resource type="PackedScene" uid="uid://dbppudbneugdt" path="res://scenes/small_knife.tscn" id="11_una4e"]
 [ext_resource type="PackedScene" uid="uid://bsgsjofuxfrpi" path="res://scenes/largeslipperyfloor.tscn" id="14_ema3p"]
 [ext_resource type="PackedScene" uid="uid://c16dyubw12s2u" path="res://scenes/mediumslipperyfloor.tscn" id="15_8uepa"]
 [ext_resource type="Texture2D" uid="uid://rfakvhqaf6a1" path="res://assets/ingredients/chocolate art.png" id="15_una4e"]
+[ext_resource type="Texture2D" uid="uid://cver3ceh5fmm4" path="res://assets/kitchen arrow.png" id="16_q7pjq"]
 [ext_resource type="Texture2D" uid="uid://4en06tccb5mn" path="res://assets/ingredients/ice cream art.png" id="16_una4e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8uepa"]
@@ -359,7 +360,7 @@ position = Vector2(4653, 3337)
 position = Vector2(8125, 2028)
 
 [node name="l3_kitchendoor" parent="." unique_id=507409338 instance=ExtResource("6_ha73p")]
-position = Vector2(8721, -294)
+position = Vector2(8724, -268)
 
 [node name="indoor terrain" type="TileMapLayer" parent="." unique_id=145901698]
 scale = Vector2(4.8, 4.8)
@@ -434,6 +435,12 @@ position = Vector2(8600, -155.4)
 
 [node name="UI layer" type="CanvasLayer" parent="." unique_id=263901170]
 
+[node name="arrow_kitchen" type="Sprite2D" parent="UI layer" unique_id=484032822]
+visible = false
+position = Vector2(1073, 63)
+scale = Vector2(0.07087055, 0.07087055)
+texture = ExtResource("16_q7pjq")
+
 [node name="icecream_timer" type="Label" parent="UI layer" unique_id=906377487]
 offset_left = 371.0
 offset_top = 109.0
@@ -447,14 +454,6 @@ offset_right = 145.0
 offset_bottom = 60.0
 text = "press esc to
 go to the main menu"
-
-[node name="arrow" type="Label" parent="UI layer" unique_id=1230475126]
-visible = false
-offset_left = 1054.0
-offset_top = 26.0
-offset_right = 1130.0
-offset_bottom = 49.0
-text = "kitchen ->"
 
 [node name="Label2" type="Label" parent="UI layer" unique_id=1775489406]
 offset_left = 468.0

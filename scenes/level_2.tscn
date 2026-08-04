@@ -2,22 +2,27 @@
 
 [ext_resource type="Script" uid="uid://d2bi7ir3nmmvh" path="res://scripts/level_2.gd" id="1_eqxsl"]
 [ext_resource type="PackedScene" uid="uid://csnym1hhvp63e" path="res://scenes/player.tscn" id="1_pbc48"]
-[ext_resource type="Texture2D" path="res://assets/tileset modified.png" id="3_guvtl"]
+[ext_resource type="Texture2D" uid="uid://7kf4oghjpbk0" path="res://assets/tileset modified.png" id="3_guvtl"]
 [ext_resource type="PackedScene" uid="uid://ekffug3swemm" path="res://scenes/ingredients/pasta.tscn" id="3_y0kc7"]
 [ext_resource type="PackedScene" uid="uid://dnw2ahjo76wht" path="res://scenes/big_knife.tscn" id="4_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://huimg0885r72" path="res://scenes/smallslipperyfloor.tscn" id="4_eqxsl"]
-[ext_resource type="Texture2D" path="res://assets/tileset (1).png" id="4_igmy8"]
+[ext_resource type="Texture2D" uid="uid://c6qwallj7r6ym" path="res://assets/tileset (1).png" id="4_igmy8"]
 [ext_resource type="PackedScene" uid="uid://b7r2rbxvgeqou" path="res://scenes/ingredients/tomatosauce.tscn" id="4_ne2mo"]
 [ext_resource type="PackedScene" uid="uid://bw0oft3mjbe7o" path="res://scenes/ingredients/mushrooms.tscn" id="5_6cvei"]
-[ext_resource type="Texture2D" path="res://assets/tileset.png" id="5_wdtqu"]
+[ext_resource type="Texture2D" uid="uid://x87ghratvvfe" path="res://assets/tileset.png" id="5_wdtqu"]
 [ext_resource type="PackedScene" uid="uid://bspmtkpd57uo3" path="res://scenes/l2_kitchendoor.tscn" id="6_6cvei"]
-[ext_resource type="Texture2D" path="res://assets/New folder/tileset.png" id="7_172wr"]
+[ext_resource type="Texture2D" uid="uid://bg20011d3yky0" path="res://assets/New folder/tileset.png" id="7_172wr"]
 [ext_resource type="Texture2D" uid="uid://bg0ooc1eljequ" path="res://assets/ingredients/pasta art.png" id="10_172wr"]
 [ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="11_172wr"]
 [ext_resource type="PackedScene" uid="uid://dbppudbneugdt" path="res://scenes/small_knife.tscn" id="11_igmy8"]
 [ext_resource type="PackedScene" uid="uid://bsgsjofuxfrpi" path="res://scenes/largeslipperyfloor.tscn" id="14_wdtqu"]
 [ext_resource type="PackedScene" uid="uid://c16dyubw12s2u" path="res://scenes/mediumslipperyfloor.tscn" id="15_7qsfm"]
+[ext_resource type="Texture2D" uid="uid://lnwaokkx2ulo" path="res://assets/ingredient circle.png" id="16_bv48q"]
 [ext_resource type="Texture2D" uid="uid://ivrwbjpb1u0t" path="res://assets/ingredients/mushrooms art.png" id="16_igmy8"]
+[ext_resource type="Texture2D" uid="uid://cver3ceh5fmm4" path="res://assets/kitchen arrow.png" id="16_vhnap"]
+[ext_resource type="Texture2D" uid="uid://cub2fu5g5t0su" path="res://assets/ingredient circle with timer.png" id="17_1sb0y"]
+[ext_resource type="Texture2D" uid="uid://catcxu5r47qcs" path="res://assets/green tick.png" id="21_vhnap"]
+[ext_resource type="Texture2D" uid="uid://2hvnwq8fenii" path="res://assets/red cross.png" id="22_vwfin"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qsfm"]
 texture = ExtResource("7_172wr")
@@ -359,7 +364,7 @@ spoil_time = 40.0
 position = Vector2(6518, 803)
 
 [node name="l2_kitchendoor" parent="." unique_id=1020096607 instance=ExtResource("6_6cvei")]
-position = Vector2(8721, -139)
+position = Vector2(8724, -114)
 
 [node name="indoor terrain" type="TileMapLayer" parent="." unique_id=2034300406]
 scale = Vector2(4.8, 4.8)
@@ -437,6 +442,12 @@ position = Vector2(7077, 305.4)
 
 [node name="UI layer" type="CanvasLayer" parent="." unique_id=1534919478]
 
+[node name="arrow_kitchen" type="Sprite2D" parent="UI layer" unique_id=618910656]
+visible = false
+position = Vector2(1073, 63)
+scale = Vector2(0.07087055, 0.07087055)
+texture = ExtResource("16_vhnap")
+
 [node name="tomatosauce_timer" type="Label" parent="UI layer" unique_id=1049732057]
 offset_left = 493.0
 offset_top = 121.0
@@ -451,14 +462,6 @@ offset_bottom = 60.0
 text = "press esc to
 go to the main menu"
 
-[node name="arrow" type="Label" parent="UI layer" unique_id=1216157858]
-visible = false
-offset_left = 1054.0
-offset_top = 26.0
-offset_right = 1130.0
-offset_bottom = 49.0
-text = "kitchen ->"
-
 [node name="Label2" type="Label" parent="UI layer" unique_id=939744061]
 offset_left = 468.0
 offset_top = 9.0
@@ -468,41 +471,59 @@ text = "ingredients to collect:"
 
 [node name="ingredientUI" type="Node2D" parent="UI layer" unique_id=1843276088]
 
-[node name="pastatext" type="Label" parent="UI layer/ingredientUI" unique_id=1771067647]
-offset_left = 429.0
-offset_top = 82.0
-offset_right = 520.0
-offset_bottom = 105.0
-text = "Pasta"
+[node name="pasta_circle" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=486498489]
+position = Vector2(464, 70)
+scale = Vector2(0.022421857, 0.021321362)
+texture = ExtResource("16_bv48q")
 
-[node name="tomatosaucetext" type="Label" parent="UI layer/ingredientUI" unique_id=1574982984]
-offset_left = 490.0
-offset_top = 38.0
-offset_right = 629.0
-offset_bottom = 61.0
-text = "Tomato sauce"
+[node name="sauce_circle" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=662416191]
+position = Vector2(542, 70)
+scale = Vector2(0.022421857, 0.021321362)
+texture = ExtResource("17_1sb0y")
 
-[node name="mushroomstext" type="Label" parent="UI layer/ingredientUI" unique_id=1823109535]
-offset_left = 603.0
-offset_top = 77.0
-offset_right = 730.0
-offset_bottom = 100.0
-text = "Mushrooms"
+[node name="mushrooms_circle" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1875358775]
+position = Vector2(621, 70)
+scale = Vector2(0.022421857, 0.021321362)
+texture = ExtResource("16_bv48q")
 
 [node name="pasta" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=348734178]
-position = Vector2(453, 60.000004)
-scale = Vector2(0.15051983, 0.15051983)
+position = Vector2(466.618, 68.49604)
+scale = Vector2(0.1598994, 0.1598994)
 texture = ExtResource("10_172wr")
 
 [node name="tomatosauce" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=916268516]
-position = Vector2(547.8075, 102.0715)
-scale = Vector2(0.24519588, 0.24519588)
+position = Vector2(538.00006, 69.99999)
+scale = Vector2(0.17893615, 0.17893612)
 texture = ExtResource("11_172wr")
 
 [node name="mushrooms" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=969666716]
-position = Vector2(653.66296, 52.997284)
-scale = Vector2(0.8000724, 0.8000724)
+position = Vector2(620.3314, 68.751366)
+scale = Vector2(0.5800363, 0.5800363)
 texture = ExtResource("16_igmy8")
+
+[node name="pasta_tick" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1599047565]
+visible = false
+position = Vector2(482.00003, 95.00001)
+scale = Vector2(0.03413464, 0.03413464)
+texture = ExtResource("21_vhnap")
+
+[node name="sauce_tick" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=117188225]
+visible = false
+position = Vector2(563, 95)
+scale = Vector2(0.03413464, 0.03413464)
+texture = ExtResource("21_vhnap")
+
+[node name="mushrooms_tick" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=509808312]
+visible = false
+position = Vector2(645, 95.00001)
+scale = Vector2(0.03413464, 0.03413464)
+texture = ExtResource("21_vhnap")
+
+[node name="sauce_cross" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=1671029829]
+visible = false
+position = Vector2(565.00006, 90.00001)
+scale = Vector2(0.03261719, 0.03261719)
+texture = ExtResource("22_vwfin")
 
 [node name="tutorialpanel" type="Panel" parent="UI layer" unique_id=1680343612]
 offset_right = 1152.0

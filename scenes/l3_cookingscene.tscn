@@ -1,14 +1,28 @@
-[gd_scene format=3 uid="uid://bnxv8s8pmfj5d"]
+[gd_scene format=4 uid="uid://bnxv8s8pmfj5d"]
 
 [ext_resource type="Script" uid="uid://bxo8rg53oc7y2" path="res://scripts/l3_cookingscene.gd" id="1_ay573"]
-[ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="2_blwxb"]
+[ext_resource type="Texture2D" uid="uid://bvjm4f75jpdvb" path="res://assets/New folder/wooden bench.png" id="2_ay573"]
 [ext_resource type="Texture2D" uid="uid://d4bl1d6i8o3wl" path="res://assets/ingredients/strawberries art.png" id="3_ay573"]
 [ext_resource type="Texture2D" uid="uid://rfakvhqaf6a1" path="res://assets/ingredients/chocolate art.png" id="4_ay573"]
 [ext_resource type="Texture2D" uid="uid://4en06tccb5mn" path="res://assets/ingredients/ice cream art.png" id="5_blwxb"]
 [ext_resource type="Texture2D" uid="uid://0wl8gmmqnwcq" path="res://assets/ingredients/icecreamsundaeart.png" id="6_5fltf"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blwxb"]
+texture = ExtResource("2_ay573")
+texture_region_size = Vector2i(2200, 2100)
+use_texture_padding = false
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5fltf"]
+sources/0 = SubResource("TileSetAtlasSource_blwxb")
+
 [node name="l3_cookingscene" type="Node2D" unique_id=1844513121]
 script = ExtResource("1_ay573")
+
+[node name="bench" type="TileMapLayer" parent="." unique_id=2102288631]
+scale = Vector2(0.08, 0.08)
+tile_map_data = PackedByteArray("AAA+AJ4BAAAAAAAAAADHAJ4BAAAAAAAAAABQAZ4BAAAAAAAAAADZAZ4BAAAAAAAAAABiAp4BAAAAAAAAAADrAp4BAAAAAAAAAAB0A54BAAAAAAAAAAA+ACACAAAAAAAAAADHACACAAAAAAAAAABQASACAAAAAAAAAADZASACAAAAAAAAAABiAiACAAAAAAAAAADrAiACAAAAAAAAAAB0AyACAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_5fltf")
 
 [node name="Label2" type="Label" parent="." unique_id=576828805]
 offset_left = 389.0
@@ -16,11 +30,6 @@ offset_top = 59.0
 offset_right = 711.0
 offset_bottom = 82.0
 text = "your aim is to create an ice cream sundae"
-
-[node name="bench" type="Sprite2D" parent="." unique_id=654491832]
-position = Vector2(577, 560.74994)
-scale = Vector2(9.0078125, 1.7460935)
-texture = ExtResource("2_blwxb")
 
 [node name="ingredientUI" type="Node2D" parent="." unique_id=1513072305]
 

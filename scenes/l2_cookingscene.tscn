@@ -1,11 +1,20 @@
-[gd_scene format=3 uid="uid://baw7uy848dufi"]
+[gd_scene format=4 uid="uid://baw7uy848dufi"]
 
 [ext_resource type="Script" uid="uid://bl1b0fpdp4ac3" path="res://scripts/l2_cookingscene.gd" id="1_jndfw"]
-[ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="2_ok3bm"]
+[ext_resource type="Texture2D" uid="uid://bvjm4f75jpdvb" path="res://assets/New folder/wooden bench.png" id="2_jndfw"]
 [ext_resource type="Texture2D" uid="uid://ivrwbjpb1u0t" path="res://assets/ingredients/mushrooms art.png" id="3_jndfw"]
 [ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="4_jndfw"]
 [ext_resource type="Texture2D" uid="uid://bg0ooc1eljequ" path="res://assets/ingredients/pasta art.png" id="5_jndfw"]
 [ext_resource type="Texture2D" uid="uid://cjutqrd7xaamc" path="res://assets/ingredients/pasta dish art.png" id="6_jndfw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ok3bm"]
+texture = ExtResource("2_jndfw")
+texture_region_size = Vector2i(2200, 2100)
+use_texture_padding = false
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5dsrp"]
+sources/0 = SubResource("TileSetAtlasSource_ok3bm")
 
 [node name="l2_cookingscene" type="Node2D" unique_id=1468727451]
 script = ExtResource("1_jndfw")
@@ -17,10 +26,10 @@ offset_right = 724.0
 offset_bottom = 82.0
 text = "your aim is to create a dish of pasta"
 
-[node name="bench" type="Sprite2D" parent="." unique_id=463025686]
-position = Vector2(577, 560.74994)
-scale = Vector2(9.0078125, 1.7460935)
-texture = ExtResource("2_ok3bm")
+[node name="bench" type="TileMapLayer" parent="." unique_id=518003677]
+scale = Vector2(0.08, 0.08)
+tile_map_data = PackedByteArray("AAA+AJ4BAAAAAAAAAADHAJ4BAAAAAAAAAABQAZ4BAAAAAAAAAADZAZ4BAAAAAAAAAABiAp4BAAAAAAAAAADrAp4BAAAAAAAAAAB0A54BAAAAAAAAAAA+ACACAAAAAAAAAADHACACAAAAAAAAAABQASACAAAAAAAAAADZASACAAAAAAAAAABiAiACAAAAAAAAAADrAiACAAAAAAAAAAB0AyACAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_5dsrp")
 
 [node name="ingredientUI" type="Node2D" parent="." unique_id=1736205263]
 

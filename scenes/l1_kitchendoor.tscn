@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://be8klt5jxnt3s"]
 
 [ext_resource type="Script" uid="uid://ckufsvuaiegke" path="res://scripts/l1_kitchendoor.gd" id="1_2qm2g"]
-[ext_resource type="Texture2D" uid="uid://bvfb1ko2nlhdo" path="res://icon.svg" id="1_ud5e8"]
+[ext_resource type="Texture2D" uid="uid://bor3syeydurad" path="res://assets/New folder/door.png" id="2_koa10"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ud5e8"]
-size = Vector2(72, 274)
+size = Vector2(150, 246)
 
 [node name="l1_kitchendoor" type="Area2D" unique_id=1353888535]
 script = ExtResource("1_2qm2g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1630642859]
-position = Vector2(-1.9073486e-06, 0)
-scale = Vector2(0.578125, 2.15625)
-texture = ExtResource("1_ud5e8")
+position = Vector2(-12.781238, 6.5000076)
+scale = Vector2(0.18624802, 0.21312498)
+texture = ExtResource("2_koa10")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1439886545]
-position = Vector2(0, -1)
+position = Vector2(-43, -8)
 shape = SubResource("RectangleShape2D_ud5e8")
 
 [node name="Label" type="Label" parent="." unique_id=674300986]
