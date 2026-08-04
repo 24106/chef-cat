@@ -1,0 +1,131 @@
+[gd_scene format=4 uid="uid://baw7uy848dufi"]
+
+[ext_resource type="Script" uid="uid://bl1b0fpdp4ac3" path="res://scripts/levels/l2_cookingscene.gd" id="1_jndfw"]
+[ext_resource type="Texture2D" uid="uid://bvjm4f75jpdvb" path="res://assets/terrain/wooden bench.png" id="2_jndfw"]
+[ext_resource type="Texture2D" uid="uid://ivrwbjpb1u0t" path="res://assets/ingredients/mushrooms art.png" id="3_jndfw"]
+[ext_resource type="Texture2D" uid="uid://vjdoanfbfrwg" path="res://assets/ingredients/tomato sauce art.png" id="4_jndfw"]
+[ext_resource type="Texture2D" uid="uid://bg0ooc1eljequ" path="res://assets/ingredients/pasta art.png" id="5_jndfw"]
+[ext_resource type="Texture2D" uid="uid://cjutqrd7xaamc" path="res://assets/ingredients/pasta dish art.png" id="6_jndfw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ok3bm"]
+texture = ExtResource("2_jndfw")
+texture_region_size = Vector2i(2200, 2100)
+use_texture_padding = false
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5dsrp"]
+sources/0 = SubResource("TileSetAtlasSource_ok3bm")
+
+[node name="l2_cookingscene" type="Node2D" unique_id=1468727451]
+script = ExtResource("1_jndfw")
+
+[node name="Label2" type="Label" parent="." unique_id=866979685]
+offset_left = 402.0
+offset_top = 59.0
+offset_right = 724.0
+offset_bottom = 82.0
+text = "your aim is to create a dish of pasta"
+
+[node name="bench" type="TileMapLayer" parent="." unique_id=518003677]
+scale = Vector2(0.08, 0.08)
+tile_map_data = PackedByteArray("AAA+AJ4BAAAAAAAAAADHAJ4BAAAAAAAAAABQAZ4BAAAAAAAAAADZAZ4BAAAAAAAAAABiAp4BAAAAAAAAAADrAp4BAAAAAAAAAAB0A54BAAAAAAAAAAA+ACACAAAAAAAAAADHACACAAAAAAAAAABQASACAAAAAAAAAADZASACAAAAAAAAAABiAiACAAAAAAAAAADrAiACAAAAAAAAAAB0AyACAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_5dsrp")
+
+[node name="ingredientUI" type="Node2D" parent="." unique_id=1736205263]
+
+[node name="Panel" type="Panel" parent="ingredientUI" unique_id=2102960020]
+offset_left = 60.0
+offset_top = 43.0
+offset_right = 200.0
+offset_bottom = 378.0
+
+[node name="Label" type="Label" parent="ingredientUI" unique_id=1966379409]
+offset_left = 84.0
+offset_top = 48.0
+offset_right = 176.0
+offset_bottom = 71.0
+text = "ingredients:"
+
+[node name="mushrooms" type="Sprite2D" parent="ingredientUI" unique_id=1020841947]
+position = Vector2(128, 318)
+scale = Vector2(0.82544786, 0.82544786)
+texture = ExtResource("3_jndfw")
+
+[node name="mushroomstext" type="Label" parent="ingredientUI" unique_id=1440705014]
+offset_left = 81.0
+offset_top = 341.0
+offset_right = 213.0
+offset_bottom = 364.0
+text = "mushrooms"
+
+[node name="tomatosaucetext" type="Label" parent="ingredientUI" unique_id=10617844]
+offset_left = 79.0
+offset_top = 246.0
+offset_right = 236.0
+offset_bottom = 269.0
+text = "tomato sauce"
+
+[node name="tomatosauce" type="Sprite2D" parent="ingredientUI" unique_id=1680227804]
+position = Vector2(127.03262, 208.37224)
+scale = Vector2(0.2530617, 0.25306168)
+texture = ExtResource("4_jndfw")
+
+[node name="pastatext" type="Label" parent="ingredientUI" unique_id=1914695538]
+offset_left = 102.0
+offset_top = 141.0
+offset_right = 210.0
+offset_bottom = 164.0
+text = "pasta"
+
+[node name="pasta" type="Sprite2D" parent="ingredientUI" unique_id=301734367]
+position = Vector2(126.0845, 114.77669)
+scale = Vector2(0.1894878, 0.1894878)
+texture = ExtResource("5_jndfw")
+
+[node name="question" type="Node2D" parent="." unique_id=2009109884]
+
+[node name="Label" type="Label" parent="question" unique_id=87009286]
+offset_left = 348.0
+offset_top = 146.0
+offset_right = 765.0
+offset_bottom = 169.0
+text = "when cooking the pasta, do you keep the lid on or off?"
+
+[node name="Button" type="Button" parent="question" unique_id=132732150]
+offset_left = 440.0
+offset_top = 198.0
+offset_right = 650.0
+offset_bottom = 229.0
+text = "obviously off"
+
+[node name="Button2" type="Button" parent="question" unique_id=24316090]
+offset_left = 444.0
+offset_top = 253.0
+offset_right = 654.0
+offset_bottom = 284.0
+text = "on of course"
+
+[node name="correctanswer" type="Node2D" parent="." unique_id=719252144]
+
+[node name="Label" type="Label" parent="correctanswer" unique_id=174374997]
+offset_left = 405.0
+offset_top = 293.0
+offset_right = 842.0
+offset_bottom = 316.0
+text = "good job, here is your finished pasta!!"
+
+[node name="pasta" type="Sprite2D" parent="correctanswer" unique_id=1710992430]
+position = Vector2(554.00006, 479)
+scale = Vector2(0.8172715, 0.81727135)
+texture = ExtResource("6_jndfw")
+
+[node name="levelcompletionbutton" type="Button" parent="." unique_id=258121504]
+offset_left = 458.0
+offset_top = 601.0
+offset_right = 649.0
+offset_bottom = 632.0
+text = "level completion screen"
+
+[connection signal="pressed" from="question/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="question/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="levelcompletionbutton" to="." method="_on_levelcompletionbutton_pressed"]

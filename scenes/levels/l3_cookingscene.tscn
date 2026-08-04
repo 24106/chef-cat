@@ -1,0 +1,140 @@
+[gd_scene format=4 uid="uid://bnxv8s8pmfj5d"]
+
+[ext_resource type="Script" uid="uid://bxo8rg53oc7y2" path="res://scripts/levels/l3_cookingscene.gd" id="1_ay573"]
+[ext_resource type="Texture2D" uid="uid://bvjm4f75jpdvb" path="res://assets/terrain/wooden bench.png" id="2_ay573"]
+[ext_resource type="Texture2D" uid="uid://d4bl1d6i8o3wl" path="res://assets/ingredients/strawberries art.png" id="3_ay573"]
+[ext_resource type="Texture2D" uid="uid://rfakvhqaf6a1" path="res://assets/ingredients/chocolate art.png" id="4_ay573"]
+[ext_resource type="Texture2D" uid="uid://4en06tccb5mn" path="res://assets/ingredients/ice cream art.png" id="5_blwxb"]
+[ext_resource type="Texture2D" uid="uid://0wl8gmmqnwcq" path="res://assets/ingredients/icecreamsundaeart.png" id="6_5fltf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_blwxb"]
+texture = ExtResource("2_ay573")
+texture_region_size = Vector2i(2200, 2100)
+use_texture_padding = false
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5fltf"]
+sources/0 = SubResource("TileSetAtlasSource_blwxb")
+
+[node name="l3_cookingscene" type="Node2D" unique_id=1844513121]
+script = ExtResource("1_ay573")
+
+[node name="bench" type="TileMapLayer" parent="." unique_id=2102288631]
+scale = Vector2(0.08, 0.08)
+tile_map_data = PackedByteArray("AAA+AJ4BAAAAAAAAAADHAJ4BAAAAAAAAAABQAZ4BAAAAAAAAAADZAZ4BAAAAAAAAAABiAp4BAAAAAAAAAADrAp4BAAAAAAAAAAB0A54BAAAAAAAAAAA+ACACAAAAAAAAAADHACACAAAAAAAAAABQASACAAAAAAAAAADZASACAAAAAAAAAABiAiACAAAAAAAAAADrAiACAAAAAAAAAAB0AyACAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_5fltf")
+
+[node name="Label2" type="Label" parent="." unique_id=576828805]
+offset_left = 389.0
+offset_top = 59.0
+offset_right = 711.0
+offset_bottom = 82.0
+text = "your aim is to create an ice cream sundae"
+
+[node name="ingredientUI" type="Node2D" parent="." unique_id=1513072305]
+
+[node name="Panel" type="Panel" parent="ingredientUI" unique_id=1140157614]
+offset_left = 60.0
+offset_top = 43.0
+offset_right = 200.0
+offset_bottom = 378.0
+
+[node name="Label" type="Label" parent="ingredientUI" unique_id=698225566]
+offset_left = 84.0
+offset_top = 48.0
+offset_right = 176.0
+offset_bottom = 71.0
+text = "ingredients:"
+
+[node name="strawberries" type="Sprite2D" parent="ingredientUI" unique_id=252382796]
+position = Vector2(125, 312.00003)
+scale = Vector2(0.14232776, 0.14232776)
+texture = ExtResource("3_ay573")
+
+[node name="strawberriestext" type="Label" parent="ingredientUI" unique_id=232279117]
+offset_left = 81.0
+offset_top = 341.0
+offset_right = 213.0
+offset_bottom = 364.0
+text = "strawberries"
+
+[node name="chocolatesaucetext" type="Label" parent="ingredientUI" unique_id=1696178642]
+offset_left = 92.0
+offset_top = 241.0
+offset_right = 249.0
+offset_bottom = 264.0
+text = "chocolate"
+
+[node name="chocolatesauce" type="Sprite2D" parent="ingredientUI" unique_id=209438952]
+position = Vector2(123.37792, 205.62207)
+scale = Vector2(1.2207361, 1.2207361)
+texture = ExtResource("4_ay573")
+
+[node name="icecreamtext" type="Label" parent="ingredientUI" unique_id=1972186452]
+offset_left = 87.0
+offset_top = 139.0
+offset_right = 195.0
+offset_bottom = 162.0
+text = "ice cream"
+
+[node name="icecream" type="Sprite2D" parent="ingredientUI" unique_id=2122346814]
+position = Vector2(128, 116)
+scale = Vector2(0.08023494, 0.08023494)
+texture = ExtResource("5_blwxb")
+
+[node name="question" type="Node2D" parent="." unique_id=2132385278]
+
+[node name="Label" type="Label" parent="question" unique_id=2078431224]
+offset_left = 413.0
+offset_top = 143.0
+offset_right = 668.0
+offset_bottom = 166.0
+text = "how do you scoop the ice cream?"
+
+[node name="Button" type="Button" parent="question" unique_id=1012402091]
+offset_left = 440.0
+offset_top = 198.0
+offset_right = 650.0
+offset_bottom = 229.0
+text = "use the ice cream scooper"
+
+[node name="Button2" type="Button" parent="question" unique_id=339480155]
+offset_left = 444.0
+offset_top = 253.0
+offset_right = 654.0
+offset_bottom = 284.0
+text = "use your fingers"
+
+[node name="Button3" type="Button" parent="question" unique_id=929460695]
+offset_left = 440.0
+offset_top = 309.0
+offset_right = 650.0
+offset_bottom = 340.0
+text = "use the ice cream scooper 
+after dipping it in water"
+
+[node name="correctanswer" type="Node2D" parent="." unique_id=1572883107]
+
+[node name="Label" type="Label" parent="correctanswer" unique_id=1139106596]
+offset_left = 362.0
+offset_top = 279.0
+offset_right = 799.0
+offset_bottom = 302.0
+text = "congratulations, here is your finished ice cream sundae!!"
+
+[node name="icecreamsundae" type="Sprite2D" parent="correctanswer" unique_id=1064481459]
+position = Vector2(550, 464.00003)
+scale = Vector2(0.5664457, 0.5664457)
+texture = ExtResource("6_5fltf")
+
+[node name="levelcompletionbutton" type="Button" parent="." unique_id=2053358047]
+offset_left = 458.0
+offset_top = 601.0
+offset_right = 649.0
+offset_bottom = 632.0
+text = "level completion screen"
+
+[connection signal="pressed" from="question/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="question/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="question/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="levelcompletionbutton" to="." method="_on_levelcompletionbutton_pressed"]

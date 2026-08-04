@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cvwkyowxcbbv4"]
+
+[ext_resource type="Script" uid="uid://cgq6n3tp2ilic" path="res://scripts/levels/l3_kitchendoor.gd" id="1_54a2v"]
+[ext_resource type="Texture2D" uid="uid://bor3syeydurad" path="res://assets/terrain/door.png" id="2_54a2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcoys"]
+size = Vector2(150, 246)
+
+[node name="l3_kitchendoor" type="Area2D" unique_id=1353888535]
+script = ExtResource("1_54a2v")
+
+[node name="Label" type="Label" parent="." unique_id=674300986]
+visible = false
+offset_left = -106.0
+offset_top = -172.0
+offset_right = 36.0
+offset_bottom = -149.0
+text = "right click to enter"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=19491646]
+position = Vector2(-12.781238, 6.5000076)
+scale = Vector2(0.18624802, 0.21312498)
+texture = ExtResource("2_54a2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=630487484]
+position = Vector2(-43, -8)
+shape = SubResource("RectangleShape2D_tcoys")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

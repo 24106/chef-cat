@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dfgrgk2eqaj6c"]
 
 [ext_resource type="Script" uid="uid://car7us0qnupad" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://bhxo810aawens" path="res://assets/main menu logo.png" id="2_ekxnf"]
 
 [node name="main_menu" type="Node2D" unique_id=1343833572]
 script = ExtResource("1_l6cm7")
@@ -10,35 +11,47 @@ position = Vector2(575, 325)
 
 [node name="mainsection" type="Node2D" parent="." unique_id=951975974]
 
-[node name="welcome text" type="Label" parent="mainsection" unique_id=1553438035]
-offset_left = 200.0
-offset_top = 60.0
-offset_right = 955.0
-offset_bottom = 83.0
-text = "welcome to chef cat!!"
-
 [node name="start game button" type="Button" parent="mainsection" unique_id=227683818]
-offset_left = 200.0
-offset_top = 115.0
-offset_right = 955.0
-offset_bottom = 146.0
+offset_left = 405.0
+offset_top = 466.0
+offset_right = 745.0
+offset_bottom = 529.0
+theme_override_colors/font_color = Color(0.87189883, 0.6770254, 0.57007295, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 40
 text = "start game"
 
 [node name="select level button" type="Button" parent="mainsection" unique_id=27762673]
-offset_left = 200.0
-offset_top = 175.0
-offset_right = 955.0
-offset_bottom = 206.0
+offset_left = 213.0
+offset_top = 553.0
+offset_right = 553.0
+offset_bottom = 605.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 26
 text = "select level"
 
 [node name="quit game button" type="Button" parent="mainsection" unique_id=1791672770]
-offset_left = 200.0
-offset_top = 235.0
-offset_right = 955.0
-offset_bottom = 266.0
+offset_left = 583.0
+offset_top = 553.0
+offset_right = 923.0
+offset_bottom = 605.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 26
 text = "quit game"
 
+[node name="Label" type="Label" parent="mainsection" unique_id=1421200176]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="welcometext" type="Sprite2D" parent="mainsection" unique_id=120650166]
+position = Vector2(573, 236.99998)
+scale = Vector2(0.45944446, 0.45944446)
+texture = ExtResource("2_ekxnf")
+
 [node name="levelselectsection" type="Node2D" parent="." unique_id=1199045995]
+visible = false
 
 [node name="level select text" type="Label" parent="levelselectsection" unique_id=1692781625]
 offset_left = 200.0
