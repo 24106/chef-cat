@@ -11,7 +11,7 @@ var spoiled = false
 var timer = 0
 var timer_started = false
 
-@onready var prompt = $Label
+@onready var prompt = $sign
 
 
 func _ready():

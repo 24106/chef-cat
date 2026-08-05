@@ -522,7 +522,7 @@ texture = ExtResource("22_y7n6r")
 
 [node name="icecream_cross" type="Sprite2D" parent="UI layer/ingredientUI" unique_id=579645911]
 visible = false
-position = Vector2(565.00006, 90.00001)
+position = Vector2(491, 91)
 scale = Vector2(0.03261719, 0.03261719)
 texture = ExtResource("23_ly8gl")
 

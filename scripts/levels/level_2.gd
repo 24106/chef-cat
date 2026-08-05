@@ -3,17 +3,17 @@ extends Node2D
 var required_ingredients = ["pasta", "tomatosauce", "mushrooms"]
 var ingredients_started = false
 
-@onready var arrow = $"UI layer"/arrow
+@onready var arrow = $"UI layer"/arrow_kitchen
 @onready var player = $player
 
 @onready var tutorialpanel = $"UI layer"/tutorialpanel
 @onready var tutorialtext = $"UI layer"/tutorialpanel/Label
 @onready var tutorialbutton = $"UI layer"/tutorialpanel/Button
 
-@onready var pasta_tick = $UIlayer/ingredientUI/pasta_tick
-@onready var sauce_tick = $UIlayer/ingredientUI/sauce_tick
-@onready var mushrooms_tick = $UIlayer/ingredientUI/mushrooms_tick
-@onready var sauce_cross = $UIlayer/ingredientUI/sauce_cross
+@onready var pasta_tick = $"UI layer"/ingredientUI/pasta_tick
+@onready var sauce_tick = $"UI layer"/ingredientUI/sauce_tick
+@onready var mushrooms_tick = $"UI layer"/ingredientUI/mushrooms_tick
+@onready var sauce_cross = $"UI layer"/ingredientUI/sauce_cross
 
 @onready var tomatosauce_timer = $"UI layer"/tomatosauce_timer
 @onready var tomatosauce = $ingredients/tomatosauce
