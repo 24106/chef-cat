@@ -22,8 +22,8 @@ shape = SubResource("CircleShape2D_ehhyp")
 
 [node name="sign" type="Sprite2D" parent="." unique_id=1578328566]
 visible = false
-position = Vector2(1.0000002, -95)
-scale = Vector2(0.034531236, 0.034531236)
+position = Vector2(2.9999998, -144)
+scale = Vector2(0.11238281, 0.07976561)
 texture = ExtResource("3_ehhyp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

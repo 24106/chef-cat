@@ -22,8 +22,8 @@ shape = SubResource("CircleShape2D_fcf3i")
 
 [node name="sign" type="Sprite2D" parent="." unique_id=460048756]
 visible = false
-position = Vector2(-1.9999995, -107)
-scale = Vector2(0.034531236, 0.034531236)
+position = Vector2(2, -156.00002)
+scale = Vector2(0.091874994, 0.076562494)
 texture = ExtResource("3_fcf3i")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

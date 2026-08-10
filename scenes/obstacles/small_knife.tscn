@@ -1,31 +1,30 @@
 [gd_scene format=3 uid="uid://dbppudbneugdt"]
 
 [ext_resource type="Script" uid="uid://xv8x63i5cgwf" path="res://scripts/movingobstacle.gd" id="1_bwmay"]
-[ext_resource type="Texture2D" uid="uid://ig43tfxe8x2v" path="res://assets/small kitchen knife.png" id="2_bwmay"]
+[ext_resource type="Texture2D" uid="uid://ig43tfxe8x2v" path="res://assets/obstacles/small kitchen knife.png" id="2_bwmay"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwmay"]
-radius = 5.0
-height = 64.0
+height = 114.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cno7v"]
-size = Vector2(12.75, 66.5)
+size = Vector2(21.375, 114)
 
 [node name="small_knife" type="CharacterBody2D" unique_id=1808693964]
 script = ExtResource("1_bwmay")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1502767707]
-position = Vector2(17.895847, 17.895847)
-scale = Vector2(0.04513019, 0.04513019)
+position = Vector2(43.89585, 43.89585)
+scale = Vector2(0.07763019, 0.07763019)
 texture = ExtResource("2_bwmay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1683219742]
-position = Vector2(14, 18)
+position = Vector2(36, 44)
 shape = SubResource("CapsuleShape2D_bwmay")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=115963941]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=663019803]
-position = Vector2(13.625, 17.75)
+position = Vector2(36.3125, 44)
 shape = SubResource("RectangleShape2D_cno7v")
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

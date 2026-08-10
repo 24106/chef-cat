@@ -2,20 +2,13 @@
 
 [ext_resource type="Script" uid="uid://d2s2gmm6k8q6b" path="res://scripts/levels/l2_kitchendoor.gd" id="1_n822l"]
 [ext_resource type="Texture2D" uid="uid://bor3syeydurad" path="res://assets/terrain/door.png" id="2_n822l"]
+[ext_resource type="Texture2D" uid="uid://beyj3goph70c0" path="res://assets/ui/right click sign.png" id="3_7b8bn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q1c45"]
 size = Vector2(150, 246)
 
 [node name="l2_kitchendoor" type="Area2D" unique_id=1353888535]
 script = ExtResource("1_n822l")
-
-[node name="Label" type="Label" parent="." unique_id=674300986]
-visible = false
-offset_left = -106.0
-offset_top = -172.0
-offset_right = 36.0
-offset_bottom = -149.0
-text = "right click to enter"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1965435693]
 position = Vector2(-12.781238, 6.5000076)
@@ -25,6 +18,12 @@ texture = ExtResource("2_n822l")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=509779609]
 position = Vector2(-43, -8)
 shape = SubResource("RectangleShape2D_q1c45")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2015071052]
+visible = false
+position = Vector2(-269, -73)
+scale = Vector2(0.106249996, 0.084375)
+texture = ExtResource("3_7b8bn")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

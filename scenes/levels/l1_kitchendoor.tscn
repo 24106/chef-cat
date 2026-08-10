@@ -21,8 +21,8 @@ shape = SubResource("RectangleShape2D_ud5e8")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=509321885]
 visible = false
-position = Vector2(-178, -78)
-scale = Vector2(0.034374997, 0.034374997)
+position = Vector2(-269, -73)
+scale = Vector2(0.106249996, 0.084375)
 texture = ExtResource("3_gy8xh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

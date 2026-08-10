@@ -3,7 +3,7 @@ extends Area2D
 var player_in_range = false
 var player
 
-@onready var prompt = $Label
+@onready var prompt = $Sprite2D2
 
 
 func _ready():

@@ -22,8 +22,8 @@ shape = SubResource("RectangleShape2D_4kw16")
 
 [node name="sign" type="Sprite2D" parent="." unique_id=591596005]
 visible = false
-position = Vector2(-0.9999995, -99)
-scale = Vector2(0.034531236, 0.034531236)
+position = Vector2(3, -146)
+scale = Vector2(0.09656249, 0.07320311)
 texture = ExtResource("3_tuwaq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
