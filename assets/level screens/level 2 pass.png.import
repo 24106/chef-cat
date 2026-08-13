@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfsenq43sr3md"
-path="res://.godot/imported/level 3 fail.png-48f7b70de22192d2ee110d025f52d32e.ctex"
+uid="uid://ctbtp6de5ghmp"
+path="res://.godot/imported/level 2 pass.png-3c4cab4a7bc0208ad04f89a6d3e63b5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level 3 fail.png"
-dest_files=["res://.godot/imported/level 3 fail.png-48f7b70de22192d2ee110d025f52d32e.ctex"]
+source_file="res://assets/level screens/level 2 pass.png"
+dest_files=["res://.godot/imported/level 2 pass.png-3c4cab4a7bc0208ad04f89a6d3e63b5c.ctex"]
 
 [params]
 

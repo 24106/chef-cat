@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqqsxgn2q13uj"]
 
 [ext_resource type="Script" uid="uid://cbndydluvdaer" path="res://scripts/levels/level_3_lose_screen.gd" id="1_nld84"]
-[ext_resource type="Texture2D" uid="uid://dfsenq43sr3md" path="res://assets/level 3 fail.png" id="2_vrn87"]
+[ext_resource type="Texture2D" uid="uid://dfsenq43sr3md" path="res://assets/level screens/level 3 fail.png" id="2_vrn87"]
 
 [node name="level_3_lose_screen" type="Node2D" unique_id=1446881211]
 script = ExtResource("1_nld84")

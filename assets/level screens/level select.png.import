@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://681haowu6fhm"
-path="res://.godot/imported/pawprint1.png-f8288a7bd7ce7e4889b7f0ba5570ffde.ctex"
+uid="uid://d3n3nqsmb78fn"
+path="res://.godot/imported/level select.png-a86bc52bd9f3e64d0b6a33afe8cdf609.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pawprint1.png"
-dest_files=["res://.godot/imported/pawprint1.png-f8288a7bd7ce7e4889b7f0ba5570ffde.ctex"]
+source_file="res://assets/level screens/level select.png"
+dest_files=["res://.godot/imported/level select.png-a86bc52bd9f3e64d0b6a33afe8cdf609.ctex"]
 
 [params]
 

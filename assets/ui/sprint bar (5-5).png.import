@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhxo810aawens"
-path="res://.godot/imported/main menu logo.png-cfcb6b5f72ddaef5bd35f2ed55e391d9.ctex"
+uid="uid://ttjumkhatsgx"
+path="res://.godot/imported/sprint bar (5-5).png-5f7e7409d0331997097cc25d298ec5cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/main menu logo.png"
-dest_files=["res://.godot/imported/main menu logo.png-cfcb6b5f72ddaef5bd35f2ed55e391d9.ctex"]
+source_file="res://assets/ui/sprint bar (5-5).png"
+dest_files=["res://.godot/imported/sprint bar (5-5).png-5f7e7409d0331997097cc25d298ec5cc.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dfgrgk2eqaj6c"]
 
 [ext_resource type="Script" uid="uid://car7us0qnupad" path="res://scripts/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://bhxo810aawens" path="res://assets/main menu logo.png" id="2_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://d3n3nqsmb78fn" path="res://assets/level select.png" id="3_8ln24"]
-[ext_resource type="Texture2D" uid="uid://681haowu6fhm" path="res://assets/pawprint1.png" id="4_rtw2f"]
-[ext_resource type="Texture2D" uid="uid://b2uof8k2fg4xa" path="res://assets/pawprint2.png" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://bhxo810aawens" path="res://assets/level screens/main menu logo.png" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://d3n3nqsmb78fn" path="res://assets/level screens/level select.png" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://681haowu6fhm" path="res://assets/level screens/pawprint1.png" id="4_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://b2uof8k2fg4xa" path="res://assets/level screens/pawprint2.png" id="5_oa1go"]
 
 [node name="main_menu" type="Node2D" unique_id=1343833572]
 script = ExtResource("1_l6cm7")

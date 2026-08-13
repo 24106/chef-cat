@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkpslvx8tntq"
-path="res://.godot/imported/sprint bar (3:5).png-97c83e4fc9ee1bcc6f1074721ea86c1e.ctex"
+uid="uid://ckk3djdvmgv0j"
+path="res://.godot/imported/level 3 pass.png-b886dae0310753919e87295cd587d0dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/sprint bar (3:5).png"
-dest_files=["res://.godot/imported/sprint bar (3:5).png-97c83e4fc9ee1bcc6f1074721ea86c1e.ctex"]
+source_file="res://assets/level screens/level 3 pass.png"
+dest_files=["res://.godot/imported/level 3 pass.png-b886dae0310753919e87295cd587d0dc.ctex"]
 
 [params]
 

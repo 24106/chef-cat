@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vuicoekuk1nv"]
 
 [ext_resource type="Script" uid="uid://vcm2cdoeqhfv" path="res://scripts/levels/level_3_win_screen.gd" id="1_ecwox"]
-[ext_resource type="Texture2D" uid="uid://ckk3djdvmgv0j" path="res://assets/level 3 pass.png" id="2_fbi7l"]
+[ext_resource type="Texture2D" uid="uid://ckk3djdvmgv0j" path="res://assets/level screens/level 3 pass.png" id="2_fbi7l"]
 
 [node name="level_3_win_screen" type="Node2D" unique_id=1446881211]
 script = ExtResource("1_ecwox")
