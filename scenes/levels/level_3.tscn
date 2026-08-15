@@ -368,6 +368,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_p3r0x")
 
 [node name="level3" type="Node2D" unique_id=638863454]
+position = Vector2(1, 0)
 script = ExtResource("1_kdsi4")
 
 [node name="background" type="TileMapLayer" parent="." unique_id=1788297832]
@@ -396,7 +397,7 @@ position = Vector2(4653, 3337)
 position = Vector2(8125, 2028)
 
 [node name="player" parent="." unique_id=1948820909 instance=ExtResource("6_aey3y")]
-position = Vector2(78, 2557)
+position = Vector2(134, 2500)
 
 [node name="indoor terrain" type="TileMapLayer" parent="." unique_id=145901698]
 scale = Vector2(4.8, 4.8)

@@ -55,5 +55,7 @@ func try_collect(player):
 		player.ingredient_failed = true
 	else:
 		player.add_ingredient(ingredient_name)
-
+	
+	AudioManager.play_sfx(AudioManager.collect)
+	
 	queue_free()

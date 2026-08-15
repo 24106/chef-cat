@@ -57,6 +57,7 @@ func _physics_process(delta: float) -> void:
 	jump()
 	update_animation(delta)
 	if global_position.y > 3675:
+		AudioManager.play_sfx(AudioManager.death)
 		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("mouse_click"):
 		for area in get_tree().get_nodes_in_group("ingredients"):
@@ -90,6 +91,7 @@ func jump():
 		if current_jumps < max_jumps:
 			velocity.y = jump_power
 			current_jumps += 1
+			AudioManager.play_sfx(AudioManager.jump)
 	velocity.y += gravity
 	if is_on_floor():
 		current_jumps = 0

@@ -32,5 +32,6 @@ func try_collect(player):
 	collected = true
 	
 	player.add_ingredient(ingredient_name)
+	AudioManager.play_sfx(AudioManager.collect)
 
 	queue_free()

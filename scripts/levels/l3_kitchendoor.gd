@@ -35,6 +35,8 @@ func _input(event):
 
 func enter_kitchen():
 	if player:
+		AudioManager.play_sfx(AudioManager.door_open)
+		
 		if player.collected_ingredients.size() >= 3:
 			get_tree().change_scene_to_file("res://scenes/levels/l3_cookingscene.tscn")
 		else:

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://iumjmam8x1by"]
+
+[ext_resource type="Script" uid="uid://bfcuoddkm0xa2" path="res://scripts/AudioManager.gd" id="1_liach"]
+[ext_resource type="AudioStream" uid="uid://bsfkro4vrq4tc" path="res://assets/sound/background music.mp3" id="2_3asnw"]
+
+[node name="AudioManager" type="Node" unique_id=970887161]
+script = ExtResource("1_liach")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=805026244]
+stream = ExtResource("2_3asnw")
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=528176535]

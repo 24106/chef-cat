@@ -19,6 +19,10 @@ run/main_scene="uid://dfgrgk2eqaj6c"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioManager="*uid://iumjmam8x1by"
+
 [input]
 
 player_left={
