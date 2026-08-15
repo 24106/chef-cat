@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dofms2t52t7ui"
+path="res://.godot/imported/knife down.mp3-2b985520ecb26bd824a5fcab9ce4c15a.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/sound effects/knife down.mp3"
+dest_files=["res://.godot/imported/knife down.mp3-2b985520ecb26bd824a5fcab9ce4c15a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
