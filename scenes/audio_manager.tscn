@@ -11,3 +11,5 @@ stream = ExtResource("2_3asnw")
 parameters/looping = true
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=528176535]
+
+[node name="Ticking" type="AudioStreamPlayer" parent="." unique_id=1051099391]

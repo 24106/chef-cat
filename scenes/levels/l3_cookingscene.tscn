@@ -143,16 +143,6 @@ position = Vector2(550, 464.00003)
 scale = Vector2(0.5664457, 0.5664457)
 texture = ExtResource("6_5fltf")
 
-[node name="levelcompletionbutton" type="Button" parent="." unique_id=2053358047]
-offset_left = 458.0
-offset_top = 601.0
-offset_right = 649.0
-offset_bottom = 632.0
-theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
-theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
-text = "level completion screen"
-
 [connection signal="pressed" from="question/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="question/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="question/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="levelcompletionbutton" to="." method="_on_levelcompletionbutton_pressed"]

@@ -411,7 +411,7 @@ tile_set = SubResource("TileSet_fldb1")
 [node name="knifes" type="Node2D" parent="." unique_id=235818971]
 
 [node name="small knife 1" parent="knifes" unique_id=1808693964 instance=ExtResource("11_igmy8")]
-position = Vector2(1832, 356)
+position = Vector2(1737, 356)
 speed = 250
 travel_distance = 80
 
