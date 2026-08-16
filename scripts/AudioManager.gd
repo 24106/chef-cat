@@ -7,7 +7,8 @@ var jump = preload("res://assets/sound/sound effects/jump.mp3")
 var collect = preload("res://assets/sound/sound effects/collect.mp3")
 var death = preload("res://assets/sound/sound effects/death.mp3")
 var door_open = preload("res://assets/sound/sound effects/door open.mp3")
-
+var knife_up = preload("res://assets/sound/sound effects/knife up.mp3")
+var knife_down = preload("res://assets/sound/sound effects/knife down.mp3")
 
 func _ready():
 	if not music.playing:
