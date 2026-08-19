@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var sprint_bar = $CanvasLayer/ProgressBar
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var camera = $Camera2D
 
 var speed = 600
 var sprint_speed = 925
@@ -57,6 +58,7 @@ func _physics_process(delta: float) -> void:
 	update_animation(delta)
 	if global_position.y > 3675:
 		AudioManager.play_sfx(AudioManager.death)
+		camera.apply_shake(40.0)
 		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("mouse_click"):
 		for area in get_tree().get_nodes_in_group("ingredients"):
