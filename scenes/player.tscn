@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://csnym1hhvp63e"]
 
 [ext_resource type="Script" uid="uid://quyh4cbsa3vt" path="res://scripts/player.gd" id="1_tou0u"]
-[ext_resource type="Texture2D" uid="uid://dinfkodr8tgap" path="res://assets/chef cat/cat_standing_idle.png" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://cvn38vficiuc1" path="res://assets/chef cat/cat_going_to_sleep.png" id="2_ur7pv"]
-[ext_resource type="Texture2D" uid="uid://dh0lbrmiootkd" path="res://assets/chef cat/cat_lying_down.png" id="3_y4r1p"]
-[ext_resource type="Texture2D" uid="uid://bge6qk3c7q3xg" path="res://assets/chef cat/cat_jumping.png" id="5_3v2ag"]
-[ext_resource type="Texture2D" uid="uid://565tvyijq57c" path="res://assets/chef cat/cat_sitting_down.png" id="6_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dab37mlcwesv2" path="res://assets/chef cat/cat_standing_idle.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://caw6147c4c8wk" path="res://assets/chef cat/cat_going_to_sleep.png" id="2_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://cq83lk2u7rxvl" path="res://assets/chef cat/cat_lying_down.png" id="3_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://c3bqmtv07dgix" path="res://assets/chef cat/cat_jumping.png" id="5_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://dcxt35u7862r7" path="res://assets/chef cat/cat_sitting_down.png" id="6_jej6c"]
+[ext_resource type="Script" uid="uid://c77k2dkrc2xja" path="res://scripts/camera_2d.gd" id="8_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://cexke5vi5jj3u" path="res://assets/ui/sprint bar (0-5).png" id="8_jej6c"]
-[ext_resource type="Texture2D" uid="uid://cro12id0b1wjs" path="res://assets/chef cat/cat_sleeping_idle.png" id="8_oprun"]
+[ext_resource type="Texture2D" uid="uid://cry3ne7e75syv" path="res://assets/chef cat/cat_sleeping_idle.png" id="8_oprun"]
 [ext_resource type="Texture2D" uid="uid://hdh72s1w608s" path="res://assets/ui/sprint bar (1-5).png" id="9_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://cuta1dfg08p6v" path="res://assets/ui/sprint bar (2-5).png" id="10_oprun"]
 [ext_resource type="Texture2D" uid="uid://bkpslvx8tntq" path="res://assets/ui/sprint bar (3-5).png" id="11_a8ls1"]
@@ -400,6 +401,7 @@ limit_bottom = 3650
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+script = ExtResource("8_f1ej7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1150499306]
 position = Vector2(-1, 0)

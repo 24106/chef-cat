@@ -36,7 +36,6 @@ const SLEEP_DELAY = 3.5
 var idle_timer = 0.0
 var can_move = true
 
-
 func _physics_process(delta: float) -> void:
 	if slippery:
 		ice_input_delay += delta
