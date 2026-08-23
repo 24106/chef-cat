@@ -1,14 +1,9 @@
-extends Node
+extends Area2D
 
-@onready var music = $Music
-@onready var sfx = $SFX
+func _on_body_entered(body):
+	if body.has_method("enter_slippery"):
+		body.enter_slippery()
 
-var jump = preload("res://assets/sound/sound effects/jump.mp3")
-var collect = preload("res://assets/sound/sound effects/collect.mp3")
-var death = preload("res://assets/sound/sound effects/death.mp3")
-var door_open = preload("res://assets/sound/sound effects/door open.mp3")
-
-
-func play_sfx(sound):
-	sfx.stream = sound
-	sfx.play()
+func _on_body_exited(body):
+	if body.has_method("exit_slippery"):
+		body.exit_slippery()
