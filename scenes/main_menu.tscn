@@ -16,9 +16,9 @@ position = Vector2(575, 325)
 
 [node name="start game button" type="Button" parent="mainsection" unique_id=227683818]
 offset_left = 405.0
-offset_top = 466.0
+offset_top = 436.0
 offset_right = 745.0
-offset_bottom = 529.0
+offset_bottom = 499.0
 theme_override_colors/font_color = Color(0.87189883, 0.6770254, 0.57007295, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_font_sizes/font_size = 40
@@ -26,19 +26,29 @@ text = "start game"
 
 [node name="select level button" type="Button" parent="mainsection" unique_id=27762673]
 offset_left = 213.0
-offset_top = 553.0
+offset_top = 516.0
 offset_right = 553.0
-offset_bottom = 605.0
+offset_bottom = 568.0
 theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_font_sizes/font_size = 26
 text = "select level"
 
-[node name="quit game button" type="Button" parent="mainsection" unique_id=1791672770]
+[node name="tutorial button" type="Button" parent="mainsection" unique_id=1791672770]
 offset_left = 583.0
-offset_top = 553.0
+offset_top = 516.0
 offset_right = 923.0
-offset_bottom = 605.0
+offset_bottom = 568.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 26
+text = "view tutorial"
+
+[node name="quit game button" type="Button" parent="mainsection" unique_id=1383898953]
+offset_left = 398.0
+offset_top = 581.0
+offset_right = 738.0
+offset_bottom = 633.0
 theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_font_sizes/font_size = 26
@@ -49,7 +59,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="welcometext" type="Sprite2D" parent="mainsection" unique_id=120650166]
-position = Vector2(573, 236.99998)
+position = Vector2(572.99994, 215.99998)
 scale = Vector2(0.45944446, 0.45944446)
 texture = ExtResource("2_ekxnf")
 
@@ -107,7 +117,7 @@ scale = Vector2(0.20137809, 0.20137808)
 texture = ExtResource("4_rtw2f")
 
 [node name="pawprints2" type="Sprite2D" parent="." unique_id=72507379]
-position = Vector2(70, 425)
+position = Vector2(70, 406)
 scale = Vector2(0.23386726, 0.23386723)
 texture = ExtResource("5_oa1go")
 
