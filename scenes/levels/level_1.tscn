@@ -399,7 +399,7 @@ position = Vector2(3880, 2168)
 position = Vector2(7582, 963)
 
 [node name="player" parent="." unique_id=1457866667 instance=ExtResource("1_014kd")]
-position = Vector2(367, -188)
+position = Vector2(8323, -53)
 
 [node name="indoor terrain" type="TileMapLayer" parent="." unique_id=1543593487]
 scale = Vector2(4.8, 4.8)
