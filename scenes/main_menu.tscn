@@ -122,6 +122,7 @@ scale = Vector2(0.23386726, 0.23386723)
 texture = ExtResource("5_oa1go")
 
 [node name="tutorialsection" type="Node2D" parent="." unique_id=490234913]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="tutorialsection" unique_id=325756363]
 offset_right = 1152.0

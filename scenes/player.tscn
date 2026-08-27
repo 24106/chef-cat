@@ -154,6 +154,11 @@ animations = [{
 "name": &"appear",
 "speed": 20.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"disappear",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_51ujp")
@@ -537,7 +542,6 @@ position = Vector2(-12.875003, -96.87499)
 scale = Vector2(0.09741212, 0.09741212)
 sprite_frames = SubResource("SpriteFrames_tk41t")
 animation = &"idle"
-frame_progress = 0.85886
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=477704557]
 position = Vector2(-13.750016, 60.750015)
