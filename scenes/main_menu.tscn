@@ -121,8 +121,23 @@ position = Vector2(70, 406)
 scale = Vector2(0.23386726, 0.23386723)
 texture = ExtResource("5_oa1go")
 
+[node name="tutorialsection" type="Node2D" parent="." unique_id=490234913]
+
+[node name="ColorRect" type="ColorRect" parent="tutorialsection" unique_id=325756363]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.05, 0.044, 0.044, 0.5568628)
+
+[node name="ColorRect2" type="ColorRect" parent="tutorialsection" unique_id=1907116135]
+offset_left = 43.0
+offset_top = 48.0
+offset_right = 1106.0
+offset_bottom = 603.0
+color = Color(0.7552626, 0.44132432, 0.46662164, 0.95686275)
+
 [connection signal="pressed" from="mainsection/start game button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="mainsection/select level button" to="." method="_on_select_level_button_pressed"]
+[connection signal="pressed" from="mainsection/tutorial button" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="mainsection/quit game button" to="." method="_on_quit_game_button_pressed"]
 [connection signal="pressed" from="levelselectsection/level 1 button" to="." method="_on_level_1_button_pressed"]
 [connection signal="pressed" from="levelselectsection/level 2 button" to="." method="_on_level_2_button_pressed"]

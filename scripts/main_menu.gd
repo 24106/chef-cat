@@ -2,10 +2,12 @@ extends Node2D
 
 @onready var main_section = $mainsection
 @onready var level_section = $levelselectsection
+@onready var tutorial_section = $tutorialsection
 
 func _ready():
 	main_section.show()
 	level_section.hide()
+	tutorial_section.hide()
 
 # main section buttons
 func _on_start_game_button_pressed() -> void:
@@ -17,6 +19,9 @@ func _on_quit_game_button_pressed() -> void:
 func _on_select_level_button_pressed() -> void:
 	main_section.hide()
 	level_section.show()
+
+func _on_tutorial_button_pressed() -> void:
+	tutorial_section.show()
 
 
 # level select section buttons
