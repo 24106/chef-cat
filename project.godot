@@ -22,7 +22,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioManager="*uid://iumjmam8x1by"
-LevelTransition="*uid://cfbi3vtk3o7bp"
 
 [input]
 

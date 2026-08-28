@@ -396,7 +396,7 @@ spoil_time = 40.0
 position = Vector2(6518, 803)
 
 [node name="player" parent="." unique_id=472328877 instance=ExtResource("1_pbc48")]
-position = Vector2(427, 1640)
+position = Vector2(427, 1630)
 
 [node name="indoor terrain" type="TileMapLayer" parent="." unique_id=2034300406]
 scale = Vector2(4.8, 4.8)

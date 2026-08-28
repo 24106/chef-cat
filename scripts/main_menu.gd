@@ -11,7 +11,7 @@ func _ready():
 
 # main section buttons
 func _on_start_game_button_pressed() -> void:
-	LevelTransition.change_scene_to("res://scenes/levels/level_1.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 
 func _on_quit_game_button_pressed() -> void:
 	get_tree().quit()

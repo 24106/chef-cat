@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
-@onready var sprint_bar = $CanvasLayer/ProgressBar
+@onready var sprint_bar = $CanvasLayer/SprintBar
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var camera = $Camera2D
+@onready var meow_text = $meow_text
+@onready var landing_particles = $LandingParticles
 
 var speed = 600
 var sprint_speed = 925
@@ -37,6 +39,7 @@ const SLEEP_DELAY = 3.5
 var idle_timer = 0.0
 var can_move = true
 var is_dying = false
+var was_airborne = false
 
 func _physics_process(delta: float) -> void:
 	if slippery:
@@ -56,6 +59,12 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0.0, friction)
 	player_movement()
 	jump()
+	if was_airborne and is_on_floor():
+		var landing_offset = clamp(velocity.x * 0.05, -40.0, 40.0)
+		landing_particles.position.x = -landing_offset
+		landing_particles.restart()
+		landing_particles.restart()
+	was_airborne = !is_on_floor()
 	update_animation(delta)
 	if global_position.y > 3675:
 		is_dying = true
@@ -113,7 +122,19 @@ func sprint(delta):
 			sprint_energy += sprint_recharge_rate
 			recharge_timer = 0
 	sprint_energy = clamp(sprint_energy, 0, max_sprint_energy)
-	sprint_bar.value = sprint_energy
+
+	if sprint_energy <= 0:
+		sprint_bar.play("sprint_0")
+	elif sprint_energy <= 2:
+		sprint_bar.play("sprint_20")
+	elif sprint_energy <= 4:
+		sprint_bar.play("sprint_40")
+	elif sprint_energy <= 6:
+		sprint_bar.play("sprint_60")
+	elif sprint_energy <= 8:
+		sprint_bar.play("sprint_80")
+	else:
+		sprint_bar.play("sprint_100")
 
 
 func enter_slippery():
@@ -131,6 +152,7 @@ func exit_slippery():
 func add_ingredient(name):
 	if name not in collected_ingredients:
 		collected_ingredients.append(name)
+		play_meow_text()
 
 
 func update_animation(delta):
@@ -168,6 +190,7 @@ func update_animation(delta):
 
 func _ready():
 	animated_sprite.animation_finished.connect(_on_animation_finished)
+	meow_text.visible = false
 
 
 func _on_animation_finished():
@@ -183,3 +206,19 @@ func _on_animation_finished():
 				animated_sprite.play("move")
 			else:
 				animated_sprite.play("standing")
+
+func play_meow_text():
+	meow_text.visible = true
+	meow_text.play("appear")
+	
+	await meow_text.animation_finished
+	
+	meow_text.play("idle")
+	
+	await get_tree().create_timer(2).timeout
+	
+	meow_text.play("disappear")
+	
+	await meow_text.animation_finished
+	
+	meow_text.visible = false

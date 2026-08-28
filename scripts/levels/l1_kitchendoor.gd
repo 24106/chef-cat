@@ -38,6 +38,6 @@ func enter_kitchen():
 		AudioManager.play_sfx(AudioManager.door_open)
 
 		if player.collected_ingredients.size() >= 3:
-			LevelTransition.change_scene_to_file("res://scenes/levels/l1_cookingscene.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/l1_cookingscene.tscn")
 		else:
-			LevelTransition.change_scene_to("res://scenes/levels/level_1_lose_screen.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/level_1_lose_screen.tscn")
