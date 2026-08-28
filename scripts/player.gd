@@ -36,6 +36,7 @@ var cat_state = CatState.NORMAL
 const SLEEP_DELAY = 3.5
 var idle_timer = 0.0
 var can_move = true
+var is_dying = false
 
 func _physics_process(delta: float) -> void:
 	if slippery:
@@ -57,8 +58,10 @@ func _physics_process(delta: float) -> void:
 	jump()
 	update_animation(delta)
 	if global_position.y > 3675:
+		is_dying = true
 		AudioManager.play_sfx(AudioManager.death)
-		camera.apply_shake(40.0)
+		camera.apply_shake(30.0)
+		await get_tree().create_timer(0.4).timeout
 		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("mouse_click"):
 		for area in get_tree().get_nodes_in_group("ingredients"):
