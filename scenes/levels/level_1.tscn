@@ -552,26 +552,14 @@ your first dish to make is a starter salad
 
 * you need to remember to add the lettuce to the salad first when making the dish at the end *
 
-you need to collect all these ingredients:
- - lettuce
- - tomato
- - cucumber
-
-controls:
-left/right movement - a/d keys or arrow keys
-jump (single, double or triple) - space, w key or up arrow
-sprint - shift
-pick up ingredients - left mouse button (LMB)
-enter the kitchen - right mouse button (RMB)
-
-make it through the obstacles, collect the ingredients, reach the kitchen and then make the dish!"
+good luck!!"
 
 [node name="Button" type="Button" parent="UIlayer/tutorialpanel" unique_id=1676751962]
 layout_mode = 0
-offset_left = 446.0
-offset_top = 572.0
-offset_right = 643.0
-offset_bottom = 603.0
+offset_left = 150.0
+offset_top = 249.0
+offset_right = 347.0
+offset_bottom = 280.0
 theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 text = "click here to start level 1"

@@ -577,30 +577,19 @@ offset_bottom = 545.0
 theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 text = "welcome to level 3 (the last level) of chef cat
 
-your third and final dish to make is an ice cream sundae dessert
+your final dish to make is an ice cream sundae dessert
+the ice cream will spoil after 15 seconds
 
-* you need to remember to dip the ice cream scooper in water during the dish making scene *
+* you need to remember to dip the ice cream scooper in water *
 
-you need to collect all these ingredients:
- - ice cream
- - chocolate
- - strawberries
-
-controls:
-left/right movement - a/d keys or arrow keys
-jump (single, double or triple) - space, w key or up arrow
-sprint - shift
-pick up ingredients - left mouse button (LMB)
-enter the kitchen - right mouse button (RMB)
-
-make it through the obstacles, collect the ingredients, reach the kitchen and then make the dish!"
+good luck!!"
 
 [node name="Button" type="Button" parent="UI layer/tutorialpanel" unique_id=872101424]
 layout_mode = 0
-offset_left = 446.0
-offset_top = 572.0
-offset_right = 643.0
-offset_bottom = 603.0
+offset_left = 152.0
+offset_top = 275.0
+offset_right = 349.0
+offset_bottom = 306.0
 theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 text = "click here to start level 3"

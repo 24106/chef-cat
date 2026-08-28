@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyhahy8c00kpw"
-path="res://.godot/imported/star_01.png-e9b5522c3d5fd5abd899a9a01d3fbbeb.ctex"
+uid="uid://cg7ebw41siejl"
+path="res://.godot/imported/obstacles.png-0365f0a30dfbbbebf60949667562bee3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://star_01.png"
-dest_files=["res://.godot/imported/star_01.png-e9b5522c3d5fd5abd899a9a01d3fbbeb.ctex"]
+source_file="res://assets/ui/obstacles.png"
+dest_files=["res://.godot/imported/obstacles.png-0365f0a30dfbbbebf60949667562bee3.ctex"]
 
 [params]
 

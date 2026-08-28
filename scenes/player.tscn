@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bkpslvx8tntq" path="res://assets/ui/sprint bar (3-5).png" id="11_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://b4o0f6j3s725s" path="res://assets/ui/sprint bar (4-5).png" id="12_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://ttjumkhatsgx" path="res://assets/ui/sprint bar (5-5).png" id="13_fulsm"]
-[ext_resource type="Texture2D" uid="uid://cyhahy8c00kpw" path="res://star_01.png" id="17_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://cyhahy8c00kpw" path="res://assets/chef cat/particle.png" id="17_qfm1y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hax0n"]
 atlas = ExtResource("2_a8ls1")

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d3n3nqsmb78fn" path="res://assets/level screens/level select.png" id="3_8ln24"]
 [ext_resource type="Texture2D" uid="uid://681haowu6fhm" path="res://assets/level screens/pawprint1.png" id="4_rtw2f"]
 [ext_resource type="Texture2D" uid="uid://b2uof8k2fg4xa" path="res://assets/level screens/pawprint2.png" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://dy17bsl4nnoc7" path="res://assets/ui/controls.png" id="6_rtw2f"]
 
 [node name="main_menu" type="Node2D" unique_id=1343833572]
 script = ExtResource("1_l6cm7")
@@ -53,10 +54,6 @@ theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
 theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
 theme_override_font_sizes/font_size = 26
 text = "quit game"
-
-[node name="Label" type="Label" parent="mainsection" unique_id=1421200176]
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="welcometext" type="Sprite2D" parent="mainsection" unique_id=120650166]
 position = Vector2(572.99994, 215.99998)
@@ -125,8 +122,10 @@ texture = ExtResource("5_oa1go")
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="tutorialsection" unique_id=325756363]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 649.0
 color = Color(0.05, 0.044, 0.044, 0.5568628)
 
 [node name="ColorRect2" type="ColorRect" parent="tutorialsection" unique_id=1907116135]
@@ -136,6 +135,69 @@ offset_right = 1106.0
 offset_bottom = 603.0
 color = Color(0.7552626, 0.44132432, 0.46662164, 0.95686275)
 
+[node name="TutorialTitle" type="Label" parent="tutorialsection" unique_id=1881506087]
+offset_left = 131.0
+offset_top = 61.0
+offset_right = 1020.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 78
+text = "Your Goal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TutorialImage" type="TextureRect" parent="tutorialsection" unique_id=663305350]
+offset_left = 235.0
+offset_top = 180.0
+offset_right = 795.1131
+offset_bottom = 576.0
+texture = ExtResource("6_rtw2f")
+expand_mode = 1
+
+[node name="TutorialText" type="Label" parent="tutorialsection" unique_id=646022620]
+offset_left = 492.0
+offset_top = 224.0
+offset_right = 1057.0
+offset_bottom = 419.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_font_sizes/font_size = 21
+text = "Collect all the ingredients displayed
+at the top of the screen. 
+
+Then go to the kitchen door and
+successfully make the dish!!"
+
+[node name="BackButton" type="Button" parent="tutorialsection" unique_id=783254322]
+offset_left = 78.0
+offset_top = 300.0
+offset_right = 151.0
+offset_bottom = 363.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "<<"
+
+[node name="NextButton" type="Button" parent="tutorialsection" unique_id=62663124]
+offset_left = 1000.0
+offset_top = 300.0
+offset_right = 1073.0
+offset_bottom = 363.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 40
+text = ">>"
+
+[node name="PageNumber" type="Label" parent="tutorialsection" unique_id=526147250]
+offset_left = 64.0
+offset_top = 59.0
+offset_right = 215.0
+offset_bottom = 149.0
+theme_override_colors/font_color = Color(0.87058824, 0.6784314, 0.5686275, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 25
+text = "1 / 3"
+
 [connection signal="pressed" from="mainsection/start game button" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="mainsection/select level button" to="." method="_on_select_level_button_pressed"]
 [connection signal="pressed" from="mainsection/tutorial button" to="." method="_on_tutorial_button_pressed"]
@@ -144,3 +206,5 @@ color = Color(0.7552626, 0.44132432, 0.46662164, 0.95686275)
 [connection signal="pressed" from="levelselectsection/level 2 button" to="." method="_on_level_2_button_pressed"]
 [connection signal="pressed" from="levelselectsection/level 3 button" to="." method="_on_level_3_button_pressed"]
 [connection signal="pressed" from="levelselectsection/back button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="tutorialsection/BackButton" to="." method="_on_tutorial_back_button_pressed"]
+[connection signal="pressed" from="tutorialsection/NextButton" to="." method="_on_next_button_pressed"]
