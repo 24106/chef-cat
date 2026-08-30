@@ -76,7 +76,7 @@ func update_ingredient_UI():
 		icecream_tick.visible = false
 
 
-	if "chocolatesauce" in player.collected_ingredients:
+	if "chocolate" in player.collected_ingredients:
 		chocolate_tick.visible = true
 	else:
 		chocolate_tick.visible = false
